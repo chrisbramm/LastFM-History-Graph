@@ -691,9 +691,13 @@ public class Track extends MusicEntry {
 
 	@Override
 	public String toString() {
-		return "Track[name=" + name + ",artist=" + artist + ", album=" + album + ", position=" + position + ", duration=" + duration
-				+ ", location=" + location + ", nowPlaying=" + nowPlaying + ", fullTrackAvailable=" + fullTrackAvailable + ", playedWhen="
-				+ playedWhen + ", artistMbId=" + artistMbid + ", albumMbId=" + albumMbid + ", red=" + red + ", green=" + green + ", blue=" + blue + "]";
+		return "Track[name=" + name + ",artist=" + artist + ",album=" + album + ",position=" + position + ",duration=" + duration
+				+ ",location=" + location + ",nowPlaying=" + nowPlaying + ",fullTrackAvailable=" + fullTrackAvailable + ",playedWhen="
+				+ playedWhen + ",artistMbId=" + artistMbid + ",albumMbId=" + albumMbid + ",red=" + red + ",green=" + green + ",blue=" + blue + "]";
+	}
+	
+	public String toFileString(){
+		return "Track[name=" + name + ",artist=" + artist + ",duration=" + duration + ",red=" + red + ",green=" + green + ",blue=" + blue + "]";
 	}
 
 	private static class TrackFactory implements ItemFactory<Track> {

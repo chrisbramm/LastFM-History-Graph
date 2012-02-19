@@ -7,6 +7,9 @@ import de.umass.lastfm.*;
 public class FileStuff {
 
 	private static String path;
+	private static final String REGEX = "\\[(\\w*=(.*),)*\\w*=(.*)\\]";
+;
+	
 	
 	private static int readLines(String file_path) throws IOException {
 		path = file_path;
@@ -59,11 +62,19 @@ public class FileStuff {
 			
 			l.setColour(red, green, blue);
 			
-			String line = l.toString();
+			String line = l.toFileString();
 			out.write(line);
 			out.newLine();
+			if (red == 255){
+				red = 0;
+			}else{
 			red++;
+			}
+			if (green == 0){
+				green = 255;
+			}else{
 			green--;
+			}
 		}
 
 		// out.write(line);

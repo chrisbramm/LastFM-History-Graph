@@ -24,7 +24,7 @@ public class LastFMHistory {
 	
 	public LastFMHistory(){
 		Caller.getInstance().setUserAgent(tst);
-		Caller.getInstance().setDebugMode(true);
+		Caller.getInstance().setDebugMode(false);
 	}
 	
 	public void setUser(String user){
