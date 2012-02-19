@@ -1,13 +1,15 @@
 package lastfmhistoryclasses;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.io.*;
 import de.umass.lastfm.*;
 
 public class FileStuff {
 
 	private static String path;
-	private static final String REGEX = "\\[(\\w*=(.*),)*\\w*=(.*)\\]";
+	private static final String REGEX = "name=(.*),artist=(.*),duration=(.*),red=(.*),green=(.*),blue=(.*)\\]"
 ;
 	
 	
@@ -36,11 +38,30 @@ public class FileStuff {
 		 BufferedReader textReader = new BufferedReader(fr);
 	
 		 Collection<Track> library = null;
-		 int noOfLines = readLines(file_path);
+
+		 int noOfLines = readLines(path);
 		 
-		 //String line = textReader.readLine();
+		 Pattern p = Pattern.compile(REGEX);
 		 
-		 System.out.println(noOfLines);
+		 for (int i = 0; i<5; i++){
+			 String line = textReader.readLine();
+			 Matcher m = p.matcher(line);
+			 boolean b = m.find();
+			 System.out.println(b);
+			 
+			 int count = 1;
+			 
+			 if (b) {
+				    String name = m.group(1);
+				    String artist = m.group(2);
+				    int duration = Integer.parseInt(m.group(3));
+				    int red = Integer.parseInt(m.group(4));
+				    int green = Integer.parseInt(m.group(5));
+				    int blue = Integer.parseInt(m.group(6));
+			}
+						 
+		 }
+		 
 		 
 		 return library;
 	
