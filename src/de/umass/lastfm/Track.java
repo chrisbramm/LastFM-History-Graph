@@ -751,5 +751,19 @@ public class Track extends MusicEntry {
 		this.blue = blue;
 	}
 	
+	public Track(String name, String artist, int duration, int red, int green, int blue){
+		Track track;
+		track.name = name;
+		track.artist = artist;
+		track.duration = duration;
+		track.red = red;
+		track.green = green;
+		track.blue = blue;
+		
+		return track;
+		
+	}
+	
+	
 	
 }

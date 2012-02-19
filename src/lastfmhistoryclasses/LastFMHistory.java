@@ -128,14 +128,6 @@ public class LastFMHistory {
 		
 	}
 	
-	public void iterateLibrary(){
-		System.out.println("All the " + library.size() + " tracks in a users Library:");
-		for(Track t: library){
-			System.out.println(t.getName());
-		}
-	}
-	
-	
 
 	
 	

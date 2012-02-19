@@ -58,6 +58,8 @@ public class FileStuff {
 				    int red = Integer.parseInt(m.group(4));
 				    int green = Integer.parseInt(m.group(5));
 				    int blue = Integer.parseInt(m.group(6));
+				    
+				    
 			}
 						 
 		 }
