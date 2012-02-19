@@ -11,7 +11,6 @@ import de.umass.xml.*;
 
 public class LastFMHistory {
 	private final static String API_KEY = "3c02b48004816856418a2c0b9a4e785b";;
-	private final static String SECRET = "5f763212ed4f82c1d2afe01e74556bd8";
 	private String user;
 	private Collection<Track> tracks;
 	private Collection<Track> library;
