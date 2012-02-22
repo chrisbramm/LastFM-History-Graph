@@ -34,8 +34,10 @@ public class LastFMHistory {
 	
 	public Collection<Track> getLibraryTracks(){
 		try{
-			FileStuff.openFile(file_name);
-			
+			library = FileStuff.openFile(file_name);
+			if (library.isEmpty() == true){
+				System.out.println("Library is not set");
+			}
 			
 		}catch(FileNotFoundException e) {
 			try{

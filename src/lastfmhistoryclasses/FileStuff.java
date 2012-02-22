@@ -9,8 +9,8 @@ import de.umass.lastfm.*;
 public class FileStuff {
 
 	private static String path;
-	private static final String REGEX = "name=(.*),artist=(.*),duration=(.*),red=(.*),green=(.*),blue=(.*)\\]"
-;
+	private static final String REGEX = "name=(.*),artist=(.*),duration=(.*),red=(.*),green=(.*),blue=(.*)\\]";
+	public static Collection<Track> library;
 	
 	
 	private static int readLines(String file_path) throws IOException {
@@ -37,7 +37,6 @@ public class FileStuff {
 		 FileReader fr = new FileReader(path);
 		 BufferedReader textReader = new BufferedReader(fr);
 	
-		 Collection<Track> library = null;
 
 		 int noOfLines = readLines(path);
 		 
@@ -49,8 +48,6 @@ public class FileStuff {
 			 boolean b = m.find();
 			 System.out.println(b);
 			 
-			 int count = 1;
-			 
 			 if (b) {
 				    String name = m.group(1);
 				    String artist = m.group(2);
@@ -59,14 +56,14 @@ public class FileStuff {
 				    int green = Integer.parseInt(m.group(5));
 				    int blue = Integer.parseInt(m.group(6));
 				    
+				    System.out.println(name + ", " + artist + ", " + duration + ", " + red + ", " + green + ", " + blue);
 				    
+				    Track track = new Track(name, artist, duration, red, green, blue);
+				    
+				    System.out.println(track);    
 			}
-						 
 		 }
-		 
-		 
 		 return library;
-	
 	 }
 
 	public static void saveFile(String file_path, Collection<Track> library) throws IOException {

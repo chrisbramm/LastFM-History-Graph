@@ -72,6 +72,10 @@ public abstract class MusicEntry extends ImageHolder {
 	protected MusicEntry(String name, String url) {
 		this(name, url, null, -1, -1, false);
 	}
+	
+	protected MusicEntry(String name){
+		this.name = name;
+	}
 
 	protected MusicEntry(String name, String url, String mbid, int playcount, int listeners, boolean streamable) {
 		this.name = name;
