@@ -33,22 +33,22 @@ public class LastFMHistory {
 	}
 	
 	public Collection<Track> getLibraryTracks(){
-		try{
-			library = FileStuff.openFile(file_name);
-			if (library.isEmpty() == true){
-				System.out.println("Library is not set");
-			}
+		//try{
+			//library = this.FileStuff.openFile(file_name);
+			//if (library.isEmpty() == true){
+			//	System.out.println("Library is not set");
+			//}
 			
-		}catch(FileNotFoundException e) {
+		//}catch(FileNotFoundException e) {
 			try{
 				library = de.umass.lastfm.Library.getAllTracks(user, API_KEY);
 				FileStuff.saveFile(file_name, library);
 			}catch(IOException x){
 				System.out.println(x);
 			}
-		}catch(IOException e){
-			System.out.println(e.getMessage());
-		}
+		//}catch(IOException e){
+			//System.out.println(e.getMessage());
+		//}
 		System.out.println(library.size());
 		return library;
 		//}
@@ -111,21 +111,25 @@ public class LastFMHistory {
 		long unixDate;
 		long originDate;
 		for (Track t: tracks){
-			Date fullDate = t.getPlayedWhen();
-			try {
-				unixDate = fullDate.getTime();
-				if (i == 0){
-					originDate = unixDate;
-					i++;
-				}
-			} catch (Exception e){
-				e.printStackTrace();
-				break;
-			}
 			
-			System.out.println(fullDate  + " " + unixDate /*fullDate.getTime()*/);
+			if(t.getPlayedWhen() != null){
+				System.out.println(t);
+				Date fullDate = t.getPlayedWhen();
+				System.out.println(fullDate);
+//				try {
+//					unixDate = fullDate.getTime();
+//					System.out.println(unixDate);
+////					if (i == 0){
+////						originDate = unixDate;
+////						i++;
+////					}
+//				} catch (Exception e){
+//					e.printStackTrace();
+//				}
+			
+				//System.out.println(fullDate  + " " + unixDate /*fullDate.getTime()*/);
+			}
 		}
-		
 		//System.out.println(originDate);
 		
 	}

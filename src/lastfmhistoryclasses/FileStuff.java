@@ -10,7 +10,7 @@ public class FileStuff {
 
 	private static String path;
 	private static final String REGEX = "name=(.*),artist=(.*),duration=(.*),red=(.*),green=(.*),blue=(.*)\\]";
-	public static Collection<Track> library;
+	public Collection<Track> library; 
 	
 	
 	private static int readLines(String file_path) throws IOException {
@@ -31,7 +31,7 @@ public class FileStuff {
 		
 	}
 
-	 public static Collection<Track> openFile(String file_path) throws IOException{
+	 public Collection<Track> openFile(String file_path) throws IOException{
 		 path = file_path;
 	
 		 FileReader fr = new FileReader(path);
@@ -48,7 +48,7 @@ public class FileStuff {
 			 boolean b = m.find();
 			 System.out.println(b);
 			 
-			 if (b) {
+			 if (b == true) {
 				    String name = m.group(1);
 				    String artist = m.group(2);
 				    int duration = Integer.parseInt(m.group(3));
@@ -59,8 +59,12 @@ public class FileStuff {
 				    System.out.println(name + ", " + artist + ", " + duration + ", " + red + ", " + green + ", " + blue);
 				    
 				    Track track = new Track(name, artist, duration, red, green, blue);
+
+				    System.out.println(track);
 				    
-				    System.out.println(track);    
+				    library.add(track);
+				    
+				    
 			}
 		 }
 		 return library;

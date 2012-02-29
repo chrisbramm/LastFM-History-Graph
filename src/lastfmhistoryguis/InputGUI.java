@@ -77,10 +77,10 @@ public class InputGUI extends JFrame {
 	public void doHistory(){
 		String user = username.getText();
 		test.setUser(user);
-		//test.getRecentTracks();
-		//test.iterateHistory();
+		test.getRecentTracks();
+		test.iterateHistory();
 		test.getLibraryTracks();
-		//test.iterateLibrary();
+		
 		
 	}
 	
