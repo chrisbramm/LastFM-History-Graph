@@ -79,6 +79,9 @@ public class Track extends MusicEntry {
 	public int red;
 	public int blue;
 	public int green;
+	
+	public long graphHeight;
+	public long day;
 
 	protected Map<String, String> lastFmExtensionInfos = new HashMap<String, String>();		// protected for use in Playlist.playlistFromElement
 
@@ -693,7 +696,7 @@ public class Track extends MusicEntry {
 	public String toString() {
 		return "Track[name=" + name + ",artist=" + artist + ",album=" + album + ",position=" + position + ",duration=" + duration
 				+ ",location=" + location + ",nowPlaying=" + nowPlaying + ",fullTrackAvailable=" + fullTrackAvailable + ",playedWhen="
-				+ playedWhen + ",artistMbId=" + artistMbid + ",albumMbId=" + albumMbid + ",red=" + red + ",green=" + green + ",blue=" + blue + "]";
+				+ playedWhen + ",artistMbId=" + artistMbid + ",albumMbId=" + albumMbid + ",red=" + red + ",green=" + green + ",blue=" + blue + ",day=" + day + ",graphHeight=" + graphHeight + "]";
 	}
 	
 	public String toFileString(){
@@ -760,6 +763,10 @@ public class Track extends MusicEntry {
 		this.blue = blue;
 	}
 	
+	public void setCoordinates(long unixDate, long originDate){
+		this.day = (long)Math.floor(((unixDate - originDate) / 86400));
+		this.graphHeight = (long)Math.IEEEremainder(unixDate, 86400);
+	}
 	
 	
 }

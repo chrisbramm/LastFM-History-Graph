@@ -79,7 +79,7 @@ public class InputGUI extends JFrame {
 		test.setUser(user);
 		test.getRecentTracks();
 		test.iterateHistory();
-		test.getLibraryTracks();
+		//test.getLibraryTracks();
 		
 		
 	}

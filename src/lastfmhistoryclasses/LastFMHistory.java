@@ -18,6 +18,7 @@ public class LastFMHistory {
 	private int total;
 	private String tst = "tst";
 	private String file_name;
+	private long originDate;
 	
 	
 	
@@ -109,28 +110,20 @@ public class LastFMHistory {
 	public void iterateHistory(){
 		int i = 0;
 		long unixDate;
-		long originDate;
 		for (Track t: tracks){
 			
 			if(t.getPlayedWhen() != null){
-				System.out.println(t);
 				Date fullDate = t.getPlayedWhen();
-				System.out.println(fullDate);
-//				try {
-//					unixDate = fullDate.getTime();
-//					System.out.println(unixDate);
-////					if (i == 0){
-////						originDate = unixDate;
-////						i++;
-////					}
-//				} catch (Exception e){
-//					e.printStackTrace();
-//				}
-			
-				//System.out.println(fullDate  + " " + unixDate /*fullDate.getTime()*/);
+				unixDate = (fullDate.getTime() / 1000);
+				if (i == 0){
+						originDate = unixDate;
+						i++;
+					}
+				t.setCoordinates(unixDate, originDate);
+				System.out.println(t);
 			}
 		}
-		//System.out.println(originDate);
+		System.out.println(originDate);
 		
 	}
 	
