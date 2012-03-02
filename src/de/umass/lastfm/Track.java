@@ -25,6 +25,7 @@
  */
 package de.umass.lastfm;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
@@ -76,9 +77,7 @@ public class Track extends MusicEntry {
 	protected int duration;		// protected for use in Playlist.playlistFromElement
 	protected String location;	// protected for use in Playlist.playlistFromElement
 	
-	public int red;
-	public int blue;
-	public int green;
+	public Color color;
 	
 	public long graphHeight;
 	public long day;
@@ -691,6 +690,12 @@ public class Track extends MusicEntry {
 		scrobbleData.setTrack(trackName);
 		return updateNowPlaying(scrobbleData, session);
 	}
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
 
 	@Override
 	public String toString() {
@@ -748,10 +753,8 @@ public class Track extends MusicEntry {
 		}
 	}
 	
-	public void setColour(int red, int green, int blue){
-		this.red = red;
-		this.green = green;
-		this.blue = blue;
+	public void setColour(Color color){
+		this.color = color;
 	}
 	
 	public Track(String name, String artist, int duration, int red, int green, int blue){
@@ -768,6 +771,8 @@ public class Track extends MusicEntry {
 		this.day = (long)Math.floor(((unixDate - originDate) / 86400));
 		this.graphHeight = unixDate - (day*86400);
 	}
+
+	
 	
 	
 }
