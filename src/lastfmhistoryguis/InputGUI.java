@@ -49,7 +49,7 @@ public class InputGUI extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		username = new JTextField();
+		username = new JTextField("wizard710");
 		contentPane.add(username, BorderLayout.NORTH);
 		username.setColumns(10);
 		
@@ -77,9 +77,9 @@ public class InputGUI extends JFrame {
 	public void doHistory(){
 		String user = username.getText();
 		test.setUser(user);
-		test.getRecentTracks();
-		test.iterateHistory();
-		//test.getLibraryTracks();
+//		test.getRecentTracks();
+//		test.iterateHistory();
+		test.getLibraryTracks();
 		
 		
 	}
