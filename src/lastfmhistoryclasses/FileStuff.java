@@ -60,9 +60,9 @@ public class FileStuff {
 				    Track track = new Track(name, artist, duration, red, green, blue);
 				    library.add(track);
 				    
-				    
 			}
 		 }
+		 textReader.close();
 		 return library;
 	 }
 
@@ -76,25 +76,9 @@ public class FileStuff {
 		// FileWriter fr = new FileWriter(path);
 		// BufferedWriter out = new BufferedWriter(fr);
 		for (Track l : library) {
-			
-			int blue = (int)(Math.random() * 255);
-			//System.out.println(l);
-			
-			l.setColour(red, green, blue);
-			
 			String line = l.toFileString();
 			out.write(line);
 			out.newLine();
-			if (red == 255){
-				red = 0;
-			}else{
-			red++;
-			}
-			if (green == 0){
-				green = 255;
-			}else{
-			green--;
-			}
 		}
 	out.close();
 		// out.write(line);
