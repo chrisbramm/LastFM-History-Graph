@@ -2,6 +2,7 @@ package lastfmhistoryclasses;
 
 
 import java.util.*;
+import java.awt.Color;
 import java.io.*;
 
 import de.umass.lastfm.*;
@@ -12,8 +13,9 @@ import de.umass.xml.*;
 public class LastFMHistory {
 	private final static String API_KEY = "3c02b48004816856418a2c0b9a4e785b";;
 	private String user;
-	private Collection<Track> tracks;
+	private Collection<Track> history;
 	private Collection<Track> library;
+	private HashMap<Track, Color> colorMapping;
 	private int page;
 	private int total;
 	private String tst = "tst";
@@ -34,42 +36,68 @@ public class LastFMHistory {
 	}
 	
 	public Collection<Track> getLibraryTracks(){
-		//try{
-			//library = this.FileStuff.openFile(file_name);
-			//if (library.isEmpty() == true){
-			//	System.out.println("Library is not set");
-			//}
+		try{
+			library = FileStuff.openFile(file_name);
+			if (library.isEmpty() == true){
+				System.out.println("Library is not set");
+			}
 			
-		//}catch(FileNotFoundException e) {
+		}catch(FileNotFoundException e) {
 			try{
 				library = de.umass.lastfm.Library.getAllTracks(user, API_KEY);
 				FileStuff.saveFile(file_name, library);
+				int red = 0;
+				int green = 255;
+				int blue;
+				
+				for(Track l : library){
+
+					blue = (int)(Math.random() * 255);
+					
+					l.setColour(red, green, blue);
+
+					if (red == 255){
+						red = 0;
+					}else{
+					red++;
+					}
+					if (green == 0){
+						green = 255;
+					}else{
+					green--;
+					}
+					Color color = new Color(red, green, blue);
+					System.out.println(color);
+					
+					
+				}
 			}catch(IOException x){
 				System.out.println(x);
 			}
-		//}catch(IOException e){
-			//System.out.println(e.getMessage());
-		//}
+		}catch(IOException e){
+			System.out.println(e.getMessage());
+		}
 		System.out.println(library.size());
 		return library;
-		//}
 	}
 	
 	public Collection<Track> getRecentTracks() {
-		tracks = null;
+		history = new ArrayList<Track>();
 		page = 1;
 		int per_page = 50;
 		final long STARTTIME = System.currentTimeMillis();
 		do {
 			PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
+			
 			//PaginatedResult<Track> result = Library.getTracks(user, page, per_page, API_KEY);
 			total = /*result.getTotalPages()*/ 5;
 			Collection<Track> pageResults = result.getPageResults();
-			if (tracks == null) {
-				// tracks is initialized here to initialize it with the right size and avoid array copying later on
-				tracks = new ArrayList<Track>(total * pageResults.size());
+			for (Track t: pageResults){
+				Color colorOfOriginalMapping = colorMapping.get(t);
+				t.setColour(colorOfOriginalMapping);
 			}
-			tracks.addAll(pageResults);
+			
+			history.addAll(pageResults);
 			
 //			System.out.println("P: " + page + " " + result);
 //			for(Track t: result.getPageResults()){
@@ -87,8 +115,8 @@ public class LastFMHistory {
 		final long ENDTIME = System.currentTimeMillis();
 		final long DURATION = ENDTIME - STARTTIME;
 		System.out.println(DURATION);
-		System.out.println(tracks.size());
-		return tracks;
+		System.out.println(history.size());
+		return history;
 		
 	}
 	
@@ -110,7 +138,7 @@ public class LastFMHistory {
 	public void iterateHistory(){
 		int i = 0;
 		long unixDate;
-		for (Track t: tracks){
+		for (Track t: history){
 			
 			if(t.getPlayedWhen() != null){
 				Date fullDate = t.getPlayedWhen();
@@ -119,6 +147,7 @@ public class LastFMHistory {
 						originDate = unixDate;
 						i++;
 					}
+				
 				t.setCoordinates(unixDate, originDate);
 				System.out.println(t);
 			}
