@@ -42,11 +42,12 @@ public class FileStuff {
 		 
 		 Pattern p = Pattern.compile(REGEX);
 		 
-		 for (int i = 0; i<noOfLines; i++){
+		 System.out.println(noOfLines);
+		 
+		 for (int i = 0; i < noOfLines; i++){
 			 String line = textReader.readLine();
 			 Matcher m = p.matcher(line);
 			 boolean b = m.find();
-			 System.out.println(b);
 			 
 			 if (b == true) {
 				    String name = m.group(1);
@@ -95,7 +96,7 @@ public class FileStuff {
 			green--;
 			}
 		}
-
+	out.close();
 		// out.write(line);
 
 	}
