@@ -764,8 +764,9 @@ public class Track extends MusicEntry {
 	}
 	
 	public void setCoordinates(long unixDate, long originDate){
+		long day = (long)Math.floor(unixDate / 86400);
 		this.day = (long)Math.floor(((unixDate - originDate) / 86400));
-		this.graphHeight = (long)Math.IEEEremainder(unixDate, 86400);
+		this.graphHeight = unixDate - (day*86400);
 	}
 	
 	
