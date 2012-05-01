@@ -701,11 +701,11 @@ public class Track extends MusicEntry {
 	public String toString() {
 		return "Track[name=" + name + ",artist=" + artist + ",album=" + album + ",position=" + position + ",duration=" + duration
 				+ ",location=" + location + ",nowPlaying=" + nowPlaying + ",fullTrackAvailable=" + fullTrackAvailable + ",playedWhen="
-				+ playedWhen + ",artistMbId=" + artistMbid + ",albumMbId=" + albumMbid + ",red=" + red + ",green=" + green + ",blue=" + blue + ",day=" + day + ",graphHeight=" + graphHeight + "]";
+				+ playedWhen + ",artistMbId=" + artistMbid + ",albumMbId=" + albumMbid + ",color=" + color + ",day=" + day + ",graphHeight=" + graphHeight + "]";
 	}
 	
 	public String toFileString(){
-		return "Track[name=" + name + ",artist=" + artist + ",duration=" + duration + ",red=" + red + ",green=" + green + ",blue=" + blue + "]";
+		return "Track[name=" + name + ",artist=" + artist + ",duration=" + duration + ",color=" + color +"]";
 	}
 
 	private static class TrackFactory implements ItemFactory<Track> {
@@ -757,13 +757,11 @@ public class Track extends MusicEntry {
 		this.color = color;
 	}
 	
-	public Track(String name, String artist, int duration, int red, int green, int blue){
-		super(name);
+	public Track(String name, String url, String artist, Color color, int duration){
+		super(name, url);
 		this.artist = artist;
 		this.duration = duration;
-		this.red = red;
-		this.green = green;
-		this.blue = blue;
+		this.color = color;
 	}
 	
 	public void setCoordinates(long unixDate, long originDate){

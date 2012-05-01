@@ -31,7 +31,7 @@ public class FileStuff {
 		
 	}
 
-	 public static Collection<Track> openFile(String file_path) throws IOException{
+	 public static Collection<Track> openFile(String file_path) throws Exception{
 		 path = file_path;
 	
 		 FileReader fr = new FileReader(path);
@@ -57,7 +57,7 @@ public class FileStuff {
 				    int green = Integer.parseInt(m.group(5));
 				    int blue = Integer.parseInt(m.group(6));
 				    
-				    Track track = new Track(name, artist, duration, red, green, blue);
+				    Track track = new Track(name, null, artist, color, duration);
 				    library.add(track);
 				    
 			}

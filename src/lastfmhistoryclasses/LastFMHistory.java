@@ -53,9 +53,10 @@ public class LastFMHistory {
 				for(Track l : library){
 
 					blue = (int)(Math.random() * 255);
+					Color color = new Color(red, green, blue);
 					
-					l.setColour(red, green, blue);
-
+					l.setColour(color);
+					l.toFileString();
 					if (red == 255){
 						red = 0;
 					}else{
@@ -66,11 +67,9 @@ public class LastFMHistory {
 					}else{
 					green--;
 					}
-					Color color = new Color(red, green, blue);
 					System.out.println(color);
-					
-					
 				}
+				
 			}catch(IOException x){
 				System.out.println(x);
 			}
