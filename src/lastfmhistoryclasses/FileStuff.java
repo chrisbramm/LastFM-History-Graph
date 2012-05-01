@@ -31,7 +31,7 @@ public class FileStuff {
 		
 	}
 
-	 public static Collection<Track> openFile(String file_path) throws Exception{
+	 public static Collection<Track> openFile(String file_path) throws IOException{
 		 path = file_path;
 	
 		 FileReader fr = new FileReader(path);
