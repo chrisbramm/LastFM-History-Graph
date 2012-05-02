@@ -11,7 +11,7 @@ public class FileStuff {
 
 	private static String path;
 	private static final String REGEX = "name=(.*),artist=(.*),duration=(.*),red=(.*),green=(.*),blue=(.*)\\]";
-	private static final String REGEXColor = "name=(.*),artist=(.*),duration=(.*),color=java.awt.Color[r=(.*),g=(.*),b=(.*)";
+	private static final String REGEXColor = "name=(.*),artist=(.*),duration=(.*),color=java\\.awt\\.Color\\[r=(.*),g=(.*),b=(.*)\\]\\]";
 	public static Collection<Track> library = new HashSet<Track>(); 
 	
 	
