@@ -80,6 +80,7 @@ public class InputGUI extends JFrame {
 //		test.getRecentTracks();
 //		test.iterateHistory();
 		test.getLibraryTracks();
+		test.createHashmap();
 		
 		
 	}
