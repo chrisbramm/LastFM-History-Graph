@@ -3,6 +3,7 @@ package lastfmhistoryclasses;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.awt.Color;
 import java.io.*;
 import de.umass.lastfm.*;
 
@@ -10,6 +11,7 @@ public class FileStuff {
 
 	private static String path;
 	private static final String REGEX = "name=(.*),artist=(.*),duration=(.*),red=(.*),green=(.*),blue=(.*)\\]";
+	private static final String REGEXColor = "name=(.*),artist=(.*),duration=(.*),color=java.awt.Color[r=(.*),g=(.*),b=(.*)";
 	public static Collection<Track> library = new HashSet<Track>(); 
 	
 	
@@ -31,16 +33,15 @@ public class FileStuff {
 		
 	}
 
-	 public static Collection<Track> openFile(String file_path) throws IOException{
+	 public static Collection<Track> openFile(String file_path) throws FileNotFoundException, IOException{
 		 path = file_path;
 	
 		 FileReader fr = new FileReader(path);
 		 BufferedReader textReader = new BufferedReader(fr);
-	
 
 		 int noOfLines = readLines(path);
 		 
-		 Pattern p = Pattern.compile(REGEX);
+		 Pattern p = Pattern.compile(REGEXColor);
 		 
 		 System.out.println(noOfLines);
 		 
@@ -57,9 +58,11 @@ public class FileStuff {
 				    int green = Integer.parseInt(m.group(5));
 				    int blue = Integer.parseInt(m.group(6));
 				    
+				    Color color = new Color(red,green,blue);
+				    
 				    Track track = new Track(name, null, artist, color, duration);
 				    library.add(track);
-				    
+				    System.out.println(track);
 			}
 		 }
 		 textReader.close();

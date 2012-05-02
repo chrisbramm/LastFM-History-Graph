@@ -41,11 +41,9 @@ public class LastFMHistory {
 			if (library.isEmpty() == true){
 				System.out.println("Library is not set");
 			}
-			
 		}catch(FileNotFoundException e) {
 			try{
 				library = de.umass.lastfm.Library.getAllTracks(user, API_KEY);
-				FileStuff.saveFile(file_name, library);
 				int red = 0;
 				int green = 255;
 				int blue;
@@ -56,7 +54,6 @@ public class LastFMHistory {
 					Color color = new Color(red, green, blue);
 					
 					l.setColour(color);
-					l.toFileString();
 					if (red == 255){
 						red = 0;
 					}else{
@@ -67,9 +64,8 @@ public class LastFMHistory {
 					}else{
 					green--;
 					}
-					System.out.println(color);
 				}
-				
+				FileStuff.saveFile(file_name, library);
 			}catch(IOException x){
 				System.out.println(x);
 			}
