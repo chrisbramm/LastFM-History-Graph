@@ -769,8 +769,10 @@ public class Track extends MusicEntry {
 		this.day = (long)Math.floor(((unixDate - originDate) / 86400));
 		this.graphHeight = unixDate - (day*86400);
 	}
-
 	
+	public Color getColour(){
+		return color;	
+	}
 	
 	
 }
