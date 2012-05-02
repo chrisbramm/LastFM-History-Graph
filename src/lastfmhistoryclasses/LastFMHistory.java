@@ -75,6 +75,21 @@ public class LastFMHistory {
 		System.out.println(library.size());
 		return library;
 	}
+	public HashMap<Track, Color> createHashmap(){
+		
+		for(Track l : library){
+			Color color = l.getColour();
+			System.out.println(color);
+			
+		}
+		
+		
+		
+		colorMapping = null;
+		
+		return colorMapping;
+		
+	}
 	
 	public Collection<Track> getRecentTracks() {
 		history = new ArrayList<Track>();
