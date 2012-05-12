@@ -79,7 +79,10 @@ public class FileStuff {
 		// FileWriter fr = new FileWriter(path);
 		// BufferedWriter out = new BufferedWriter(fr);
 		for (Track l : library) {
-			String line = l.toFileString();
+			String hashName = l.getName();
+			String hashArtist = l.getArtist();
+			String hashString = hashName + hashArtist;
+			String line = l.toFileString() + ", "+ l.hashCode() + ", "+ hashString.hashCode();
 			out.write(line);
 			out.newLine();
 		}

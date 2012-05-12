@@ -15,7 +15,7 @@ public class LastFMHistory {
 	private String user;
 	private Collection<Track> history;
 	private Collection<Track> library;
-	private HashMap<Track, Color> colorMapping;
+	private HashMap<String, Color> colorMapping;
 	private int page;
 	private int total;
 	private String tst = "tst";
@@ -75,11 +75,15 @@ public class LastFMHistory {
 		System.out.println(library.size());
 		return library;
 	}
-	public HashMap<Track, Color> createHashmap(){
-		colorMapping = null;
+	public HashMap<String, Color> createHashmap(){
+		colorMapping = new HashMap();
 		for(Track l : library){
+			String hashName = l.getName();
+			String hashArtist = l.getArtist();
+			String hashString = hashName + hashArtist;
 			Color color = l.getColour();
-			colorMapping.put(l, color);
+			System.out.println(l + ", " + l.hashCode() + ", " + hashString.hashCode());
+			colorMapping.put(hashString, color);
 			
 		}
 		return colorMapping;
@@ -90,15 +94,31 @@ public class LastFMHistory {
 		page = 1;
 		int per_page = 50;
 		final long STARTTIME = System.currentTimeMillis();
+		int i = 0;
+		long unixDate;
 		do {
 			PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
 			
 			//PaginatedResult<Track> result = Library.getTracks(user, page, per_page, API_KEY);
-			total = /*result.getTotalPages()*/ 5;
+			total = /*result.getTotalPages()*/ 1;
 			Collection<Track> pageResults = result.getPageResults();
 			for (Track t: pageResults){
-				Color colorOfOriginalMapping = colorMapping.get(t);
+				String hashName = t.getName();
+				String hashArtist = t.getArtist();
+				String hashString = hashName + hashArtist;
+				Color colorOfOriginalMapping = colorMapping.get(hashString);
 				t.setColour(colorOfOriginalMapping);
+				
+				if(t.getPlayedWhen() != null){
+					Date fullDate = t.getPlayedWhen();
+					unixDate = (fullDate.getTime() / 1000);
+					if (i == 0){
+							originDate = unixDate;
+							i++;
+					}	
+					t.setCoordinates(unixDate, originDate);
+				}
+				System.out.println(t);
 			}
 			
 			history.addAll(pageResults);
