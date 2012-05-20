@@ -2,8 +2,11 @@ package lastfmhistoryclasses;
 
 
 import java.util.*;
-import java.awt.Color;
+import java.awt.*;
+import java.awt.geom.*;
+
 import java.io.*;
+import javax.swing.*;
 
 import de.umass.lastfm.*;
 import de.umass.util.*;
@@ -16,12 +19,15 @@ public class LastFMHistory {
 	private Collection<Track> history;
 	private Collection<Track> library;
 	private HashMap<String, Color> colorMapping;
+	private HashMap<String, Integer> durationMapping;
 	private int page;
 	private int total;
 	private String tst = "tst";
 	private String file_name;
 	private long originDate;
-	
+	private final static int PAD = 20;
+	private static final Graphics2D Graphics2D = null;
+	private static int dayMax;
 	
 	
 	public LastFMHistory(){
@@ -75,18 +81,30 @@ public class LastFMHistory {
 		System.out.println(library.size());
 		return library;
 	}
-	public HashMap<String, Color> createHashmap(){
+	public HashMap<String, Color> createColorHashmap(){
 		colorMapping = new HashMap();
 		for(Track l : library){
 			String hashName = l.getName();
 			String hashArtist = l.getArtist();
 			String hashString = hashName + hashArtist;
 			Color color = l.getColour();
-			System.out.println(l + ", " + l.hashCode() + ", " + hashString.hashCode());
+			//System.out.println(l + ", " + l.hashCode() + ", " + hashString.hashCode());
 			colorMapping.put(hashString, color);
 			
 		}
 		return colorMapping;
+	}
+	public HashMap<String, Integer> createDurationHashmap(){
+		durationMapping = new HashMap();
+		for(Track l : library){
+			String hashName = l.getName();
+			String hashArtist = l.getArtist();
+			String hashString = hashName + hashArtist;
+			int duration = l.getDuration();
+			//System.out.println(l + ", " + l.hashCode() + ", " + hashString.hashCode());
+			durationMapping.put(hashString, duration);
+		}
+		return durationMapping;
 	}
 	
 	public Collection<Track> getRecentTracks() {
@@ -107,7 +125,9 @@ public class LastFMHistory {
 				String hashArtist = t.getArtist();
 				String hashString = hashName + hashArtist;
 				Color colorOfOriginalMapping = colorMapping.get(hashString);
+				int duration = durationMapping.get(hashString);
 				t.setColour(colorOfOriginalMapping);
+				t.setDuration(duration);
 				
 				if(t.getPlayedWhen() != null){
 					Date fullDate = t.getPlayedWhen();
@@ -180,8 +200,13 @@ public class LastFMHistory {
 		
 	}
 	
-
-	
+	public void graphMax(){
+		for(Track t: history){
+			if(t.getDay() < dayMax){
+				dayMax = t.getDay();			
+			}
+		}	
+	}
 	
 }
 
