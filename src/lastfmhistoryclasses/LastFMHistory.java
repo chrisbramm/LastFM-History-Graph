@@ -16,7 +16,7 @@ import de.umass.xml.*;
 public class LastFMHistory {
 	private final static String API_KEY = "3c02b48004816856418a2c0b9a4e785b";;
 	private String user;
-	private Collection<Track> history;
+	public Collection<Track> history;
 	private Collection<Track> library;
 	private HashMap<String, Color> colorMapping;
 	private HashMap<String, Integer> durationMapping;
@@ -24,10 +24,8 @@ public class LastFMHistory {
 	private int total;
 	private String tst = "tst";
 	private String file_name;
-	private long originDate;
-	private final static int PAD = 20;
-	private static final Graphics2D Graphics2D = null;
-	private static int dayMax;
+	public long originDate;
+	public static int dayMax;
 	
 	
 	public LastFMHistory(){
