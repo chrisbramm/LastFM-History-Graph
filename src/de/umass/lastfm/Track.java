@@ -773,6 +773,12 @@ public class Track extends MusicEntry {
 	public Color getColour(){
 		return color;	
 	}
+	public int getDay(){
+		return (int)day;	
+	}
+	public void setDuration(int d){
+		this.duration = d;
+	}
 	
 	
 }
