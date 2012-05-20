@@ -73,12 +73,14 @@ public class InputGUI extends JFrame {
 		
 		test = new LastFMHistory();
 	}
+
 	
 	public void doHistory(){
 		String user = username.getText();
 		test.setUser(user);
 		test.getLibraryTracks();
-		test.createHashmap();
+		test.createColorHashmap();
+		test.createDurationHashmap();
 		test.getRecentTracks();
 //		test.iterateHistory();
 		
