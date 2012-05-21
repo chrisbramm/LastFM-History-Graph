@@ -15,16 +15,23 @@ import de.umass.lastfm.Track;
 import lastfmhistoryclasses.LastFMHistory;
 
 public class OutputGUI extends JPanel{
-	private final static int PAD = 20;
+	private static int PAD = 20;
+	
 
 	
 	public void paintComponent(Graphics g){
 		Graphics2D graph = (Graphics2D)g;
+		
+		int panelWidth = getWidth() - 2*PAD;
+		int panelHeight = getHeight() - 2*PAD;
+		
+		System.out.println(panelWidth + ", " + panelHeight);
+		
 		int w = 1200;
 		int h = 800;
 		int x0 = w - PAD;
-		graph.draw(new Rectangle2D.Double(PAD, PAD, w-2*PAD, h-2*PAD));
-		double xInc = (double)(w - 2*PAD)/(Math.abs(dayMax));
+		graph.draw(new Rectangle2D.Double(PAD, PAD, panelWidth, panelHeight));
+		/*double xInc = (double)(w - 2*PAD)/(Math.abs(dayMax));
 		double secondHeight = (double)(h - 2*PAD)/86400;
 		for(Track t: history){
 			Color color = t.getColour();
@@ -32,7 +39,7 @@ public class OutputGUI extends JPanel{
 			int day = t.getDay();
 			
 		
-		}
+		}*/
 	}
 	
 }

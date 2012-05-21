@@ -3,7 +3,9 @@ package lastfmhistoryguis;
 import lastfmhistoryclasses.*;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,11 +23,19 @@ public class InputGUI extends JFrame {
 	private JPanel contentPane;
 	private JTextField username;
 	private JButton btnDeleteLibraryFile;
-
+	private static final int SCREENPAD = 15;
+	
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		Toolkit tk = Toolkit.getDefaultToolkit();
+		Dimension d = tk.getScreenSize();
+		
+		int screenHeight = (int)d.getHeight() - 2*SCREENPAD - 50;
+		int screenWidth = (int)d.getWidth() - 2*SCREENPAD;
+		
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -36,6 +46,13 @@ public class InputGUI extends JFrame {
 				}
 			}
 		});
+		JFrame f = new JFrame();
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.add(new OutputGUI());
+		f.setSize(screenWidth, screenHeight);
+		//f.setExtendedState(MAXIMISED_BOTH);
+		f.setLocation(20, 20);
+		f.setVisible(true);
 	}
 
 	/**
