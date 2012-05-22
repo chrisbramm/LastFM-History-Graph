@@ -43,7 +43,7 @@ public class FileStuff {
 		 
 		 Pattern p = Pattern.compile(REGEXColor);
 		 
-		 System.out.println(noOfLines);
+		 //System.out.println("# of lines: " + noOfLines);
 		 
 		 for (int i = 0; i < noOfLines; i++){
 			 String line = textReader.readLine();
@@ -62,7 +62,6 @@ public class FileStuff {
 				    
 				    Track track = new Track(name, null, artist, color, duration);
 				    library.add(track);
-				    System.out.println(track);
 			}
 		 }
 		 textReader.close();
