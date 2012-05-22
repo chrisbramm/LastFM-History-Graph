@@ -25,7 +25,7 @@ public class LastFMHistory {
 	private String tst = "tst";
 	private String file_name;
 	public long originDate;
-	public static int dayMax;
+	public int dayMax;
 	
 	
 	public LastFMHistory(){
@@ -76,7 +76,7 @@ public class LastFMHistory {
 		}catch(IOException e){
 			System.out.println(e.getMessage());
 		}
-		System.out.println(library.size());
+		//System.out.println("Library size: " + library.size());
 		return library;
 	}
 	public HashMap<String, Color> createColorHashmap(){
@@ -201,9 +201,12 @@ public class LastFMHistory {
 	public void graphMax(){
 		for(Track t: history){
 			if(t.getDay() < dayMax){
-				dayMax = t.getDay();			
+				dayMax = t.getDay();
+				
 			}
-		}	
+		}
+		dayMax = Math.abs(dayMax) + 1;
+		System.out.println(dayMax);
 	}
 	
 }

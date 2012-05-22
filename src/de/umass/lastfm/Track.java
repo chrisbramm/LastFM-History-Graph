@@ -779,6 +779,8 @@ public class Track extends MusicEntry {
 	public void setDuration(int d){
 		this.duration = d;
 	}
-	
+	public long getGraphHeight(){
+		return (long)graphHeight;
+	}
 	
 }
