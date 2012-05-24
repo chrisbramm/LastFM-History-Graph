@@ -81,6 +81,8 @@ public class Track extends MusicEntry {
 	
 	public long graphHeight;
 	public long day;
+	
+	public final int SECDAY = 86400;
 
 	protected Map<String, String> lastFmExtensionInfos = new HashMap<String, String>();		// protected for use in Playlist.playlistFromElement
 
@@ -765,9 +767,24 @@ public class Track extends MusicEntry {
 	}
 	
 	public void setCoordinates(long unixDate, long originDate){
-		long day = (long)Math.floor(unixDate / 86400);
-		this.day = (long)Math.floor(((unixDate - originDate) / 86400));
-		this.graphHeight = unixDate - (day*86400);
+		
+		
+		long originDay = (long)Math.floor(originDate / 86400);
+		long originDayStart = originDay *SECDAY;
+		long dateDiff = unixDate - originDayStart;
+		double dayDouble = (double)dateDiff / 86400;
+		int daySet = (int)Math.floor(dayDouble);
+		
+		long dayStart = originDayStart - (-1*daySet * SECDAY);
+		int graphHeight = (int)unixDate - (int)dayStart;
+		
+		//System.out.println(unixDate  + ", " + originDate  + ", " + originDay + ", " + originDayStart  + ", " + dateDiff + ", " + dayDouble + ", " + daySet);
+		
+		this.day = daySet;
+		this.graphHeight = graphHeight;
+		
+		
+		
 	}
 	
 	public Color getColour(){
