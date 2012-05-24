@@ -30,7 +30,7 @@ public class LastFMHistory {
 	
 	public LastFMHistory(){
 		Caller.getInstance().setUserAgent(tst);
-		Caller.getInstance().setDebugMode(false);
+		Caller.getInstance().setDebugMode(true);
 	}
 	
 	public void setUser(String user){
@@ -109,34 +109,50 @@ public class LastFMHistory {
 		history = new ArrayList<Track>();
 		page = 1;
 		int per_page = 50;
-		final long STARTTIME = System.currentTimeMillis();
 		int i = 0;
 		long unixDate;
 		do {
 			PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
 			
 			//PaginatedResult<Track> result = Library.getTracks(user, page, per_page, API_KEY);
-			total = /*result.getTotalPages()*/ 1;
+			total = /*result.getTotalPages()*/ 5;
 			Collection<Track> pageResults = result.getPageResults();
 			for (Track t: pageResults){
 				String hashName = t.getName();
 				String hashArtist = t.getArtist();
 				String hashString = hashName + hashArtist;
-				Color colorOfOriginalMapping = colorMapping.get(hashString);
-				int duration = durationMapping.get(hashString);
-				t.setColour(colorOfOriginalMapping);
-				t.setDuration(duration);
+				try{
+					Color colorOfOriginalMapping = colorMapping.get(hashString);
+					t.setColour(colorOfOriginalMapping);
+				}catch(Exception e){
+					System.out.println(e);
+				}
+				
+				try{
+					int duration = durationMapping.get(hashString);
+					t.setDuration(duration);
+				}catch (Exception e){
+					t.setDuration(60);
+					System.out.println(e);
+				}
+				
+				
 				
 				if(t.getPlayedWhen() != null){
 					Date fullDate = t.getPlayedWhen();
-					unixDate = (fullDate.getTime() / 1000);
+					unixDate = fullDate.getTime() / 1000;
+					int offset = fullDate.getTimezoneOffset();
+					unixDate = unixDate - offset*60;
 					if (i == 0){
-							originDate = unixDate;
-							i++;
-					}	
+						originDate = unixDate;
+						i++;
+					}
+					
 					t.setCoordinates(unixDate, originDate);
+					System.out.println(t);
+					
 				}
-				System.out.println(t);
+				
 			}
 			
 			history.addAll(pageResults);
@@ -154,30 +170,28 @@ public class LastFMHistory {
 				}
 			}
 		} while (page <= total);
-		final long ENDTIME = System.currentTimeMillis();
-		final long DURATION = ENDTIME - STARTTIME;
-		System.out.println(DURATION);
+		
 		System.out.println(history.size());
 		return history;
 		
 	}
 	
-//	public void getHistory(){
-//		de.umass.lastfm.Library.getAllTracks(user, apiKey);
-//		
-//		System.out.println(history.size());
-//	}
-//	
-//	public void iterateHistory(){
-//		Iterator<Track> tracksItr = tracks.iterator();
-//		while(tracksItr.hasNext()){
-//			
-//			String title = tracks.get(name)
-//			
-//			System.out.println(tracksItr.next());
-//		}
+	/*public void getHistory(){
+		de.umass.lastfm.Library.getAllTracks(user, apiKey);
+		
+		System.out.println(history.size());
+	}
 	
 	public void iterateHistory(){
+		Iterator<Track> tracksItr = tracks.iterator();
+		while(tracksItr.hasNext()){
+			
+			String title = tracks.get(name)
+			
+			System.out.println(tracksItr.next());
+		}*/
+	
+	/*public void iterateHistory(){
 		int i = 0;
 		long unixDate;
 		for (Track t: history){
@@ -196,7 +210,7 @@ public class LastFMHistory {
 		}
 		System.out.println(originDate);
 		
-	}
+	}*/
 	
 	public void graphMax(){
 		for(Track t: history){
@@ -206,7 +220,7 @@ public class LastFMHistory {
 			}
 		}
 		dayMax = Math.abs(dayMax) + 1;
-		System.out.println(dayMax);
+		//System.out.println(dayMax);
 	}
 	
 }
