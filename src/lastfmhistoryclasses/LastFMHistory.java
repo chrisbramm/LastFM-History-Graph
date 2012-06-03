@@ -6,7 +6,10 @@ import java.awt.*;
 import java.awt.geom.*;
 
 import java.io.*;
+
 import javax.swing.*;
+
+import org.xml.sax.SAXParseException;
 
 import de.umass.lastfm.*;
 import de.umass.util.*;
@@ -23,7 +26,7 @@ public class LastFMHistory {
 	private int page;
 	private int total;
 	private String tst = "tst";
-	private String file_name;
+	//private String file_name;
 	public long originDate;
 	public int dayMax;
 	
@@ -35,11 +38,12 @@ public class LastFMHistory {
 	
 	public void setUser(String user){
 		this.user = user;
-		this.file_name = user + ".txt";
+		
 		System.out.println(this.user);
 	}
 	
 	public Collection<Track> getLibraryTracks(){
+		String file_name = user + "_library.txt";
 		try{
 			library = FileStuff.openFile(file_name);
 			if (library.isEmpty() == true){
@@ -53,7 +57,7 @@ public class LastFMHistory {
 				int blue;
 				
 				for(Track l : library){
-
+					System.out.println(l);
 					blue = (int)(Math.random() * 255);
 					Color color = new Color(red, green, blue);
 					
@@ -106,72 +110,97 @@ public class LastFMHistory {
 	}
 	
 	public Collection<Track> getRecentTracks() {
+		String file_name = user + "_history1.txt";
 		history = new ArrayList<Track>();
 		page = 1;
 		int per_page = 50;
 		int i = 0;
 		long unixDate;
-		do {
-			PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
-			
-			//PaginatedResult<Track> result = Library.getTracks(user, page, per_page, API_KEY);
-			total = /*result.getTotalPages()*/ 5;
-			Collection<Track> pageResults = result.getPageResults();
-			for (Track t: pageResults){
-				String hashName = t.getName();
-				String hashArtist = t.getArtist();
-				String hashString = hashName + hashArtist;
-				try{
-					Color colorOfOriginalMapping = colorMapping.get(hashString);
-					t.setColour(colorOfOriginalMapping);
+		/*try{
+			history = FileStuff.openFile(file_name);
+			for (Track h : history){
+				System.out.println("History Track Name: " + h.getName());
+			}
+			System.out.println("LOLOLOL I'M READING THE HISTORY");
+			if (history.isEmpty() == true){
+				System.out.println("Library is not set");
+			}
+		}catch(FileNotFoundException x){*/
+			do {
+				try {
+					PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
+					total = /*result.getTotalPages();*/ 5;
+					System.out.println(total + ", " + page);
+					Collection<Track> pageResults = result.getPageResults();
+					for (Track t: pageResults){
+						String hashName = t.getName();
+						String hashArtist = t.getArtist();
+						String hashString = hashName + hashArtist;
+						try{
+							Color colorOfOriginalMapping = colorMapping.get(hashString);
+							t.setColour(colorOfOriginalMapping);
+						}catch(Exception e){
+							System.err.println(e + "Could not find track in colorMapping");
+						}
+
+						try{
+							int duration = durationMapping.get(hashString);
+							t.setDuration(duration);
+						}catch (Exception e){
+							t.setDuration(60);
+							System.err.println(e + ", " + t + " Could not find track in durationMapping");
+						}
+						//Pull out date of when played and then use it to set the coordinates for the graph		
+						if(t.getPlayedWhen() != null){
+							Date fullDate = t.getPlayedWhen();
+							Calendar fullDateCalendar = Calendar.getInstance();
+							fullDateCalendar.setTime(fullDate);
+							TimeZone timeZone = fullDateCalendar.getTimeZone();
+							//System.out.println(timeZone + ", " + timeZone.getDSTSavings() + ", " + timeZone.inDaylightTime(fullDate));
+							int timeZoneOffset = timeZone.getRawOffset();
+							unixDate = (fullDate.getTime() + timeZoneOffset) / 1000;
+
+							//This Section corrects for being in DST
+							if(timeZone.inDaylightTime(fullDate) == true){
+								int dSTOffset = timeZone.getDSTSavings() / 1000;
+								unixDate = unixDate + dSTOffset;
+							}
+
+							if (i == 0){
+								originDate = unixDate;
+								i++;
+							}
+							t.setCoordinates(unixDate, originDate);
+							//System.out.println(t);
+						}
+					}
+					history.addAll(pageResults);
+
+
+					if(page % 10 == 0){
+						try {
+							Thread.sleep(5000);
+						}catch (InterruptedException ex) {
+							System.out.println("Error! :(");
+						}
+					}
 				}catch(Exception e){
 					System.out.println(e);
 				}
-				
-				try{
-					int duration = durationMapping.get(hashString);
-					t.setDuration(duration);
-				}catch (Exception e){
-					t.setDuration(60);
-					System.out.println(e);
-				}
-				
-				
-				
-				if(t.getPlayedWhen() != null){
-					Date fullDate = t.getPlayedWhen();
-					unixDate = fullDate.getTime() / 1000;
-					int offset = fullDate.getTimezoneOffset();
-					unixDate = unixDate - offset*60;
-					if (i == 0){
-						originDate = unixDate;
-						i++;
-					}
-					
-					t.setCoordinates(unixDate, originDate);
-					System.out.println(t);
-					
-				}
-				
-			}
-			
-			history.addAll(pageResults);
-			
-//			System.out.println("P: " + page + " " + result);
-//			for(Track t: result.getPageResults()){
-//				System.out.println(t.getArtist() + "\t" + t.getName() + "\t" + t.getPlayedWhen());
-//			}
-			page++;
-			if(page % 10 == 0){
+				page++;
 				try {
-					Thread.sleep(5000);
-				}catch (InterruptedException ex) {
-					System.out.println("Error! :(");
+					FileStuff.saveFile(file_name, history);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-			}
-		} while (page <= total);
+			} while (page <= total);
+		/*}catch(IOException x){
+			System.err.println(x);
+		}*/
+			
+		System.out.println("History Size:" + history.size());
 		
-		System.out.println(history.size());
 		return history;
 		
 	}
