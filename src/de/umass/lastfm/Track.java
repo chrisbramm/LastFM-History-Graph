@@ -74,6 +74,7 @@ public class Track extends MusicEntry {
 	private boolean nowPlaying;
 
 	private Date playedWhen;
+	public long playedTime;
 	protected int duration;		// protected for use in Playlist.playlistFromElement
 	protected String location;	// protected for use in Playlist.playlistFromElement
 	
@@ -86,12 +87,14 @@ public class Track extends MusicEntry {
 
 	protected Map<String, String> lastFmExtensionInfos = new HashMap<String, String>();		// protected for use in Playlist.playlistFromElement
 
-
+	
+	//Constructor of Name, URL and Artist
 	protected Track(String name, String url, String artist) {
 		super(name, url);
 		this.artist = artist;
 	}
-
+	
+	//Full Constructor
 	protected Track(String name, String url, String mbid, int playcount, int listeners, boolean streamable,
 					String artist, String artistMbid, boolean fullTrackAvailable, boolean nowPlaying) {
 		super(name, url, mbid, playcount, listeners, streamable);
@@ -99,6 +102,22 @@ public class Track extends MusicEntry {
 		this.artistMbid = artistMbid;
 		this.fullTrackAvailable = fullTrackAvailable;
 		this.nowPlaying = nowPlaying;
+	}
+	// Constructor for Rebuilding the library
+	public Track(String name, String url, String artist, Color color, int duration){
+		super(name, url);
+		this.artist = artist;
+		this.duration = duration;
+		this.color = color;
+	}
+	// Constructor for rebuilding history
+	public Track(String name, String url, String artist, Color color, int duration, int day, int graphHeight){
+		super(name, url);
+		this.artist = artist;
+		this.duration = duration;
+		this.color = color;
+		this.day = (long)day;
+		this.graphHeight = (long)graphHeight;
 	}
 
 	/**
@@ -177,6 +196,14 @@ public class Track extends MusicEntry {
 	 */
 	public Date getPlayedWhen() {
 		return playedWhen;
+	}
+	
+	public void setPlayedWhen(Date date){
+		this.playedWhen = date;
+	}
+	
+	public long getPlayedTime(){
+		return playedTime;
 	}
 
 	/**
@@ -703,11 +730,11 @@ public class Track extends MusicEntry {
 	public String toString() {
 		return "Track[name=" + name + ",artist=" + artist + ",album=" + album + ",position=" + position + ",duration=" + duration
 				+ ",location=" + location + ",nowPlaying=" + nowPlaying + ",fullTrackAvailable=" + fullTrackAvailable + ",playedWhen="
-				+ playedWhen + ",artistMbId=" + artistMbid + ",albumMbId=" + albumMbid + ",color=" + color + ",day=" + day + ",graphHeight=" + graphHeight + "]";
+				+ playedWhen + ",playedTime=" + playedTime + ",artistMbId=" + artistMbid + ",albumMbId=" + albumMbid + ",color=" + color + ",day=" + day + ",graphHeight=" + graphHeight + "]";
 	}
 	
 	public String toFileString(){
-		return "Track[name=" + name + ",artist=" + artist + ",duration=" + duration + ",color=" + color +"]";
+		return "Track[name=" + name + ",artist=" + artist + ",duration=" + duration + ",color=" + color + ",day=" + day + ",graphHeight=" + graphHeight + "]";
 	}
 
 	private static class TrackFactory implements ItemFactory<Track> {
@@ -745,6 +772,7 @@ public class Track extends MusicEntry {
 				String uts = date.getAttribute("uts");
 				long utsTime = Long.parseLong(uts);
 				track.playedWhen = new Date(utsTime * 1000);
+				track.playedTime = utsTime;
 			}
 			DomElement stream = element.getChild("streamable");
 			if (stream != null) {
@@ -759,12 +787,7 @@ public class Track extends MusicEntry {
 		this.color = color;
 	}
 	
-	public Track(String name, String url, String artist, Color color, int duration){
-		super(name, url);
-		this.artist = artist;
-		this.duration = duration;
-		this.color = color;
-	}
+	
 	
 	public void setCoordinates(long unixDate, long originDate){
 		
