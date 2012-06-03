@@ -1,5 +1,8 @@
 package lastfmhistoryclasses;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,8 +14,8 @@ public class FileStuff {
 
 	private static String path;
 	private static final String REGEX = "name=(.*),artist=(.*),duration=(.*),red=(.*),green=(.*),blue=(.*)\\]";
-	private static final String REGEXColor = "name=(.*),artist=(.*),duration=(.*),color=java\\.awt\\.Color\\[r=(.*),g=(.*),b=(.*)\\]\\]";
-	public static Collection<Track> library = new HashSet<Track>(); 
+	private static final String REGEXColor = "name=(.*),artist=(.*),duration=(.*),color=java\\.awt\\.Color\\[r=(.*),g=(.*),b=(.*)\\]\\,day=(.*),graphHeight=(.*)]";
+	public static Collection<Track> collection = new HashSet<Track>(); 
 	
 	
 	private static int readLines(String file_path) throws IOException {
@@ -51,27 +54,60 @@ public class FileStuff {
 			 boolean b = m.find();
 			 
 			 if (b == true) {
+				 	
 				    String name = m.group(1);
 				    String artist = m.group(2);
+				   				    
 				    int duration = Integer.parseInt(m.group(3));
 				    int red = Integer.parseInt(m.group(4));
 				    int green = Integer.parseInt(m.group(5));
 				    int blue = Integer.parseInt(m.group(6));
-				    
 				    Color color = new Color(red,green,blue);
+				    int day = Integer.parseInt(m.group(7));
+				    int graphHeight = Integer.parseInt(m.group(8));
 				    
-				    Track track = new Track(name, null, artist, color, duration);
-				    library.add(track);
+				    /*if(!dateString.equals("null")){
+				    	System.out.println(dateString);
+				        DateFormat format = DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.FULL);
+				        try {
+				        	Date playedWhen = format.parse(dateString);
+				        	System.out.println(playedWhen);
+				        	Track track = new Track (name, null, artist, color, duration, playedWhen);
+				        	System.out.println(track);
+						    library.add(track);
+				        } catch (ParseException e) {
+				        	// TODO Auto-generated catch block
+				        	System.err.println(e);
+				        }
+				    }*/
+				    
+				    if(graphHeight != 0){
+				    	Track track = new Track(name, null, artist, color, duration, day, graphHeight);
+				    	System.out.println("History Track " + track);
+				    	collection.add(track);
+				    }else{
+				    	Track track = new Track(name, null, artist, color, duration);
+				    	System.out.println("Library Track " + track);
+					    collection.add(track);
+				    }
+				    
+				    
+				    //SimpleDateFormat date = new SimpleDateFormat(m.group(3));
+				    //Date playedWhen = parse(date);
+				    
+				    
+				    
+				   
+				    
 			}
 		 }
 		 textReader.close();
-		 return library;
+		 return collection;
 	 }
 
 	public static void saveFile(String file_path, Collection<Track> library) throws IOException {
 		path = file_path;
-		int red = 0;
-		int green = 255;
+		
 		
 		File file = new File(path);
 		BufferedWriter out = new BufferedWriter(new FileWriter(file));
@@ -81,6 +117,9 @@ public class FileStuff {
 			String hashName = l.getName();
 			String hashArtist = l.getArtist();
 			String hashString = hashName + hashArtist;
+			//System.out.println("Save File: Played When: " + l.getPlayedWhen());
+			//Date playedWhen = l.getPlayedWhen();
+			//long playedTime = playedWhen.getTime();
 			String line = l.toFileString() + ", "+ l.hashCode() + ", "+ hashString.hashCode();
 			out.write(line);
 			out.newLine();
