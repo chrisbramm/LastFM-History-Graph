@@ -4,16 +4,17 @@ import lastfmhistoryclasses.*;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.EventQueue;
+
 import java.awt.Toolkit;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-
 import javax.swing.*;
+import javax.swing.border.*;
+import javax.swing.JFrame;
+
+
+
+
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,7 +26,8 @@ public class InputPanel extends JFrame {
 	private JButton btnDeleteLibraryFile;
 	private OutputPanel outputFrame;
 	private static final int SCREENPAD = 15;
-	
+	private static int screenHeight;
+	private static int screenWidth;
 	
 
 	/**
@@ -34,30 +36,35 @@ public class InputPanel extends JFrame {
 	public static void main(String[] args) {
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension d = tk.getScreenSize();
+		
+		JFrame outputFrame = new JFrame();
+		OutputPanel outputCanvas = new OutputPanel();
+		InputPanel inputFrame = new InputPanel(outputCanvas);
+		LastFMHistory data = inputFrame.getHistory();
+		JScrollPane scrollOutput = new JScrollPane(outputCanvas);
+		scrollOutput.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		scrollOutput.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 
-		int screenHeight = (int) d.getHeight() - 2 * SCREENPAD - 50;
-		int screenWidth = (int) d.getWidth() - 2 * SCREENPAD;
+		outputFrame.add(scrollOutput);
 		
-		OutputPanel gui = new OutputPanel();
-		gui.setVisible(true);
-		InputPanel frame = new InputPanel(gui);
-//		
-		JFrame f = new JFrame();
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		LastFMHistory data = frame.getHistory();
-		f.setSize(screenWidth, screenHeight);
+		screenHeight = (int) d.getHeight() - 2 * SCREENPAD - 50;
+		screenWidth = (int) d.getWidth() - 2 * SCREENPAD;
+		outputFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//outputFrame.setSize(200, 200);
 		
 		
-		JScrollPane scrollOutput = new JScrollPane(gui);
 		//scrollOutput.add(gui);
-		scrollOutput.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		f.add(scrollOutput);
 		// f.setExtendedState(MAXIMISED_BOTH);
-		f.setLocation(20, 20);
-		f.setVisible(true);
+		outputFrame.setLocation(20, 20);
+		outputFrame.setVisible(true);
 	
 		//By leaving frame.setVisible down here, it creates the input window on top of the output window
-		frame.setVisible(true);
+		inputFrame.setVisible(true);
+		outputCanvas.setVisible(true);
+		//scrollOutput.setSize(screenWidth, screenHeight);
+
+		
+
 	}
 
 	/**
@@ -80,6 +87,8 @@ public class InputPanel extends JFrame {
 		btnGetHistory.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				outputFrame.setData(doHistory());
+				outputFrame.invalidate();
+				outputFrame.setSize(screenWidth, screenHeight);
 			};
 		});
 

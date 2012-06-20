@@ -40,9 +40,9 @@ public class OutputPanel extends JPanel {
 
 			panelWidth = getWidth() - 4* PAD;
 			//int panelHeight = getHeight() - 2 * PAD;
-			panelHeight = 2000 - 2 * PAD;
+			panelHeight = 6000 - 2 * PAD;
 			
-
+			//graph.setClip(0, 0, getWidth(), 2000);
 			System.out.println(panelWidth + ", " + panelHeight);
 
 			
