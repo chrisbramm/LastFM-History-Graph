@@ -28,7 +28,17 @@ public class OutputPanel extends JPanel {
 		repaint();
 
 	}
-
+	
+	public void setTrack(String name){
+		for(Track track: data.history){
+			if(!track.getName().equals(name)){
+				data.history.remove(track);
+			}
+		}
+		repaint();
+		
+	}
+	
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		//System.out.println("Drawing");
@@ -37,15 +47,12 @@ public class OutputPanel extends JPanel {
 		if (data == null) {
 			System.err.println("No data found");
 		} else {
-
 			panelWidth = getWidth() - 4* PAD;
-			//int panelHeight = getHeight() - 2 * PAD;
-			panelHeight = 6000 - 2 * PAD;
-			
+			int panelHeight = getHeight() - 2 * PAD;
+			//panelHeight = 6000 - 2 * PAD;
 			//graph.setClip(0, 0, getWidth(), 2000);
 			System.out.println(panelWidth + ", " + panelHeight);
-
-			
+		
 			int x0 = panelWidth + PAD;
 			graph.draw(new Rectangle2D.Double(PAD, PAD, panelWidth, panelHeight));
 			double xInc = (double) (panelWidth) / (data.dayMax);
@@ -78,8 +85,6 @@ public class OutputPanel extends JPanel {
 			}
 		}
 	}
-	public Dimension getPreferredSize(){
-		return new Dimension((int)panelWidth, (int)panelHeight);
-	}
+	
 
 }

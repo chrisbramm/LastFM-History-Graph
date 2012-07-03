@@ -3,13 +3,17 @@ package lastfmhistoryguis;
 import lastfmhistoryclasses.*;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.Dimension;
 
 import java.awt.Toolkit;
 
 import javax.swing.*;
 import javax.swing.border.*;
+import javax.swing.text.Document;
 import javax.swing.JFrame;
+
+import sas.samples.AutoCompleteDocument;
 
 
 
@@ -17,10 +21,12 @@ import javax.swing.JFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class InputPanel extends JFrame {
 
-	private LastFMHistory test;
+	public LastFMHistory test;
 	private JPanel contentPane;
 	private JTextField username;
 	private JButton btnDeleteLibraryFile;
@@ -36,33 +42,64 @@ public class InputPanel extends JFrame {
 	public static void main(String[] args) {
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension d = tk.getScreenSize();
+		screenHeight = (int) d.getHeight() - 2 * SCREENPAD - 50;
+		screenWidth = (int) d.getWidth() - 2 * SCREENPAD;
+		
 		
 		JFrame outputFrame = new JFrame();
+		outputFrame.setSize(screenWidth, screenHeight);
 		OutputPanel outputCanvas = new OutputPanel();
 		InputPanel inputFrame = new InputPanel(outputCanvas);
 		LastFMHistory data = inputFrame.getHistory();
 		JScrollPane scrollOutput = new JScrollPane(outputCanvas);
 		scrollOutput.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		scrollOutput.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		scrollOutput.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-		outputFrame.add(scrollOutput);
+		JPanel bottomPanel = new JPanel();
 		
-		screenHeight = (int) d.getHeight() - 2 * SCREENPAD - 50;
-		screenWidth = (int) d.getWidth() - 2 * SCREENPAD;
+		//**
+		// Create the autocomplete track box
+		//*
+		
+		//TODO - Pass Data into nameService
+		List<String> testComplete = new ArrayList<String>();
+		testComplete.add("Sequile - Ronny K. Emotion Mix");
+		NameService nameService = new NameService(testComplete);
+		JTextField trackInput = new JTextField("Track");
+		Document autoCompleteDocument = new AutoCompleteDocument(nameService, trackInput);
+		trackInput.setDocument(autoCompleteDocument);
+	
+		
+		trackInput.setColumns(25);
+		bottomPanel.add(trackInput);
+		
+		
+		
+		JButton trackGo = new JButton("Track");
+		trackGo.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		bottomPanel.add(trackGo);
+		
+		outputFrame.add(bottomPanel, BorderLayout.SOUTH);
+		outputFrame.add(scrollOutput, BorderLayout.CENTER);
 		outputFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//outputFrame.setSize(200, 200);
 		
-		
-		//scrollOutput.add(gui);
 		// f.setExtendedState(MAXIMISED_BOTH);
-		outputFrame.setLocation(20, 20);
+		outputFrame.setLocation(20, 20); 
 		outputFrame.setVisible(true);
 	
 		//By leaving frame.setVisible down here, it creates the input window on top of the output window
 		inputFrame.setVisible(true);
 		outputCanvas.setVisible(true);
 		//scrollOutput.setSize(screenWidth, screenHeight);
-
+		
+		
 		
 
 	}
@@ -114,6 +151,8 @@ public class InputPanel extends JFrame {
 		test.createDurationHashmap();
 		test.getRecentTracks();
 		test.graphMax();
+//		test.getTrackList();
+//		test.getArtistList();
 		return test;
 
 	}

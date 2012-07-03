@@ -2,6 +2,7 @@ package lastfmhistoryclasses;
 
 
 import java.util.*;
+import java.util.List;
 import java.awt.*;
 import java.awt.geom.*;
 
@@ -29,6 +30,9 @@ public class LastFMHistory {
 	//private String file_name;
 	public long originDate;
 	public int dayMax;
+	
+	public List<String> artists = new ArrayList<String>();
+	public List<String> tracks = new ArrayList<String>();
 	
 	
 	public LastFMHistory(){
@@ -83,6 +87,7 @@ public class LastFMHistory {
 		//System.out.println("Library size: " + library.size());
 		return library;
 	}
+	
 	public HashMap<String, Color> createColorHashmap(){
 		colorMapping = new HashMap();
 		for(Track l : library){
@@ -205,42 +210,6 @@ public class LastFMHistory {
 		
 	}
 	
-	/*public void getHistory(){
-		de.umass.lastfm.Library.getAllTracks(user, apiKey);
-		
-		System.out.println(history.size());
-	}
-	
-	public void iterateHistory(){
-		Iterator<Track> tracksItr = tracks.iterator();
-		while(tracksItr.hasNext()){
-			
-			String title = tracks.get(name)
-			
-			System.out.println(tracksItr.next());
-		}*/
-	
-	/*public void iterateHistory(){
-		int i = 0;
-		long unixDate;
-		for (Track t: history){
-			
-			if(t.getPlayedWhen() != null){
-				Date fullDate = t.getPlayedWhen();
-				unixDate = (fullDate.getTime() / 1000);
-				if (i == 0){
-						originDate = unixDate;
-						i++;
-					}
-				
-				t.setCoordinates(unixDate, originDate);
-				System.out.println(t);
-			}
-		}
-		System.out.println(originDate);
-		
-	}*/
-	
 	public void graphMax(){
 		for(Track t: history){
 			if(t.getDay() < dayMax){
@@ -249,8 +218,25 @@ public class LastFMHistory {
 			}
 		}
 		dayMax = Math.abs(dayMax) + 1;
-		//System.out.println(dayMax);
+		
 	}
 	
+	public List<String> getTrackList(){
+		for(Track t: history){
+			String trackName = t.getName();
+			tracks.add(trackName);
+		}
+		return tracks;
+	}
+	
+	public List<String> getArtistList(){
+		for(Track t: history){
+			String artist = t.getArtist();
+			if (!artists.contains(artist)){
+				artists.add(artist);
+			}
+		}
+		return artists;
+	}
 }
 
