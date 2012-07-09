@@ -1,14 +1,19 @@
 package lastfmhistoryclasses;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.awt.Color;
-import java.io.*;
-import de.umass.lastfm.*;
+
+import de.umass.lastfm.Track;
 
 public class FileStuff {
 
