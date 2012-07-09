@@ -51,6 +51,8 @@ public class InputPanel extends JFrame {
 		OutputPanel outputCanvas = new OutputPanel(outputFrame);
 		InputPanel inputFrame = new InputPanel(outputCanvas);
 		
+		outputFrame.add(outputCanvas, BorderLayout.CENTER);
+		
 		outputFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//outputFrame.setSize(200, 200);
 		

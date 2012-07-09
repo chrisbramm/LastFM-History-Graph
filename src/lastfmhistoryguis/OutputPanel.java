@@ -31,8 +31,7 @@ public class OutputPanel extends JPanel {
 	int panelWidth;
 	int panelHeight;
 	private LastFMHistory data;
-	private static NameService nameService = new NameService(
-			new ArrayList<String>());
+	private static NameService nameService = new NameService(new ArrayList<String>());
 
 	public OutputPanel(JFrame parent) {
 		JPanel bottomPanel = new JPanel();
@@ -44,7 +43,7 @@ public class OutputPanel extends JPanel {
 		// TODO - Pass Data into nameService
 		// List<String> testComplete = new ArrayList<String>();
 		// testComplete.add();
-//		NameService nameService = new NameService(data.tracks);
+		//NameService nameService = new NameService(data.tracks);
 		JTextField trackInput = new JTextField();
 		Document autoCompleteDocument = new AutoCompleteDocument(nameService,
 				trackInput);
