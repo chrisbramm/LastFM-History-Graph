@@ -57,15 +57,15 @@ public class InputPanel extends JFrame {
 
 		JPanel bottomPanel = new JPanel();
 		
-		//**
-		// Create the autocomplete track box
-		//*
+		/**
+		 Create the autocomplete track box
+		**/
 		
 		//TODO - Pass Data into nameService
-		List<String> testComplete = new ArrayList<String>();
-		testComplete.add("Sequile - Ronny K. Emotion Mix");
-		NameService nameService = new NameService(testComplete);
-		JTextField trackInput = new JTextField("Track");
+		//List<String> testComplete = new ArrayList<String>();
+		//testComplete.add();
+		NameService nameService = new NameService(data.tracks);
+		JTextField trackInput = new JTextField();
 		Document autoCompleteDocument = new AutoCompleteDocument(nameService, trackInput);
 		trackInput.setDocument(autoCompleteDocument);
 	
@@ -129,7 +129,7 @@ public class InputPanel extends JFrame {
 			};
 		});
 
-		contentPane.add(btnGetHistory, BorderLayout.SOUTH);
+		contentPane.add(btnGetHistory, BorderLayout.LINE_START);
 
 		btnDeleteLibraryFile = new JButton("Delete Library File");
 		btnDeleteLibraryFile.addActionListener(new ActionListener() {
@@ -138,7 +138,7 @@ public class InputPanel extends JFrame {
 			};
 		});
 
-		contentPane.add(btnDeleteLibraryFile, BorderLayout.CENTER);
+		contentPane.add(btnDeleteLibraryFile, BorderLayout.LINE_END);
 
 		test = new LastFMHistory();
 	}
@@ -147,12 +147,13 @@ public class InputPanel extends JFrame {
 		String user = username.getText();
 		test.setUser(user);
 		test.getLibraryTracks();
+		
 		test.createColorHashmap();
 		test.createDurationHashmap();
 		test.getRecentTracks();
 		test.graphMax();
-//		test.getTrackList();
-//		test.getArtistList();
+		test.getTrackList();
+		test.getArtistList();
 		return test;
 
 	}
