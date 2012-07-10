@@ -61,13 +61,9 @@ public class OutputPanel extends JPanel {
 			}
 		});
 		bottomPanel.add(trackGo);
-		JScrollPane scrollOutput = new JScrollPane();
-
-		scrollOutput.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		scrollOutput.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		
 
 		parent.add(bottomPanel, BorderLayout.SOUTH);
-		parent.add(scrollOutput, BorderLayout.CENTER);
 	}
 
 	public void setData(LastFMHistory data) {
@@ -98,8 +94,8 @@ public class OutputPanel extends JPanel {
 			System.err.println("No data found");
 		} else {
 			panelWidth = getWidth() - 4 * PAD;
-			int panelHeight = getHeight() - 2 * PAD;
-			// panelHeight = 6000 - 2 * PAD;
+			//int panelHeight = getHeight() - 2 * PAD;
+			panelHeight = 6000 - 2 * PAD;
 			// graph.setClip(0, 0, getWidth(), 2000);
 			System.out.println(panelWidth + ", " + panelHeight);
 
@@ -138,6 +134,11 @@ public class OutputPanel extends JPanel {
 							(int) xInc, (int) trackHeight);
 				}
 
+			}
+			
+			for (int i = 0; i < data.dayMax;){
+				graph.draw(new Line2D.Double(x0 - i * xInc, PAD, x0 - i * xInc, panelHeight + PAD));
+				i = i + 7;
 			}
 		}
 	}

@@ -52,6 +52,7 @@ public class InputPanel extends JFrame {
 		InputPanel inputFrame = new InputPanel(outputCanvas);
 		
 		outputFrame.add(outputCanvas, BorderLayout.CENTER);
+	
 		
 		outputFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//outputFrame.setSize(200, 200);
@@ -62,9 +63,9 @@ public class InputPanel extends JFrame {
 	
 		//By leaving frame.setVisible down here, it creates the input window on top of the output window
 		inputFrame.setVisible(true);
-		outputCanvas.setVisible(true);
 		
 		
+		outputCanvas.repaint();
 		
 
 	}
