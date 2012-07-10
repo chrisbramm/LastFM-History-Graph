@@ -56,5 +56,8 @@ public class InputGUI extends JFrame {
 	public void addGetLastFMHistoryListener(ActionListener gh){
 		btnGetHistory.addActionListener(gh);
 	}
+	public void addDeleteLibraryFile(ActionListener dh){
+		btnDeleteHistory.addActionListener(dh);
+	}
 
 }
