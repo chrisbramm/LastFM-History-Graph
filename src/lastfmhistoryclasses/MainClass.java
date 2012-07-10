@@ -27,7 +27,7 @@ public class MainClass {
 		screenWidth = (int) d.getWidth() - 2 * SCREENPAD;
 		
 		LastFMHistory lastFMHistoryModel = new LastFMHistory();
-		InputGUI InputGUI = new InputGUI(lastFMHistoryModel, screenWidth, screenHeight);
+		InputGUI InputGUI = new InputGUI(screenWidth, screenHeight);
 		Controller controller = new Controller(lastFMHistoryModel, InputGUI);
 		
 	}

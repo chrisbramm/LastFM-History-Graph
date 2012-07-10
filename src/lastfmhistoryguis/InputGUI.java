@@ -5,8 +5,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import lastfmhistoryclasses.LastFMHistory;
-
 
 public class InputGUI extends JFrame {
 	
@@ -14,18 +12,15 @@ public class InputGUI extends JFrame {
 	private int screenHeight;
 	private JTextField usernameInput;
 	private JButton btnGetHistory, btnDeleteHistory;
-	private LastFMHistory lastFMHistoryModel;
 	
-	public InputGUI(LastFMHistory model, int screenWidth, int screenHeight){
-		lastFMHistoryModel = model;
+	
+	public InputGUI(int screenWidth, int screenHeight){
 		createGui();
-		
+		this.screenWidth = screenWidth;
+		this.screenHeight = screenHeight;
 	}
 	
 	public void createGui(){
-		
-		this.screenWidth = screenWidth;
-		this.screenHeight = screenHeight;
 		
 		JFrame inputGUIFrame = new JFrame();
 		JPanel inputGUIPanel = new JPanel();
