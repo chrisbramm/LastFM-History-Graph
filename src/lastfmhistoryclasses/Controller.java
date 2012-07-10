@@ -21,6 +21,8 @@ public class Controller {
 		inputGUIView.addDeleteLibraryFile(new DeleteLibraryFile());
 	}
 	
+	
+	
 	class GetLastFMHistory implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			username = "Not Set";
