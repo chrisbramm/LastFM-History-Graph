@@ -9,18 +9,22 @@ import lastfmhistoryclasses.LastFMHistory;
 public class Controller {
 	
 	private LastFMHistory lastFMHistoryModel;
-	private JFrame inputGUIView;
+	private InputGUI inputGUIView;
+	private String username;
 
-	public Controller(LastFMHistory model, JFrame view){
+	public Controller(LastFMHistory model, InputGUI view){
 		lastFMHistoryModel = model;
 		inputGUIView = view;
+		
+		inputGUIView.addGetLastFMHistoryListener(new GetLastFMHistory());
 	}
 	
 	class GetLastFMHistory implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			String username = "";
+			String username = "Not Set";
 			try {
-				//username = inputGUIView.getUsername();
+				username = inputGUIView.getUsername();
+				System.out.println(username);
 			}catch(Exception ex){
 				System.err.println(e);
 			}

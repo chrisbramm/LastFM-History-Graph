@@ -1,7 +1,11 @@
 package lastfmhistoryguis;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
+
+import lastfmhistoryclasses.LastFMHistory;
 
 
 public class InputGUI extends JFrame {
@@ -10,10 +14,12 @@ public class InputGUI extends JFrame {
 	private int screenHeight;
 	private JTextField usernameInput;
 	private JButton btnGetHistory, btnDeleteHistory;
+	private LastFMHistory lastFMHistoryModel;
 	
-	
-	public InputGUI(int screenWidth, int screenHeight){
+	public InputGUI(LastFMHistory model, int screenWidth, int screenHeight){
+		lastFMHistoryModel = model;
 		createGui();
+		
 	}
 	
 	public void createGui(){
@@ -44,7 +50,11 @@ public class InputGUI extends JFrame {
 	
 	
 	public String getUsername(){
+		System.out.println("getUsername being called");
 		return usernameInput.getText();
+	}
+	public void addGetLastFMHistoryListener(ActionListener gh){
+		btnGetHistory.addActionListener(gh);
 	}
 
 }
