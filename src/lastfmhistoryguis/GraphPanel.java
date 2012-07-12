@@ -31,8 +31,8 @@ public class GraphPanel extends JPanel {
 			System.err.println("No data found");
 		} else {
 			panelWidth = getWidth() - 4 * PAD;
-			panelHeight = getHeight() - 2 * PAD;
-			//panelHeight = 6000 - 2 * PAD;
+			//panelHeight = getHeight() - 2 * PAD;
+			panelHeight = 6000 - 2 * PAD;
 			// graph.setClip(0, 0, getWidth(), 2000);
 			System.out.println(panelWidth + ", " + panelHeight);
 
