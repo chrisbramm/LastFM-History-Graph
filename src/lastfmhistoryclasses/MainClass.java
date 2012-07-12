@@ -26,9 +26,11 @@ public class MainClass {
 		screenHeight = (int) d.getHeight() - 2 * SCREENPAD - 50;
 		screenWidth = (int) d.getWidth() - 2 * SCREENPAD;
 		
+		System.out.println("Width = " + screenWidth + ", Height = " + screenHeight);
+		
 		LastFMHistory lastFMHistoryModel = new LastFMHistory();
 		InputGUI InputGUI = new InputGUI(screenWidth, screenHeight);
-		Controller controller = new Controller(lastFMHistoryModel, InputGUI);
+		Controller controller = new Controller(lastFMHistoryModel, InputGUI, screenWidth, screenHeight);
 		
 	}
 	

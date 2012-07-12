@@ -18,6 +18,10 @@ public class GraphPanel extends JPanel {
 	private int panelWidth;
 	private final int PAD = 20;
 	
+	public GraphPanel(LastFMHistory model){
+		this.graphData = model;
+	}
+	
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		 System.out.println("Drawing");
@@ -26,8 +30,8 @@ public class GraphPanel extends JPanel {
 		if (graphData == null) {
 			System.err.println("No data found");
 		} else {
-			//panelWidth = getWidth() - 4 * PAD;
-			//int panelHeight = getHeight() - 2 * PAD;
+			panelWidth = getWidth() - 4 * PAD;
+			panelHeight = getHeight() - 2 * PAD;
 			//panelHeight = 6000 - 2 * PAD;
 			// graph.setClip(0, 0, getWidth(), 2000);
 			System.out.println(panelWidth + ", " + panelHeight);

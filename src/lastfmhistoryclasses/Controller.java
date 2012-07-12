@@ -5,17 +5,23 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import lastfmhistoryguis.InputGUI;
+import lastfmhistoryguis.*;
 
 public class Controller {
 	
 	private LastFMHistory lastFMHistoryModel;
 	private InputGUI inputGUIView;
+	private OutputGUI outputGUIView;
 	private String username;
+	private int screenWidth;
+	private int screenHeight;
 
-	public Controller(LastFMHistory model, InputGUI view){
+	public Controller(LastFMHistory model, InputGUI view, int screenWidth, int screenHeight){
 		lastFMHistoryModel = model;
 		inputGUIView = view;
+		
+		this.screenWidth = screenWidth;
+		this.screenHeight = screenHeight;
 		
 		inputGUIView.addGetLastFMHistoryListener(new GetLastFMHistory());
 		inputGUIView.addDeleteLibraryFile(new DeleteLibraryFile());
@@ -37,6 +43,8 @@ public class Controller {
 				lastFMHistoryModel.graphMax();
 				lastFMHistoryModel.getTrackList();
 				lastFMHistoryModel.getArtistList();
+				
+				outputGUIView = new OutputGUI(lastFMHistoryModel, screenWidth, screenHeight);
 			}catch(Exception ex){
 				System.err.println(ex);
 				System.out.println(username);
