@@ -32,8 +32,8 @@ public class OutputGUI extends JFrame {
 		outputGUIFrame = new JFrame();
 		outputGUIFrame.setSize(screenWidth, screenHeight);
 		
-		int frameWidth = getWidth();
-		int frameHeight = getHeight();
+		int frameWidth = outputGUIFrame.getWidth();
+		int frameHeight = outputGUIFrame.getHeight();
 		
 		System.out.println("Frame Width: " + frameWidth + ", Frame Height:" + frameHeight);
 

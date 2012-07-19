@@ -1,351 +1,51 @@
-Track[name=Bigger Than Us,artist=White Lies,duration=281,color=java.awt.Color[r=80,g=175,b=142],day=0,graphHeight=0], 1758539869, 457582419
-Track[name=Derezzed (Remixed by Avicii),artist=Daft Punk,duration=304,color=java.awt.Color[r=31,g=224,b=13],day=0,graphHeight=60852], 2109628269, -504112717
-Track[name=Call Me Maybe,artist=Carly Rae Jepsen,duration=188,color=java.awt.Color[r=240,g=15,b=108],day=0,graphHeight=60657], 1567305113, 1468520882
-Track[name=Razzamatazz,artist=Pulp,duration=220,color=java.awt.Color[r=58,g=197,b=26],day=0,graphHeight=60437], 662620089, 1117234652
-Track[name=Strangers,artist=White Lies,duration=325,color=java.awt.Color[r=75,g=180,b=236],day=0,graphHeight=60112], 1953126128, -1929333985
-Track[name=Payphone - Explicit Version,artist=Maroon 5,duration=231,color=java.awt.Color[r=236,g=19,b=37],day=0,graphHeight=59880], 1903288901, 1907410590
-Track[name=White Sky,artist=Vampire Weekend,duration=179,color=java.awt.Color[r=121,g=134,b=132],day=0,graphHeight=59702], 1807637042, -2055489429
-Track[name=Acrylic,artist=The Courteeners,duration=172,color=java.awt.Color[r=55,g=200,b=123],day=0,graphHeight=59489], 504610785, -2096960201
-Track[name=Nørgaard,artist=The Vaccines,duration=98,color=java.awt.Color[r=211,g=44,b=87],day=0,graphHeight=59390], 580541492, -1640506914
-Track[name=Don't Stop Believin',artist=Journey,duration=249,color=java.awt.Color[r=16,g=239,b=248],day=0,graphHeight=59141], 1142647723, 540777469
-Track[name=Buddy Holly,artist=Weezer,duration=159,color=java.awt.Color[r=125,g=130,b=134],day=0,graphHeight=58929], 1681508987, -1325440888
-Track[name=Not Nineteen Forever,artist=The Courteeners,duration=242,color=java.awt.Color[r=50,g=205,b=77],day=0,graphHeight=58684], 236749989, 10371348
-Track[name=Hey Scenesters!,artist=The Cribs,duration=191,color=java.awt.Color[r=67,g=188,b=114],day=0,graphHeight=58492], 1917350879, -1239427624
-Track[name=Razzamatazz,artist=Pulp,duration=220,color=java.awt.Color[r=58,g=197,b=26],day=0,graphHeight=58085], 1924100118, 1117234652
-Track[name=Home,artist=Edward Sharpe & The Magnetic Zeros,duration=306,color=java.awt.Color[r=110,g=145,b=147],day=0,graphHeight=57749], 1541926700, -223663337
-Track[name=Kids,artist=MGMT,duration=302,color=java.awt.Color[r=139,g=116,b=127],day=0,graphHeight=57445], 1476878551, -763120434
-Track[name=You'll Find A Way,artist=Santigold,duration=192,color=java.awt.Color[r=185,g=70,b=13],day=0,graphHeight=57262], 1281814631, -259325900
-Track[name=S&M,artist=Rihanna,duration=241,color=java.awt.Color[r=155,g=100,b=158],day=0,graphHeight=57018], 2050040160, 528861527
-Track[name=One More Chance - Original version,artist=Bloc Party,duration=280,color=java.awt.Color[r=128,g=127,b=181],day=0,graphHeight=56738], 797336652, 2122808539
-Track[name=Starman - 1997 Digital Remaster,artist=David Bowie,duration=260,color=java.awt.Color[r=71,g=184,b=71],day=0,graphHeight=56479], 539152884, 2057478382
-Track[name=White Sky,artist=Vampire Weekend,duration=179,color=java.awt.Color[r=121,g=134,b=132],day=0,graphHeight=56300], 1309014695, -2055489429
-Track[name=Te Amo,artist=Rihanna,duration=208,color=java.awt.Color[r=238,g=17,b=110],day=0,graphHeight=56092], 1787498997, -974566147
-Track[name=Banquet,artist=Bloc Party,duration=200,color=java.awt.Color[r=75,g=180,b=206],day=0,graphHeight=55822], 1346904696, 1484834726
-Track[name=Lifestyles of the Rich & Famous,artist=Good Charlotte,duration=190,color=java.awt.Color[r=4,g=251,b=28],day=0,graphHeight=55631], 802102645, 970164844
-Track[name=Mr. Brightside,artist=The Killers,duration=223,color=java.awt.Color[r=41,g=214,b=77],day=0,graphHeight=55406], 1184302296, -173986191
-Track[name=Heartbeat Song,artist=The Futureheads,duration=148,color=java.awt.Color[r=70,g=185,b=61],day=0,graphHeight=55258], 1690248476, 1504373288
-Track[name=Heads Will Roll,artist=Yeah Yeah Yeahs,duration=223,color=java.awt.Color[r=186,g=69,b=223],day=0,graphHeight=55037], 1092453616, -671864830
-Track[name=White Flag,artist=Dido,duration=477,color=java.awt.Color[r=142,g=113,b=238],day=0,graphHeight=54790], 2030225909, -1801139277
-Track[name=She's Always A Woman,artist=Billy Joel,duration=201,color=java.awt.Color[r=173,g=82,b=26],day=0,graphHeight=54590], 639185380, 2040085552
-Track[name=Drum Song,artist=The Temper Trap,duration=200,color=java.awt.Color[r=192,g=63,b=242],day=0,graphHeight=54387], 1075479366, -602335762
-Track[name=Fools,artist=The Temper Trap,duration=276,color=java.awt.Color[r=118,g=137,b=214],day=0,graphHeight=54111], 211847563, -612024624
-Track[name=Calling You,artist=Blue October,duration=240,color=java.awt.Color[r=76,g=179,b=176],day=0,graphHeight=53871], 2141588262, 41895709
-Track[name=Can't Stop,artist=Red Hot Chili Peppers,duration=268,color=java.awt.Color[r=45,g=210,b=53],day=0,graphHeight=53577], 1847995714, -356846261
-Track[name=Science Of Fear,artist=The Temper Trap,duration=256,color=java.awt.Color[r=187,g=68,b=9],day=0,graphHeight=53316], 207978637, 1012111744
-Track[name=Bigger Than Us,artist=White Lies,duration=281,color=java.awt.Color[r=80,g=175,b=142],day=0,graphHeight=53033], 1541058390, 457582419
-Track[name=Emerald City (Mono),artist=The Seekers,duration=159,color=java.awt.Color[r=187,g=68,b=239],day=0,graphHeight=52872], 1915577910, 593597480
-Track[name=Crying Lightning,artist=Arctic Monkeys,duration=224,color=java.awt.Color[r=79,g=176,b=71],day=0,graphHeight=52648], 43097546, -975694146
-Track[name=Ayo Technology,artist=Milow,duration=211,color=java.awt.Color[r=20,g=235,b=233],day=0,graphHeight=52432], 638466583, -610755741
-Track[name=Day of the Moon,artist=Murray Gold,duration=164,color=java.awt.Color[r=121,g=134,b=133],day=0,graphHeight=52268], 1879560069, -1747201461
-Track[name=Open Up Them Pearly Gates (Mono),artist=The Seekers,duration=132,color=java.awt.Color[r=50,g=205,b=47],day=0,graphHeight=52132], 281632313, 2045543057
-Track[name=Whiskey In the Jar (Stereo),artist=The Seekers,duration=30,color=java.awt.Color[r=230,g=25,b=17],day=0,graphHeight=51991], 340326603, 584750019
-Track[name=Prologue,artist=The New Musical Cast,duration=99,color=java.awt.Color[r=194,g=61,b=187],day=0,graphHeight=51890], 1120264660, -197462011
-Track[name=Ever Fallen In Love (With Someone You Shouldn't've)? [2001 - Remaster],artist=Buzzcocks,duration=163,color=java.awt.Color[r=105,g=150,b=49],day=0,graphHeight=51707], 1299007371, 823931275
-Track[name=1987,artist=Ticon,duration=503,color=java.awt.Color[r=48,g=207,b=20],day=0,graphHeight=51201], 1098128995, 2000990214
-Track[name=Derezzed (Remixed by Avicii),artist=Daft Punk,duration=304,color=java.awt.Color[r=31,g=224,b=13],day=0,graphHeight=50897], 779556647, -504112717
-Track[name=Strangers,artist=White Lies,duration=325,color=java.awt.Color[r=75,g=180,b=236],day=0,graphHeight=50573], 210835782, -1929333985
-Track[name=Charlie,artist=Red Hot Chili Peppers,duration=277,color=java.awt.Color[r=13,g=242,b=140],day=0,graphHeight=50295], 168970524, 741324190
-Track[name=Accidentally In Love,artist=Counting Crows,duration=189,color=java.awt.Color[r=253,g=2,b=44],day=0,graphHeight=50107], 914215534, 1584781283
-Track[name=Warlocks,artist=Red Hot Chili Peppers,duration=205,color=java.awt.Color[r=87,g=168,b=25],day=0,graphHeight=49901], 2122469300, 1198190288
-Track[name=Retirement,artist=Kaiser Chiefs,duration=234,color=java.awt.Color[r=136,g=119,b=161],day=0,graphHeight=49669], 490664783, 1815418664
-Track[name=American Pie,artist=Don McLean,duration=251,color=java.awt.Color[r=183,g=72,b=71],day=0,graphHeight=49153], 265803401, 72818277
-Track[name=Heartlines,artist=Florence + the Machine,duration=302,color=java.awt.Color[r=216,g=39,b=253],day=0,graphHeight=48851], 963084272, -608361136
-Track[name=Payphone - Explicit Version,artist=Maroon 5,duration=231,color=java.awt.Color[r=236,g=19,b=37],day=0,graphHeight=48620], 973112065, 1907410590
-Track[name=Uncharted - Drake's Fortune: Nate’s Theme,artist=London Philharmonic Orchestra,duration=112,color=java.awt.Color[r=242,g=13,b=19],day=0,graphHeight=46732], 2006504550, -1193353787
-Track[name=Brianstorm,artist=Arctic Monkeys,duration=171,color=java.awt.Color[r=145,g=110,b=57],day=0,graphHeight=46254], 1386263009, -735744161
-Track[name=Mardy Bum,artist=Arctic Monkeys,duration=176,color=java.awt.Color[r=43,g=212,b=60],day=0,graphHeight=46078], 872305960, -2127218647
-Track[name=When the Sun Goes Down,artist=Arctic Monkeys,duration=199,color=java.awt.Color[r=97,g=158,b=96],day=0,graphHeight=45878], 2122895298, -573045793
-Track[name=My Propeller,artist=Arctic Monkeys,duration=208,color=java.awt.Color[r=19,g=236,b=82],day=0,graphHeight=45669], 1207962228, -1142688329
-Track[name=Vincent,artist=Don McLean,duration=239,color=java.awt.Color[r=239,g=16,b=166],day=-1,graphHeight=75129], 2058250905, 1749812284
-Track[name=Good Life,artist=Francis Dunnery,duration=202,color=java.awt.Color[r=68,g=187,b=225],day=-1,graphHeight=74919], 1356374459, 567160624
-Track[name=Dead Poets Society,artist=Royal Philharmonic Orchestra/Maurice Jarre,duration=313,color=java.awt.Color[r=102,g=153,b=249],day=-1,graphHeight=74605], 1046619508, 554071288
-Track[name=Don't Know Much - feat. Aaron Neville,artist=Linda Ronstadt,duration=215,color=java.awt.Color[r=147,g=108,b=90],day=-1,graphHeight=74392], 495518379, -1829458728
-Track[name=Wherever You Will Go,artist=The Calling,duration=207,color=java.awt.Color[r=35,g=220,b=53],day=-1,graphHeight=73968], 235812787, -1704063228
-Track[name=Light & Day/Reach for the Sun,artist=The Polyphonic Spree,duration=201,color=java.awt.Color[r=158,g=97,b=196],day=-1,graphHeight=69396], 1198182394, -1690668285
-Track[name=Somewhere Else,artist=Razorlight,duration=194,color=java.awt.Color[r=72,g=183,b=118],day=-1,graphHeight=69199], 897338039, 1715750958
-Track[name=Rotterdam (Or Anywhere),artist=The Beautiful South,duration=216,color=java.awt.Color[r=232,g=23,b=40],day=-1,graphHeight=68983], 1930252239, 1654752560
-Track[name=Send in the Clowns,artist=Renato Russo,duration=222,color=java.awt.Color[r=23,g=232,b=244],day=-1,graphHeight=68759], 1861409291, 1707398101
-Track[name=Baba O'Riley - Remixed Version,artist=The Who,duration=311,color=java.awt.Color[r=83,g=172,b=144],day=-1,graphHeight=68448], 164184341, -1039591149
-Track[name=Here With Me,artist=Dido,duration=253,color=java.awt.Color[r=170,g=85,b=167],day=-1,graphHeight=68193], 2077216439, -579708398
-Track[name=One Week,artist=Barenaked Ladies,duration=169,color=java.awt.Color[r=210,g=45,b=46],day=-1,graphHeight=68023], 135040994, 1497926929
-Track[name=The Sound of Silence,artist=Simon & Garfunkel,duration=186,color=java.awt.Color[r=248,g=7,b=214],day=-1,graphHeight=67837], 1891254926, 470489455
-Track[name=Right Here Waiting,artist=Richard Marx,duration=260,color=java.awt.Color[r=198,g=57,b=197],day=-1,graphHeight=67572], 1416082035, 201591268
-Track[name=Be Prepared,artist=Cheech Marin,duration=220,color=java.awt.Color[r=41,g=214,b=11],day=-1,graphHeight=67260], 1676986191, -1616322873
-Track[name=Big Bang Theory Theme,artist=Barenaked Ladies,duration=104,color=java.awt.Color[r=101,g=154,b=254],day=-1,graphHeight=67154], 1531528909, -2114886727
-Track[name=Welcome Home,artist=Radical Face,duration=287,color=java.awt.Color[r=24,g=231,b=82],day=-1,graphHeight=66869], 667380621, -381226432
-Track[name=She's Always A Woman,artist=Billy Joel,duration=201,color=java.awt.Color[r=173,g=82,b=26],day=-1,graphHeight=66666], 359008866, 2040085552
-Track[name=No Angel - Radio Edit,artist=Zara,duration=224,color=java.awt.Color[r=98,g=157,b=100],day=-1,graphHeight=62687], 1580446439, 1108718422
-Track[name=Viking - Original Mix Edit,artist=Orjan Nilsen,duration=198,color=java.awt.Color[r=136,g=119,b=26],day=-1,graphHeight=62489], 338070530, 222931115
-Track[name=Feel It - Radio Edit,artist=Ferry Corsten,duration=194,color=java.awt.Color[r=113,g=142,b=194],day=-1,graphHeight=62294], 1857151395, -301152339
-Track[name=Mjuzik - Album Mix,artist=Orjan Nilsen,duration=307,color=java.awt.Color[r=121,g=134,b=135],day=-1,graphHeight=61986], 1616170267, 1504980883
-Track[name=Sólarupprás - Instrumental,artist=Chicane,duration=284,color=java.awt.Color[r=96,g=159,b=105],day=-1,graphHeight=61703], 1600510213, -926065664
-Track[name=Circle of Life,artist=Carmen Twillie,duration=238,color=java.awt.Color[r=193,g=62,b=140],day=-2,graphHeight=83778], 394987569, -1435914983
-Track[name=Be Prepared,artist=Cheech Marin,duration=220,color=java.awt.Color[r=41,g=214,b=11],day=-2,graphHeight=83559], 684119306, -1616322873
-Track[name=Danny Boy (Stereo),artist=The Seekers,duration=185,color=java.awt.Color[r=51,g=204,b=70],day=-2,graphHeight=82416], 365729904, -1717177890
-Track[name=59th Street Bridge Song (Feelin' Groovy) (Stereo),artist=The Seekers,duration=137,color=java.awt.Color[r=234,g=21,b=86],day=-2,graphHeight=82278], 724298814, -804363506
-Track[name=Myra (Stereo),artist=The Seekers,duration=121,color=java.awt.Color[r=61,g=194,b=49],day=-2,graphHeight=82157], 1352855702, 475421393
-Track[name=Whiskey In the Jar (Stereo),artist=The Seekers,duration=30,color=java.awt.Color[r=230,g=25,b=17],day=-2,graphHeight=82015], 2036412725, 584750019
-Track[name=Morningtown Ride (Stereo),artist=The Seekers,duration=161,color=java.awt.Color[r=58,g=197,b=116],day=-2,graphHeight=81853], 1541786836, 1281921816
-Track[name=Yesterday (Stereo),artist=The Seekers,duration=147,color=java.awt.Color[r=216,g=39,b=131],day=-2,graphHeight=81708], 1273667950, -836437576
-Track[name=California Dreamin' (Stereo),artist=The Seekers,duration=149,color=java.awt.Color[r=215,g=40,b=151],day=-2,graphHeight=81558], 420242354, -797492995
-Track[name=We Shall Not Be Moved (Stereo),artist=The Seekers,duration=145,color=java.awt.Color[r=75,g=180,b=59],day=-2,graphHeight=81412], 2087012342, -2038670017
-Track[name=Five Hundred Miles (Stereo),artist=The Seekers,duration=176,color=java.awt.Color[r=63,g=192,b=54],day=-2,graphHeight=81237], 1566025543, 446406612
-Track[name=Nobody Knows The Trouble I've Seen (Stereo),artist=The Seekers,duration=147,color=java.awt.Color[r=76,g=179,b=182],day=-2,graphHeight=81089], 631723569, -62775849
-Track[name=Island Of Dreams (Stereo),artist=The Seekers,duration=152,color=java.awt.Color[r=27,g=228,b=67],day=-2,graphHeight=80939], 218873415, -653117084
-Track[name=Colours Of My Life (Stereo),artist=The Seekers,duration=155,color=java.awt.Color[r=74,g=181,b=144],day=-2,graphHeight=80783], 2113482241, 790880982
-Track[name=Turn! Turn! Turn! (To Everything There Is a Season),artist=The Byrds,duration=234,color=java.awt.Color[r=125,g=130,b=115],day=-2,graphHeight=80553], 1916503107, -1854621806
-Track[name=When Will The Good Apples Fall (Mono),artist=The Seekers,duration=154,color=java.awt.Color[r=129,g=126,b=172],day=-2,graphHeight=80258], 560497996, 1880817271
-Track[name=Blowin' In The Wind (Stereo),artist=The Seekers,duration=154,color=java.awt.Color[r=55,g=200,b=204],day=-2,graphHeight=80105], 1426543030, 1787864536
-Track[name=Georgy Girl (Stereo),artist=The Seekers,duration=144,color=java.awt.Color[r=210,g=45,b=248],day=-2,graphHeight=79964], 1401270102, -930202241
-Track[name=Titanium (Extended),artist=David Guetta,duration=90,color=java.awt.Color[r=251,g=4,b=241],day=-2,graphHeight=79679], 1840931312, 1857209257
-Track[name=Shake It Out,artist=Florence + the Machine,duration=278,color=java.awt.Color[r=219,g=36,b=16],day=-2,graphHeight=79401], 1735658455, 920211594
-Track[name=This'll Be My Year,artist=Train,duration=210,color=java.awt.Color[r=41,g=214,b=148],day=-2,graphHeight=79191], 306414217, 1590893885
-Track[name=Drive By,artist=Train,duration=195,color=java.awt.Color[r=220,g=35,b=50],day=-2,graphHeight=78994], 237959613, 1700849435
-Track[name=Derezzed (Remixed by Avicii),artist=Daft Punk,duration=304,color=java.awt.Color[r=31,g=224,b=13],day=-2,graphHeight=78689], 772664977, -504112717
-Track[name=All This and Heaven Too,artist=Florence + the Machine,duration=246,color=java.awt.Color[r=217,g=38,b=165],day=-2,graphHeight=78443], 346655030, -1253944974
-Track[name=No Light, No Light,artist=Florence + the Machine,duration=275,color=java.awt.Color[r=20,g=235,b=198],day=-2,graphHeight=78167], 107954899, -643791207
-Track[name=Heartlines,artist=Florence + the Machine,duration=302,color=java.awt.Color[r=216,g=39,b=253],day=-2,graphHeight=77865], 1921789425, -608361136
-Track[name=Call Me Maybe,artist=Carly Rae Jepsen,duration=188,color=java.awt.Color[r=240,g=15,b=108],day=-2,graphHeight=77671], 1360815095, 1468520882
-Track[name=Payphone - Explicit Version,artist=Maroon 5,duration=231,color=java.awt.Color[r=236,g=19,b=37],day=-2,graphHeight=77437], 518461115, 1907410590
-Track[name=Call Me Maybe,artist=Carly Rae Jepsen,duration=188,color=java.awt.Color[r=240,g=15,b=108],day=-2,graphHeight=73594], 1434803926, 1468520882
-Track[name=Payphone - Explicit Version,artist=Maroon 5,duration=231,color=java.awt.Color[r=236,g=19,b=37],day=-2,graphHeight=73363], 655712119, 1907410590
-Track[name=The Lonely Goatherd,artist=The Sound Of Music/London Palladium Cast/The Company,duration=193,color=java.awt.Color[r=195,g=60,b=113],day=-2,graphHeight=68370], 1814991276, 2117130170
-Track[name=What Is This Feeling? - Original Cast Recording/2003,artist=Kristin Chenoweth,duration=211,color=java.awt.Color[r=241,g=14,b=113],day=-2,graphHeight=68157], 1700653744, -424571342
-Track[name=Sit Down, You're Rockin' the Boat (From "Guys and Dolls"),artist=Edward Strauss,duration=176,color=java.awt.Color[r=66,g=189,b=6],day=-2,graphHeight=67980], 2027617485, -492812895
-Track[name=I Know Him So Well - Musical "Chess",artist=Elaine Paige,duration=255,color=java.awt.Color[r=214,g=41,b=114],day=-2,graphHeight=67724], 1896559799, -1919477411
-Track[name=The Worst Pies in London,artist=Helena Bonham Carter,duration=143,color=java.awt.Color[r=233,g=22,b=235],day=-2,graphHeight=67580], 380769372, 912096273
-Track[name=Prologue: Jellicle Songs For Jellicle Cats,artist=Original Cast Of Cats,duration=317,color=java.awt.Color[r=121,g=134,b=83],day=-2,graphHeight=67241], 89567144, 415444387
-Track[name=Macavity The Mystery Cat - UK 1981 / Musical "Cats",artist=Original Cast Of Cats,duration=418,color=java.awt.Color[r=113,g=142,b=184],day=-2,graphHeight=66823], 2116436308, -70134408
-Track[name=Merano - Musical "Chess",artist=Murray Head,duration=419,color=java.awt.Color[r=240,g=15,b=55],day=-2,graphHeight=66403], 25899648, -133953609
-Track[name=Crescendolls,artist=Daft Punk,duration=208,color=java.awt.Color[r=252,g=3,b=233],day=-2,graphHeight=64826], 1503687242, -1135358626
-Track[name=Take Me or Leave Me,artist=Jonathan Larson,duration=224,color=java.awt.Color[r=242,g=13,b=183],day=-2,graphHeight=63134], 883918398, 1490277869
-Track[name=Seasons of Love B,artist=Jonathan Larson,duration=67,color=java.awt.Color[r=11,g=244,b=241],day=-2,graphHeight=63065], 1872128887, -641393
-Track[name=La Vie Boheme B,artist=Jonathan Larson,duration=96,color=java.awt.Color[r=157,g=98,b=54],day=-2,graphHeight=62968], 2087291612, -363200033
-Track[name=I Should Tell You,artist=Jonathan Larson,duration=181,color=java.awt.Color[r=156,g=99,b=74],day=-2,graphHeight=62796], 1964749139, -2059137098
-Track[name=La Vie Boheme,artist=Jonathan Larson,duration=524,color=java.awt.Color[r=126,g=129,b=65],day=-2,graphHeight=62267], 1830222901, 1706392449
-Track[name=Over the Moon,artist=Jonathan Larson,duration=317,color=java.awt.Color[r=51,g=204,b=181],day=-2,graphHeight=61883], 537479, -52103456
-Track[name=I'll Cover You,artist=Jonathan Larson,duration=151,color=java.awt.Color[r=104,g=151,b=115],day=-2,graphHeight=61734], 443474965, 1245170088
-Track[name=Santa Fe,artist=Jonathan Larson,duration=193,color=java.awt.Color[r=223,g=32,b=55],day=-2,graphHeight=61526], 1715481665, -336092278
-Track[name=Will I,artist=Jonathan Larson,duration=166,color=java.awt.Color[r=199,g=56,b=159],day=-2,graphHeight=61360], 2132382680, 1543181441
-Track[name=Another Day,artist=Jonathan Larson,duration=287,color=java.awt.Color[r=178,g=77,b=123],day=-2,graphHeight=61073], 1748601624, 9244381
-Track[name=Out Tonight,artist=Jonathan Larson,duration=231,color=java.awt.Color[r=85,g=170,b=75],day=-2,graphHeight=60839], 433785373, -86612303
-Track[name=Life Support,artist=Jonathan Larson,duration=118,color=java.awt.Color[r=55,g=200,b=159],day=-2,graphHeight=60781], 2071266093, 725355377
-Track[name=Tango: Maureen,artist=Jonathan Larson,duration=208,color=java.awt.Color[r=179,g=76,b=39],day=-2,graphHeight=60546], 1059307181, -774754098
-Track[name=Today 4 U,artist=Jonathan Larson,duration=210,color=java.awt.Color[r=158,g=97,b=193],day=-2,graphHeight=60382], 1136357437, 1084962386
-Track[name=Light My Candle,artist=Jonathan Larson,duration=249,color=java.awt.Color[r=172,g=83,b=158],day=-2,graphHeight=60132], 1187370888, -1789555899
-Track[name=One Song Glory,artist=Jonathan Larson,duration=159,color=java.awt.Color[r=194,g=61,b=15],day=-2,graphHeight=59965], 1724466692, -2044018116
-Track[name=You'll See,artist=Jonathan Larson,duration=177,color=java.awt.Color[r=39,g=216,b=9],day=-2,graphHeight=59830], 672392532, -455611263
-Track[name=Rent,artist=Jonathan Larson,duration=267,color=java.awt.Color[r=10,g=245,b=176],day=-2,graphHeight=59592], 842334810, 1184204035
-Track[name=Encore 2 - One Day More,artist=Claude-Michel Schönberg,duration=251,color=java.awt.Color[r=220,g=35,b=147],day=-2,graphHeight=58651], 908950646, 1447989715
-Track[name=Epilogue [Finale],artist=Claude-Michel Schönberg,duration=556,color=java.awt.Color[r=47,g=208,b=59],day=-2,graphHeight=58094], 1682326211, -591371550
-Track[name=Empty Chairs at Empty Tables,artist=Claude-Michel Schönberg,duration=246,color=java.awt.Color[r=88,g=167,b=89],day=-2,graphHeight=57925], 1086931875, -2090319751
-Track[name=Bring Him Home,artist=Claude-Michel Schönberg,duration=306,color=java.awt.Color[r=245,g=10,b=93],day=-2,graphHeight=57751], 1568121743, 86753342
-Track[name=Drink With Me,artist=Claude-Michel Schönberg,duration=227,color=java.awt.Color[r=176,g=79,b=167],day=-2,graphHeight=57610], 1502818617, -194041163
-Track[name=A Little Fall of Rain,artist=Claude-Michel Schönberg,duration=200,color=java.awt.Color[r=8,g=247,b=250],day=-2,graphHeight=57409], 1317323552, 1644674780
-Track[name=The Attack,artist=Claude-Michel Schönberg,duration=53,color=java.awt.Color[r=31,g=224,b=9],day=-2,graphHeight=57355], 1848021541, 1240581768
-Track[name=On My Own,artist=Claude-Michel Schönberg,duration=242,color=java.awt.Color[r=135,g=120,b=21],day=-2,graphHeight=57116], 642053026, 1784551372
-Track[name=One Day More,artist=Claude-Michel Schönberg,duration=215,color=java.awt.Color[r=106,g=149,b=225],day=-2,graphHeight=56900], 2027365454, 206191084
-Track[name=Love Montage: I Saw Him Once/In My Life/A Heart Full Of Love,artist=Claude-Michel Schönberg,duration=316,color=java.awt.Color[r=153,g=102,b=56],day=-2,graphHeight=56572], 1955642076, 1473728095
-Track[name=Do You Hear the People Sing?,artist=Claude-Michel Schönberg,duration=193,color=java.awt.Color[r=177,g=78,b=87],day=-2,graphHeight=56435], 1239153997, 501044469
-Track[name=Red & Black,artist=Claude-Michel Schönberg,duration=269,color=java.awt.Color[r=152,g=103,b=253],day=-2,graphHeight=56165], 164818973, 1398191625
-Track[name=Little People,artist=Claude-Michel Schönberg,duration=151,color=java.awt.Color[r=215,g=40,b=185],day=-2,graphHeight=56022], 2006058228, -1812372890
-Track[name=Look Down,artist=Claude-Michel Schönberg,duration=153,color=java.awt.Color[r=175,g=80,b=19],day=-2,graphHeight=55868], 327380096, -2059334500
-Track[name=Stars,artist=Claude-Michel Schönberg,duration=253,color=java.awt.Color[r=198,g=57,b=22],day=-2,graphHeight=55663], 424169858, 1825026078
-Track[name=Master of the House,artist=Claude-Michel Schönberg,duration=402,color=java.awt.Color[r=197,g=58,b=129],day=-2,graphHeight=55364], 1524579013, -1917785511
-Track[name=Castle on a Cloud,artist=Claude-Michel Schönberg,duration=88,color=java.awt.Color[r=130,g=125,b=176],day=-2,graphHeight=55268], 1972079134, 1842822274
-Track[name=Confrontation,artist=Claude-Michel Schönberg,duration=169,color=java.awt.Color[r=44,g=211,b=244],day=-2,graphHeight=55097], 471397340, 1398448241
-Track[name=Come to Me,artist=Claude-Michel Schönberg,duration=224,color=java.awt.Color[r=92,g=163,b=239],day=-2,graphHeight=54872], 707919597, 1333834462
-Track[name=Who Am I?,artist=Claude-Michel Schönberg,duration=123,color=java.awt.Color[r=189,g=66,b=132],day=-2,graphHeight=54704], 945262399, 1416907287
-Track[name=I Dreamed a Dream,artist=Claude-Michel Schönberg,duration=254,color=java.awt.Color[r=179,g=76,b=180],day=-2,graphHeight=54435], 2088603134, -2055963280
-Track[name=At the End of the Day,artist=Claude-Michel Schönberg,duration=308,color=java.awt.Color[r=219,g=36,b=62],day=-2,graphHeight=54144], 385179276, -260714278
-Track[name=Valjean's Soliloquy,artist=Claude-Michel Schönberg,duration=219,color=java.awt.Color[r=249,g=6,b=168],day=-2,graphHeight=53923], 1192379674, 1045383921
-Track[name=On Parole/The Bishop,artist=Claude-Michel Schönberg,duration=333,color=java.awt.Color[r=97,g=158,b=75],day=-2,graphHeight=53608], 7787114, -1557057428
-Track[name=Prologue: Work Song,artist=Claude-Michel Schönberg,duration=202,color=java.awt.Color[r=40,g=215,b=112],day=-2,graphHeight=53404], 2029006178, 413009928
-Track[name=Payphone - Explicit Version,artist=Maroon 5,duration=231,color=java.awt.Color[r=236,g=19,b=37],day=-2,graphHeight=53128], 1614002933, 1907410590
-Track[name=Alejandro - Radio edit,artist=Lady Gaga,duration=239,color=java.awt.Color[r=93,g=162,b=137],day=-2,graphHeight=2996], 1681349674, 1862654220
-Track[name=Fading Like A Flower - Radio Edit,artist=Roxette,duration=185,color=java.awt.Color[r=226,g=29,b=130],day=-2,graphHeight=2799], 1854143692, -1308124139
-Track[name=Paddy's Revenge - Radio Edit,artist=Steve Mac,duration=150,color=java.awt.Color[r=45,g=210,b=209],day=-2,graphHeight=2654], 457829827, 1033722718
-Track[name=Heaven - Cascada Radio Mix,artist=Manian,duration=189,color=java.awt.Color[r=65,g=190,b=39],day=-2,graphHeight=2466], 311995188, -546825237
-Track[name=Elements,artist=Neo Cortex,duration=226,color=java.awt.Color[r=137,g=118,b=24],day=-2,graphHeight=2230], 1695542389, 1231915264
-Track[name=Set you free - Original mix,artist=N-Trance,duration=436,color=java.awt.Color[r=227,g=28,b=234],day=-2,graphHeight=1978], 2020419880, 1992712161
-Track[name=Never Leave You Alone,artist=Dance Assassins,duration=278,color=java.awt.Color[r=227,g=28,b=112],day=-2,graphHeight=1700], 1185496796, -1140185436
-Track[name=I'll Be Ready - Radio Version,artist=Sunblock,duration=429,color=java.awt.Color[r=53,g=202,b=248],day=-2,graphHeight=1536], 291373506, 1708271337
-Track[name=From Somewhere - Original Mix,artist=Ronny K.,duration=524,color=java.awt.Color[r=107,g=148,b=173],day=-2,graphHeight=1001], 851800182, -310945462
-Track[name=Shake It Out,artist=Florence + the Machine,duration=278,color=java.awt.Color[r=219,g=36,b=16],day=-2,graphHeight=857], 1079667972, 920211594
-Track[name=The Angry Mob,artist=Kaiser Chiefs,duration=283,color=java.awt.Color[r=72,g=183,b=32],day=-2,graphHeight=285], 1890271901, 256752943
-Track[name=Calling You,artist=Blue October,duration=240,color=java.awt.Color[r=76,g=179,b=176],day=-2,graphHeight=45], 2074250036, 41895709
-Track[name=Death,artist=White Lies,duration=302,color=java.awt.Color[r=243,g=12,b=185],day=-3,graphHeight=86144], 1818313301, -695788010
-Track[name=No Light, No Light,artist=Florence + the Machine,duration=275,color=java.awt.Color[r=20,g=235,b=198],day=-3,graphHeight=85868], 1699353097, -643791207
-Track[name=Retirement,artist=Kaiser Chiefs,duration=234,color=java.awt.Color[r=136,g=119,b=161],day=-3,graphHeight=85636], 1642479826, 1815418664
-Track[name=Tonight In Babylon - Acoustic Mix,artist=Bryan Adams,duration=219,color=java.awt.Color[r=235,g=20,b=127],day=-3,graphHeight=85417], 1403637044, 1759120933
-Track[name=Titanium (Extended),artist=David Guetta,duration=90,color=java.awt.Color[r=251,g=4,b=241],day=-3,graphHeight=85104], 819936213, 1857209257
-Track[name=Farewell To The Fairground,artist=White Lies,duration=257,color=java.awt.Color[r=203,g=52,b=181],day=-3,graphHeight=84847], 265369092, 455086877
-Track[name=Levels,artist=Avicii,duration=194,color=java.awt.Color[r=236,g=19,b=10],day=-3,graphHeight=84646], 1882278072, 735587294
-Track[name=Take Me Out,artist=Franz Ferdinand,duration=238,color=java.awt.Color[r=175,g=80,b=162],day=-3,graphHeight=84407], 865952147, -737198653
-Track[name=Heartlines,artist=Florence + the Machine,duration=302,color=java.awt.Color[r=216,g=39,b=253],day=-3,graphHeight=84105], 561058910, -608361136
-Track[name=All This and Heaven Too,artist=Florence + the Machine,duration=246,color=java.awt.Color[r=217,g=38,b=165],day=-3,graphHeight=83859], 116406393, -1253944974
-Track[name=Payphone - Explicit Version,artist=Maroon 5,duration=231,color=java.awt.Color[r=236,g=19,b=37],day=-3,graphHeight=83627], 84644734, 1907410590
-Track[name=Shine,artist=Booty Luv,duration=205,color=java.awt.Color[r=45,g=210,b=5],day=-3,graphHeight=83298], 989870024, -1543239927
-Track[name=Strobe,artist=deadmau5,duration=319,color=java.awt.Color[r=4,g=251,b=8],day=-3,graphHeight=82665], 189680059, 1806614937
-Track[name=Palladio (1st Movement) from Diamond Music (De Beers ad),artist=Karl Jenkins,duration=0,color=java.awt.Color[r=168,g=87,b=194],day=-3,graphHeight=69300], 1087019465, 1105325393
-Track[name=Nero Sighted,artist=Michael Giacchino,duration=203,color=java.awt.Color[r=97,g=158,b=230],day=-3,graphHeight=69096], 892763226, 904796504
-Track[name=Wake Me When You Need Me,artist=Martin O'Donnell / Michael Salvatori,duration=139,color=java.awt.Color[r=93,g=162,b=240],day=-3,graphHeight=68956], 203297793, -1577126827
-Track[name=Star Trek,artist=Michael Giacchino,duration=102,color=java.awt.Color[r=210,g=45,b=14],day=-3,graphHeight=68895], 179524574, -325251594
-Track[name=Chopin: Raindrops Prelude No. 15, Op. 28,artist=Orchestra Italiana,duration=292,color=java.awt.Color[r=237,g=18,b=117],day=-3,graphHeight=68602], 54991183, -1889941588
-Track[name=Call of Duty Modern Warfare 2: Theme,artist=London Philharmonic Orchestra,duration=214,color=java.awt.Color[r=148,g=107,b=216],day=-3,graphHeight=68387], 818844471, -1707841020
-Track[name=Canon in D major,artist=Johann Pachelbel,duration=285,color=java.awt.Color[r=101,g=154,b=43],day=-3,graphHeight=68084], 1243814121, 1783164893
-Track[name=1812 Overture: Grand Finale,artist=Pyotr Ilyich Tchaikovsky,duration=221,color=java.awt.Color[r=92,g=163,b=235],day=-3,graphHeight=67863], 1178111749, -1850668499
-Track[name=Uncharted - Drake's Fortune: Nate’s Theme,artist=London Philharmonic Orchestra,duration=112,color=java.awt.Color[r=242,g=13,b=19],day=-3,graphHeight=67750], 724940103, -1193353787
-Track[name=Drive By,artist=Train,duration=195,color=java.awt.Color[r=220,g=35,b=50],day=-3,graphHeight=67572], 1393581690, 1700849435
-Track[name=All This and Heaven Too,artist=Florence + the Machine,duration=246,color=java.awt.Color[r=217,g=38,b=165],day=-3,graphHeight=67326], 1470809648, -1253944974
-Track[name=No Light, No Light,artist=Florence + the Machine,duration=275,color=java.awt.Color[r=20,g=235,b=198],day=-3,graphHeight=67051], 213493319, -643791207
-Track[name=Heartlines,artist=Florence + the Machine,duration=302,color=java.awt.Color[r=216,g=39,b=253],day=-3,graphHeight=66749], 1884521943, -608361136
-Track[name=Payphone - Explicit Version,artist=Maroon 5,duration=231,color=java.awt.Color[r=236,g=19,b=37],day=-3,graphHeight=66518], 2071470045, 1907410590
-Track[name=Shake It Out,artist=Florence + the Machine,duration=278,color=java.awt.Color[r=219,g=36,b=16],day=-3,graphHeight=63682], 192161151, 920211594
-Track[name=This'll Be My Year,artist=Train,duration=210,color=java.awt.Color[r=41,g=214,b=148],day=-3,graphHeight=63396], 1984543416, 1590893885
-Track[name=Drive By,artist=Train,duration=195,color=java.awt.Color[r=220,g=35,b=50],day=-3,graphHeight=63199], 1652671155, 1700849435
-Track[name=All This and Heaven Too,artist=Florence + the Machine,duration=246,color=java.awt.Color[r=217,g=38,b=165],day=-3,graphHeight=62953], 890611787, -1253944974
-Track[name=No Light, No Light,artist=Florence + the Machine,duration=275,color=java.awt.Color[r=20,g=235,b=198],day=-3,graphHeight=62678], 551284519, -643791207
-Track[name=Heartlines,artist=Florence + the Machine,duration=302,color=java.awt.Color[r=216,g=39,b=253],day=-3,graphHeight=62376], 1194457675, -608361136
-Track[name=Payphone - Explicit Version,artist=Maroon 5,duration=231,color=java.awt.Color[r=236,g=19,b=37],day=-3,graphHeight=62144], 573011569, 1907410590
-Track[name=Call My Name,artist=Cheryl Cole,duration=44,color=java.awt.Color[r=141,g=114,b=197],day=-3,graphHeight=61925], 1288767035, -756908349
-Track[name=Payphone,artist=Maroon 5,duration=231,color=java.awt.Color[r=247,g=8,b=199],day=-3,graphHeight=61693], 787493603, -577600373
-Track[name=Wild Ones - feat. Sia,artist=Flo Rida,duration=234,color=java.awt.Color[r=132,g=123,b=26],day=-3,graphHeight=61401], 463269160, -1031156766
-Track[name=Need You Now,artist=Lady Antebellum,duration=232,color=java.awt.Color[r=124,g=131,b=43],day=-3,graphHeight=61164], 1536551745, -1675945020
-Track[name=Silhouettes - Original Radio Edit,artist=Avicii,duration=212,color=java.awt.Color[r=55,g=200,b=24],day=-3,graphHeight=60952], 1334323040, -2127031467
-Track[name=Starships,artist=Nicki Minaj,duration=209,color=java.awt.Color[r=148,g=107,b=103],day=-3,graphHeight=60741], 1943091306, 942957276
-Track[name=R.I.P. featuring Tinie Tempah,artist=Rita Ora,duration=229,color=java.awt.Color[r=32,g=223,b=83],day=-3,graphHeight=60511], 751760013, -1429553610
-Track[name=Somebody That I Used To Know,artist=Gotye,duration=245,color=java.awt.Color[r=40,g=215,b=178],day=-3,graphHeight=60266], 1184243190, -1000178427
-Track[name=My Kind of Love,artist=Emeli Sandé,duration=203,color=java.awt.Color[r=246,g=9,b=13],day=-3,graphHeight=60068], 696853934, -1733793156
-Track[name=Express Yourself,artist=Labrinth,duration=243,color=java.awt.Color[r=34,g=221,b=156],day=-3,graphHeight=59824], 1795741647, 185710189
-Track[name=Where Have You Been,artist=Rihanna,duration=243,color=java.awt.Color[r=201,g=54,b=74],day=-3,graphHeight=59581], 294686191, -642890299
-Track[name=Too Close,artist=Alex Clare,duration=257,color=java.awt.Color[r=62,g=193,b=203],day=-3,graphHeight=59324], 693522155, -458853963
-Track[name=Drive By,artist=Train,duration=195,color=java.awt.Color[r=220,g=35,b=50],day=-3,graphHeight=59126], 1633106816, 1700849435
-Track[name=Wide Awake,artist=Katy Perry,duration=221,color=java.awt.Color[r=41,g=214,b=117],day=-3,graphHeight=58896], 637764205, 311165463
-Track[name=Sing,artist=Gary Barlow & The Commonwealth Band,duration=241,color=java.awt.Color[r=70,g=185,b=76],day=-3,graphHeight=58655], 812111258, 501289733
-Track[name=Picking Up The Pieces - Radio Edit,artist=Paloma Faith,duration=219,color=java.awt.Color[r=144,g=111,b=27],day=-3,graphHeight=58441], 1895336521, -52710286
-Track[name=Scream,artist=Usher,duration=235,color=java.awt.Color[r=54,g=201,b=228],day=-3,graphHeight=58204], 1295972496, -1963119384
-Track[name=Call Me Maybe,artist=Carly Rae Jepsen,duration=188,color=java.awt.Color[r=240,g=15,b=108],day=-3,graphHeight=55004], 1630592398, 1468520882
-Track[name=Payphone,artist=Maroon 5,duration=231,color=java.awt.Color[r=247,g=8,b=199],day=-3,graphHeight=54579], 1327613819, -577600373
-Track[name=Princess of China,artist=Coldplay,duration=239,color=java.awt.Color[r=120,g=135,b=84],day=-3,graphHeight=54318], 850363603, 1154393501
-Track[name=Black Heart,artist=Stooshe,duration=206,color=java.awt.Color[r=57,g=198,b=73],day=-3,graphHeight=54109], 557404836, -1461216086
-Track[name=Whistle,artist=Flo Rida,duration=218,color=java.awt.Color[r=50,g=205,b=176],day=-3,graphHeight=53884], 979410438, 299465661
-Track[name=Call My Name,artist=Cheryl Cole,duration=44,color=java.awt.Color[r=141,g=114,b=197],day=-3,graphHeight=53675], 489077211, -756908349
-Track[name=Payphone,artist=Maroon 5,duration=231,color=java.awt.Color[r=247,g=8,b=199],day=-3,graphHeight=53444], 1500768208, -577600373
-Track[name=Payphone,artist=Maroon 5,duration=231,color=java.awt.Color[r=247,g=8,b=199],day=-3,graphHeight=52671], 1215837841, -577600373
-Track[name=What Do You Do with a B.A. in English?/It Sucks To Be Me,artist=Jordan Gelber;John Tartaglia,duration=355,color=java.awt.Color[r=63,g=192,b=146],day=-3,graphHeight=52305], 1279692482, 574897414
-Track[name=Picking Up The Pieces - Radio Edit,artist=Paloma Faith,duration=219,color=java.awt.Color[r=144,g=111,b=27],day=-3,graphHeight=52168], 742820269, -52710286
-Track[name=Payphone,artist=Maroon 5,duration=231,color=java.awt.Color[r=247,g=8,b=199],day=-3,graphHeight=51938], 1257821072, -577600373
-Track[name=I Know Him So Well - Musical "Chess",artist=Elaine Paige,duration=255,color=java.awt.Color[r=214,g=41,b=114],day=-3,graphHeight=43713], 369736036, -1919477411
-Track[name=The Worst Pies in London,artist=Helena Bonham Carter,duration=143,color=java.awt.Color[r=233,g=22,b=235],day=-3,graphHeight=43569], 1483366281, 912096273
-Track[name=Prologue: Jellicle Songs For Jellicle Cats,artist=Original Cast Of Cats,duration=317,color=java.awt.Color[r=121,g=134,b=83],day=-3,graphHeight=43223], 799426744, 415444387
-Track[name=Macavity The Mystery Cat - UK 1981 / Musical "Cats",artist=Original Cast Of Cats,duration=418,color=java.awt.Color[r=113,g=142,b=184],day=-3,graphHeight=42805], 1307590776, -70134408
-Track[name=Scary Monsters And Nice Sprites - Noisa Remix,artist=Skrillex,duration=204,color=java.awt.Color[r=88,g=167,b=140],day=-3,graphHeight=40663], 1478012481, 816754817
-Track[name=With You, Friends [Long Drive],artist=Skrillex,duration=389,color=java.awt.Color[r=86,g=169,b=112],day=-3,graphHeight=40275], 1012423318, -2116728670
-Track[name=All I Ask Of You - Feat. Penny,artist=Skrillex,duration=340,color=java.awt.Color[r=209,g=46,b=50],day=-3,graphHeight=39899], 1285770445, 389035906
-Track[name=Kill Everybody,artist=Skrillex,duration=332,color=java.awt.Color[r=92,g=163,b=135],day=-3,graphHeight=39601], 1963413001, -1299656867
-Track[name=Scary Monsters And Nice Sprites,artist=Skrillex,duration=197,color=java.awt.Color[r=203,g=52,b=149],day=-3,graphHeight=39358], 848588005, 1571245013
-Track[name=Rock N' Roll [Will Take You To The Mountain],artist=Skrillex,duration=284,color=java.awt.Color[r=99,g=156,b=63],day=-3,graphHeight=39074], 779700308, -227026898
-Track[name=Suck It And See,artist=Arctic Monkeys,duration=105,color=java.awt.Color[r=207,g=48,b=250],day=-3,graphHeight=38827], 477862562, -1521933177
-Track[name=Dancing Shoes,artist=Arctic Monkeys,duration=142,color=java.awt.Color[r=180,g=75,b=87],day=-3,graphHeight=38686], 1994723401, -2118583276
-Track[name=That's Where You're Wrong,artist=Arctic Monkeys,duration=159,color=java.awt.Color[r=129,g=126,b=211],day=-3,graphHeight=38428], 948987290, 128301962
-Track[name=I Bet You Look Good On The Dancefloor,artist=Arctic Monkeys,duration=175,color=java.awt.Color[r=220,g=35,b=72],day=-3,graphHeight=38254], 220283427, 1329631484
-Track[name=Mardy Bum,artist=Arctic Monkeys,duration=176,color=java.awt.Color[r=43,g=212,b=60],day=-3,graphHeight=38078], 41750161, -2127218647
-Track[name=The Hellcat Spangled Shalalala,artist=Arctic Monkeys,duration=138,color=java.awt.Color[r=249,g=6,b=41],day=-3,graphHeight=37897], 1615287005, 1581449259
-Track[name=Old Yellow Bricks,artist=Arctic Monkeys,duration=186,color=java.awt.Color[r=14,g=241,b=41],day=-3,graphHeight=37703], 1787911308, -183598527
-Track[name=Library Pictures,artist=Arctic Monkeys,duration=113,color=java.awt.Color[r=39,g=216,b=93],day=-3,graphHeight=37561], 1834164732, 424876950
-Track[name=Fluorescent Adolescent,artist=Arctic Monkeys,duration=172,color=java.awt.Color[r=69,g=186,b=42],day=-3,graphHeight=37376], 1826381686, -365205782
-Track[name=Still Take You Home,artist=Arctic Monkeys,duration=175,color=java.awt.Color[r=223,g=32,b=51],day=-3,graphHeight=37202], 2013230031, 486226269
-Track[name=This House Is A Circus,artist=Arctic Monkeys,duration=188,color=java.awt.Color[r=241,g=14,b=48],day=-3,graphHeight=37010], 604788885, -449969980
-Track[name=The Bad Thing,artist=Arctic Monkeys,duration=142,color=java.awt.Color[r=138,g=117,b=199],day=-3,graphHeight=36864], 646688944, -486309728
-Track[name=Crying Lightning,artist=Arctic Monkeys,duration=224,color=java.awt.Color[r=79,g=176,b=71],day=-3,graphHeight=36641], 486344341, -975694146
-Track[name=Brianstorm,artist=Arctic Monkeys,duration=171,color=java.awt.Color[r=145,g=110,b=57],day=-3,graphHeight=36469], 666578705, -735744161
-Track[name=My Propeller,artist=Arctic Monkeys,duration=208,color=java.awt.Color[r=19,g=236,b=82],day=-3,graphHeight=36261], 1913592183, -1142688329
-Track[name=Black Treacle,artist=Arctic Monkeys,duration=115,color=java.awt.Color[r=116,g=139,b=118],day=-3,graphHeight=36045], 1028722209, -702622211
-Track[name=Pretty Visitors,artist=Arctic Monkeys,duration=221,color=java.awt.Color[r=255,g=0,b=215],day=-3,graphHeight=35824], 343324666, -1250061365
-Track[name=She's Thunderstorms,artist=Arctic Monkeys,duration=137,color=java.awt.Color[r=248,g=7,b=43],day=-3,graphHeight=35588], 2116585620, 280231270
-Track[name=Don't Sit Down 'Cause I've Moved Your Chair,artist=Arctic Monkeys,duration=183,color=java.awt.Color[r=128,g=127,b=4],day=-3,graphHeight=35404], 387902785, 2121072962
-Track[name=Love Is A Laserquest,artist=Arctic Monkeys,duration=123,color=java.awt.Color[r=89,g=166,b=86],day=-3,graphHeight=35212], 1869238850, 434468922
-Track[name=D Is For Dangerous,artist=Arctic Monkeys,duration=134,color=java.awt.Color[r=137,g=118,b=67],day=-3,graphHeight=35074], 759079987, 329848725
-Track[name=Balaclava,artist=Arctic Monkeys,duration=166,color=java.awt.Color[r=191,g=64,b=223],day=-3,graphHeight=34902], 1804478329, 1830673867
-Track[name=The View from the Afternoon,artist=Arctic Monkeys,duration=222,color=java.awt.Color[r=174,g=81,b=136],day=-3,graphHeight=34684], 1103212569, 462443839
-Track[name=When the Sun Goes Down,artist=Arctic Monkeys,duration=199,color=java.awt.Color[r=97,g=158,b=96],day=-3,graphHeight=34470], 319838985, -573045793
-Track[name=505,artist=Arctic Monkeys,duration=252,color=java.awt.Color[r=115,g=140,b=9],day=-3,graphHeight=34216], 382252454, -879456426
-Track[name=Teddy Picker,artist=Arctic Monkeys,duration=160,color=java.awt.Color[r=154,g=101,b=238],day=-3,graphHeight=34051], 1393406201, 74540386
-Track[name=Do Me A Favour,artist=Arctic Monkeys,duration=204,color=java.awt.Color[r=253,g=2,b=244],day=-3,graphHeight=33842], 668849672, 1677278015
-Track[name=Hljóp,artist=Chicane & Vigri,duration=312,color=java.awt.Color[r=158,g=97,b=151],day=-5,graphHeight=51178], 1427028906, -1780213209
-Track[name=Nowhere To Go - Shogun Remix,artist=W&W,duration=487,color=java.awt.Color[r=204,g=51,b=78],day=-5,graphHeight=50683], 977453446, 1064476441
-Track[name=Beggin' You - Armin Van Buuren Remix Edit,artist=Jaren,duration=265,color=java.awt.Color[r=101,g=154,b=156],day=-5,graphHeight=50418], 1957651019, 1911149005
-Track[name=Derezzed (Remixed by Avicii),artist=Daft Punk,duration=304,color=java.awt.Color[r=31,g=224,b=13],day=-5,graphHeight=49123], 643720646, -504112717
-Track[name=Kiss With a Fist,artist=Florence + the Machine,duration=124,color=java.awt.Color[r=190,g=65,b=122],day=-6,graphHeight=56703], 2137767383, 752690130
-Track[name=Hardest Of Hearts,artist=Florence + the Machine,duration=207,color=java.awt.Color[r=101,g=154,b=12],day=-6,graphHeight=56497], 2054991771, 24012488
-Track[name=Howl,artist=Florence + the Machine,duration=214,color=java.awt.Color[r=56,g=199,b=133],day=-6,graphHeight=56185], 267200496, 1381395635
-Track[name=I'm Not Calling You A Liar,artist=Florence + the Machine,duration=185,color=java.awt.Color[r=149,g=106,b=98],day=-6,graphHeight=56000], 450430395, 1858689887
-Track[name=Dog Days Are Over,artist=Florence + the Machine,duration=253,color=java.awt.Color[r=94,g=161,b=123],day=-6,graphHeight=55747], 503793090, -2021179748
-Track[name=Girl With One Eye (Bayou Percussion Version),artist=Florence + the Machine,duration=235,color=java.awt.Color[r=237,g=18,b=110],day=-6,graphHeight=55511], 1869927156, 996640966
-Track[name=Heartlines,artist=Florence + the Machine,duration=302,color=java.awt.Color[r=216,g=39,b=253],day=-6,graphHeight=55210], 1590020694, -608361136
-Track[name=Viking - Original Mix Edit,artist=Orjan Nilsen,duration=198,color=java.awt.Color[r=136,g=119,b=26],day=-6,graphHeight=54786], 191300790, 222931115
-Track[name=Rapture (Avicii New Generation Radio Edit),artist=Nadia Ali,duration=218,color=java.awt.Color[r=12,g=243,b=251],day=-6,graphHeight=54564], 409357971, -403066655
-Track[name=The Ones That Get Away - Original Mix Edit,artist=Arnej,duration=253,color=java.awt.Color[r=137,g=118,b=217],day=-6,graphHeight=54311], 1689297256, 2025727179
-Track[name=Belter - Original Mix Edit,artist=Armin van Buuren,duration=260,color=java.awt.Color[r=46,g=209,b=211],day=-6,graphHeight=54051], 137684605, -457677737
-Track[name=Dusky 2010 (Does She Know Yet) - Radio Mix,artist=Max Graham,duration=189,color=java.awt.Color[r=131,g=124,b=178],day=-6,graphHeight=53862], 1225268416, -1108836302
-Track[name=Twilight - Armin van Buuren Remix Edit,artist=Kirsty,duration=195,color=java.awt.Color[r=11,g=244,b=236],day=-6,graphHeight=53666], 865576629, 942157677
-Track[name=Hyperfocus - Wezz Devall Remix Edit,artist=Mark Otten,duration=180,color=java.awt.Color[r=24,g=231,b=223],day=-6,graphHeight=53486], 692178825, 637286479
-Track[name=Overthrow - Protoculture Remix Edit,artist=James Dymond,duration=196,color=java.awt.Color[r=44,g=211,b=204],day=-6,graphHeight=53290], 530595976, 81875875
-Track[name=Superman - Original Mix Edit,artist=Mat Zo,duration=248,color=java.awt.Color[r=135,g=120,b=81],day=-6,graphHeight=53042], 1374466288, -1330371682
-Track[name=Ramsterdam - Jorn Van Deynhoven Remix Edit,artist=Ram,duration=285,color=java.awt.Color[r=186,g=69,b=95],day=-6,graphHeight=52756], 173311637, -1795903726
-Track[name=Blossom - Radio Edit,artist=Abstract Vision,duration=237,color=java.awt.Color[r=45,g=210,b=25],day=-6,graphHeight=52519], 860857727, 162231463
-Track[name=Toy Story - Radio Edit,artist=Quintin,duration=188,color=java.awt.Color[r=52,g=203,b=81],day=-6,graphHeight=52331], 838487850, 1958757889
-Track[name=Earth Hour - Original Mix Edit,artist=Dash Berlin,duration=238,color=java.awt.Color[r=136,g=119,b=177],day=-6,graphHeight=51857], 677603336, 137409708
-Track[name=Beggin' You - Armin Van Buuren Remix Edit,artist=Jaren,duration=265,color=java.awt.Color[r=101,g=154,b=156],day=-6,graphHeight=50920], 373488111, 1911149005
-Track[name=Derezzed (Remixed by Avicii),artist=Daft Punk,duration=304,color=java.awt.Color[r=31,g=224,b=13],day=-6,graphHeight=50520], 119981396, -504112717
-Track[name=Holy Ghost,artist=White Lies,duration=261,color=java.awt.Color[r=127,g=128,b=102],day=-6,graphHeight=49947], 962436315, 442076485
-Track[name=Turn The Bells,artist=White Lies,duration=302,color=java.awt.Color[r=134,g=121,b=156],day=-6,graphHeight=49643], 820317001, -975984992
-Track[name=Streetlights,artist=White Lies,duration=298,color=java.awt.Color[r=130,g=125,b=0],day=-6,graphHeight=49342], 222822067, 1667700930
-Track[name=Bad Love,artist=White Lies,duration=238,color=java.awt.Color[r=102,g=153,b=36],day=-6,graphHeight=49104], 1906483348, -606658705
-Track[name=Come Down,artist=White Lies,duration=308,color=java.awt.Color[r=136,g=119,b=17],day=-6,graphHeight=48794], 1809616596, 459889536
-Track[name=Peace & Quiet,artist=White Lies,duration=352,color=java.awt.Color[r=231,g=24,b=205],day=-6,graphHeight=48439], 1562720158, -39520118
-Track[name=The Power & The Glory,artist=White Lies,duration=311,color=java.awt.Color[r=111,g=144,b=119],day=-6,graphHeight=48125], 912692696, 421057088
-Track[name=Strangers,artist=White Lies,duration=325,color=java.awt.Color[r=75,g=180,b=236],day=-6,graphHeight=47800], 150451151, -1929333985
-Track[name=Is Love,artist=White Lies,duration=291,color=java.awt.Color[r=227,g=28,b=70],day=-6,graphHeight=47508], 1044242338, -707132566
-Track[name=Bigger Than Us,artist=White Lies,duration=281,color=java.awt.Color[r=80,g=175,b=142],day=-6,graphHeight=47225], 1344611482, 457582419
-Track[name=Strangers,artist=White Lies,duration=325,color=java.awt.Color[r=75,g=180,b=236],day=-6,graphHeight=46888], 914760593, -1929333985
-Track[name=Holy Ghost,artist=White Lies,duration=261,color=java.awt.Color[r=127,g=128,b=102],day=-6,graphHeight=36234], 545857678, 442076485
-Track[name=Streetlights,artist=White Lies,duration=298,color=java.awt.Color[r=130,g=125,b=0],day=-6,graphHeight=35934], 179854162, 1667700930
-Track[name=Peace & Quiet,artist=White Lies,duration=352,color=java.awt.Color[r=231,g=24,b=205],day=-6,graphHeight=35580], 1299409405, -39520118
-Track[name=Bigger Than Us,artist=White Lies,duration=281,color=java.awt.Color[r=80,g=175,b=142],day=-6,graphHeight=35297], 1412663492, 457582419
-Track[name=All Star,artist=Smash Mouth,duration=201,color=java.awt.Color[r=250,g=5,b=78],day=-7,graphHeight=62556], 56108812, -2127802638
-Track[name=Come On, Come On,artist=Smash Mouth,duration=60,color=null,day=-7,graphHeight=62403], 275482251, 604160855
-Track[name=All Star,artist=Smash Mouth,duration=201,color=java.awt.Color[r=250,g=5,b=78],day=-7,graphHeight=62095], 55449625, -2127802638
-Track[name=Assassin,artist=Muse,duration=211,color=java.awt.Color[r=210,g=45,b=154],day=-7,graphHeight=56376], 2081428224, -390682305
-Track[name=The Greatest Story Never Told,artist=Murray Gold,duration=375,color=java.awt.Color[r=116,g=139,b=248],day=-7,graphHeight=55998], 55551138, 742143286
-Track[name=Taken For A Fool,artist=The Strokes,duration=204,color=java.awt.Color[r=132,g=123,b=233],day=-7,graphHeight=55795], 1640073568, 1229041591
-Track[name=Feeling A Moment,artist=Feeder,duration=251,color=java.awt.Color[r=247,g=8,b=141],day=-7,graphHeight=55546], 1763848131, -781604146
-Track[name=My Sound (Cc.K Radio Edit) - Cc.K Radio Edit,artist=Commercial Club Crew,duration=204,color=java.awt.Color[r=17,g=238,b=236],day=-7,graphHeight=55334], 1131274529, 766465422
-Track[name=Is Love,artist=White Lies,duration=291,color=java.awt.Color[r=227,g=28,b=70],day=-7,graphHeight=55027], 1658282012, -707132566
-Track[name=Peace & Quiet,artist=White Lies,duration=352,color=java.awt.Color[r=231,g=24,b=205],day=-7,graphHeight=54673], 703004918, -39520118
-Track[name=Turn The Bells,artist=White Lies,duration=302,color=java.awt.Color[r=134,g=121,b=156],day=-7,graphHeight=54368], 2096114679, -975984992
-Track[name=Bigger Than Us,artist=White Lies,duration=281,color=java.awt.Color[r=80,g=175,b=142],day=-7,graphHeight=51781], 2077664565, 457582419
-Track[name=Come Down,artist=White Lies,duration=308,color=java.awt.Color[r=136,g=119,b=17],day=-7,graphHeight=51453], 1224243735, 459889536
-Track[name=Strangers,artist=White Lies,duration=325,color=java.awt.Color[r=75,g=180,b=236],day=-7,graphHeight=51129], 823632238, -1929333985
-Track[name=Holy Ghost,artist=White Lies,duration=261,color=java.awt.Color[r=127,g=128,b=102],day=-7,graphHeight=43460], 107435504, 442076485
-Track[name=Strangers,artist=White Lies,duration=325,color=java.awt.Color[r=75,g=180,b=236],day=-7,graphHeight=43135], 1782252248, -1929333985
-Track[name=Bad Love,artist=White Lies,duration=238,color=java.awt.Color[r=102,g=153,b=36],day=-7,graphHeight=42896], 1211623780, -606658705
-Track[name=The Power & The Glory,artist=White Lies,duration=311,color=java.awt.Color[r=111,g=144,b=119],day=-7,graphHeight=42583], 1320929606, 421057088
-Track[name=Come Down,artist=White Lies,duration=308,color=java.awt.Color[r=136,g=119,b=17],day=-7,graphHeight=42273], 177945356, 459889536
-Track[name=Streetlights,artist=White Lies,duration=298,color=java.awt.Color[r=130,g=125,b=0],day=-7,graphHeight=41668], 1430361668, 1667700930
-Track[name=Turn The Bells,artist=White Lies,duration=302,color=java.awt.Color[r=134,g=121,b=156],day=-7,graphHeight=41363], 1156609558, -975984992
-Track[name=Peace & Quiet,artist=White Lies,duration=352,color=java.awt.Color[r=231,g=24,b=205],day=-7,graphHeight=40422], 114868662, -39520118
-Track[name=Is Love,artist=White Lies,duration=291,color=java.awt.Color[r=227,g=28,b=70],day=-7,graphHeight=40129], 9803581, -707132566
-Track[name=Bigger Than Us,artist=White Lies,duration=281,color=java.awt.Color[r=80,g=175,b=142],day=-7,graphHeight=39846], 1560028695, 457582419
-Track[name=Parallel Universe,artist=Red Hot Chili Peppers,duration=270,color=java.awt.Color[r=229,g=26,b=243],day=-8,graphHeight=84462], 774430642, -362141646
-Track[name=Stadium Arcadium,artist=Red Hot Chili Peppers,duration=314,color=java.awt.Color[r=51,g=204,b=229],day=-8,graphHeight=84146], 2104899274, -34584223
-Track[name=Warlocks,artist=Red Hot Chili Peppers,duration=205,color=java.awt.Color[r=87,g=168,b=25],day=-8,graphHeight=83940], 1543981087, 1198190288
-Track[name=Turn It Again,artist=Red Hot Chili Peppers,duration=365,color=java.awt.Color[r=100,g=155,b=131],day=-8,graphHeight=83573], 1645222508, 867140130
-Track[name=If,artist=Red Hot Chili Peppers,duration=172,color=java.awt.Color[r=53,g=202,b=152],day=-8,graphHeight=83399], 255253184, 995851411
-Track[name=I Could Die For You,artist=Red Hot Chili Peppers,duration=192,color=java.awt.Color[r=67,g=188,b=6],day=-8,graphHeight=83207], 1515420429, 224473534
-Track[name=Death Of A Martian,artist=Red Hot Chili Peppers,duration=264,color=java.awt.Color[r=221,g=34,b=109],day=-8,graphHeight=82942], 515096783, 15332876
-Track[name=Minor Thing,artist=Red Hot Chili Peppers,duration=216,color=java.awt.Color[r=221,g=34,b=92],day=-8,graphHeight=82682], 725050824, 1269371149
-Track[name=Around The World,artist=Red Hot Chili Peppers,duration=238,color=java.awt.Color[r=160,g=95,b=64],day=-8,graphHeight=82445], 1106985890, -684344512
-Track[name=Warlocks,artist=Red Hot Chili Peppers,duration=205,color=java.awt.Color[r=87,g=168,b=25],day=-8,graphHeight=82235], 1461019269, 1198190288
-Track[name=So Much I,artist=Red Hot Chili Peppers,duration=224,color=java.awt.Color[r=163,g=92,b=233],day=-8,graphHeight=82010], 1022834285, -318158154
+Track[name=Everywhere,artist=Master Blaster,duration=190,color=java.awt.Color[r=39,g=216,b=42],day=0,graphHeight=0], 1353537674, 2034086579
+Track[name=Machu Picchu,artist=The Strokes,duration=209,color=java.awt.Color[r=141,g=114,b=119],day=0,graphHeight=77480], 613414247, -1767678750
+Track[name=On The Road,artist=Keane,duration=237,color=java.awt.Color[r=170,g=85,b=86],day=0,graphHeight=77065], 1731743729, 1633003886
+Track[name=Otherside,artist=Red Hot Chili Peppers,duration=255,color=java.awt.Color[r=35,g=220,b=3],day=0,graphHeight=73824], 570985512, 2022783945
+Track[name=On The Road,artist=Keane,duration=237,color=java.awt.Color[r=170,g=85,b=86],day=0,graphHeight=73586], 1596565388, 1633003886
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=0,graphHeight=73368], 666306851, -362377627
+Track[name=Last Of The Ladies,artist=The Courteeners,duration=205,color=java.awt.Color[r=208,g=47,b=169],day=0,graphHeight=72117], 1639509299, -1925924770
+Track[name=White Sky,artist=Vampire Weekend,duration=179,color=java.awt.Color[r=233,g=22,b=230],day=0,graphHeight=71088], 870113636, -2055489429
+Track[name=On The Road,artist=Keane,duration=237,color=java.awt.Color[r=170,g=85,b=86],day=0,graphHeight=70851], 1783727829, 1633003886
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=0,graphHeight=70634], 241909883, -362377627
+Track[name=I Am the Doctor,artist=Murray Gold,duration=123,color=java.awt.Color[r=87,g=168,b=229],day=0,graphHeight=68605], 592859810, -1256649995
+Track[name=Day of the Moon,artist=Murray Gold,duration=164,color=java.awt.Color[r=147,g=108,b=60],day=0,graphHeight=68440], 2018188237, -1747201461
+Track[name=Day of the Moon,artist=Murray Gold,duration=164,color=java.awt.Color[r=147,g=108,b=60],day=0,graphHeight=66241], 185494894, -1747201461
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=0,graphHeight=65807], 1613911661, -362377627
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=0,graphHeight=65559], 147341170, -362377627
+Track[name=Razzmatazz,artist=Pulp,duration=221,color=java.awt.Color[r=167,g=88,b=217],day=0,graphHeight=51608], 314399199, 2111479545
+Track[name=Disco 2000 - 7" Mix,artist=Pulp,duration=274,color=java.awt.Color[r=113,g=142,b=60],day=0,graphHeight=51333], 1297565973, -1340966145
+Track[name=On The Road,artist=Keane,duration=237,color=java.awt.Color[r=170,g=85,b=86],day=0,graphHeight=51096], 494872926, 1633003886
+Track[name=White Sky,artist=Vampire Weekend,duration=179,color=java.awt.Color[r=233,g=22,b=230],day=0,graphHeight=50916], 125102451, -2055489429
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=0,graphHeight=50683], 210403544, -362377627
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=-1,graphHeight=85710], 1494281046, -362377627
+Track[name=Disconnected,artist=Keane,duration=238,color=java.awt.Color[r=201,g=54,b=39],day=-1,graphHeight=85294], 1707772104, -1292532573
+Track[name=The Starting Line,artist=Keane,duration=252,color=java.awt.Color[r=73,g=182,b=102],day=-1,graphHeight=85041], 1406809773, 359777017
+Track[name=In Your Own Time,artist=Keane,duration=224,color=java.awt.Color[r=83,g=172,b=157],day=-1,graphHeight=84816], 456901341, -1511866171
+Track[name=The Boys - Bonus Track,artist=Keane,duration=213,color=java.awt.Color[r=116,g=139,b=200],day=-1,graphHeight=84603], 1886800162, -29767727
+Track[name=Silenced By The Night - Bonus Track,artist=Keane,duration=210,color=java.awt.Color[r=119,g=136,b=95],day=-1,graphHeight=84392], 1706791132, -1370422486
+Track[name=Neon River,artist=Keane,duration=293,color=java.awt.Color[r=84,g=171,b=195],day=-1,graphHeight=84099], 2099482545, 1780921372
+Track[name=You Are Young,artist=Keane,duration=215,color=java.awt.Color[r=64,g=191,b=168],day=-1,graphHeight=83884], 699329958, -118810925
+Track[name=The Starting Line - Bonus Track,artist=Keane,duration=273,color=java.awt.Color[r=120,g=135,b=211],day=-1,graphHeight=83611], 460604075, 2061362146
+Track[name=Silenced By The Night,artist=Keane,duration=196,color=java.awt.Color[r=63,g=192,b=97],day=-1,graphHeight=83414], 1841624737, -26361791
+Track[name=Black Rain,artist=Keane,duration=227,color=java.awt.Color[r=77,g=178,b=252],day=-1,graphHeight=83187], 505150548, -554635287
+Track[name=On The Road,artist=Keane,duration=237,color=java.awt.Color[r=170,g=85,b=86],day=-1,graphHeight=82950], 1062403645, 1633003886
+Track[name=Watch How You Go,artist=Keane,duration=220,color=java.awt.Color[r=76,g=179,b=39],day=-1,graphHeight=81443], 1639020357, 528645524
+Track[name=Run With Me - Bonus Track,artist=Keane,duration=211,color=java.awt.Color[r=114,g=141,b=228],day=-1,graphHeight=81232], 1242400030, 959430826
+Track[name=Day Will Come,artist=Keane,duration=192,color=java.awt.Color[r=74,g=181,b=179],day=-1,graphHeight=81039], 1033804429, -562999312
+Track[name=Strangeland - Bonus Track,artist=Keane,duration=276,color=java.awt.Color[r=115,g=140,b=211],day=-1,graphHeight=80762], 2008333973, -935003232
+Track[name=Sea Fog,artist=Keane,duration=203,color=java.awt.Color[r=72,g=183,b=194],day=-1,graphHeight=80559], 2068604312, 1622033681
+Track[name=It's Not True - Bonus Track,artist=Keane,duration=229,color=java.awt.Color[r=117,g=138,b=10],day=-1,graphHeight=80329], 1419910501, 1920548483
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=-1,graphHeight=80111], 1597504843, -362377627
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=-1,graphHeight=79595], 1423341507, -362377627
+Track[name=On The Road,artist=Keane,duration=237,color=java.awt.Color[r=170,g=85,b=86],day=-1,graphHeight=76045], 1280364216, 1633003886
+Track[name=Sovereign Light Café,artist=Keane,duration=219,color=java.awt.Color[r=114,g=141,b=7],day=-1,graphHeight=75826], 1295235372, -362377627
+Track[name=Somewhere Only We Know,artist=Keane,duration=237,color=java.awt.Color[r=78,g=177,b=163],day=-1,graphHeight=74228], 2126651212, 312209640
+Track[name=Accidentally In Love,artist=Counting Crows,duration=189,color=java.awt.Color[r=45,g=210,b=175],day=-1,graphHeight=74039], 2056583063, 1584781283
+Track[name=The Scientist,artist=Coldplay,duration=310,color=java.awt.Color[r=74,g=181,b=165],day=-1,graphHeight=64814], 1242241376, 549197601
+Track[name=Danger! High Voltage,artist=Electric Six,duration=215,color=java.awt.Color[r=35,g=220,b=132],day=-1,graphHeight=64586], 514790298, 1498148321
+Track[name=Crying Lightning,artist=Arctic Monkeys,duration=224,color=java.awt.Color[r=78,g=177,b=233],day=-1,graphHeight=59157], 2016408370, -975694146
+Track[name=The Lonely Goatherd,artist=The Sound Of Music/London Palladium Cast/The Company,duration=193,color=java.awt.Color[r=146,g=109,b=132],day=-1,graphHeight=58392], 336041283, 2117130170
+Track[name=What Is This Feeling? - Original Cast Recording/2003,artist=Kristin Chenoweth,duration=211,color=java.awt.Color[r=197,g=58,b=252],day=-1,graphHeight=58179], 2111335418, -424571342
+Track[name=Sit Down, You're Rockin' the Boat (From "Guys and Dolls"),artist=Edward Strauss,duration=176,color=java.awt.Color[r=20,g=235,b=64],day=-1,graphHeight=58002], 194587298, -492812895
+Track[name=I Know Him So Well - Musical "Chess",artist=Elaine Paige,duration=255,color=java.awt.Color[r=79,g=176,b=69],day=-1,graphHeight=57740], 1958606752, -1919477411
