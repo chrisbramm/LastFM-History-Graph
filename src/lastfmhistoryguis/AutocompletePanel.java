@@ -42,10 +42,10 @@ public class AutocompletePanel extends JPanel{
 
 		// List<String> testComplete = new ArrayList<String>();
 		// testComplete.add();
-		//NameService nameService = new NameService(trackList);
+		NameService nameService = new NameService(trackList);
 		JTextField trackInput = new JTextField();
-		//Document autoCompleteDocument = new AutoCompleteDocument(nameService,	trackInput);
-		//trackInput.setDocument(autoCompleteDocument);
+		Document autoCompleteDocument = new AutoCompleteDocument(nameService,	trackInput);
+		trackInput.setDocument(autoCompleteDocument);
 
 		trackInput.setColumns(25);
 		this.add(trackInput);
