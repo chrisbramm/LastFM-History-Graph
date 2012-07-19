@@ -224,7 +224,9 @@ public class LastFMHistory {
 	public List<String> getTrackList(){
 		for(Track t: history){
 			String trackName = t.getName();
-			tracks.add(trackName);
+			if(!tracks.contains(trackName)){
+				tracks.add(trackName);
+			}
 		}
 		return tracks;
 	}

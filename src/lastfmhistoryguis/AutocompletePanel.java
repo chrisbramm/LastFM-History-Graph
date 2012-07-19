@@ -25,23 +25,28 @@ public class AutocompletePanel extends JPanel{
 		
 		this.trackList = trackList;
 		this.artistList = artistList;
-	
+		createAutocompletePanel();
+		
 	}
 	
 	public void createAutocompletePanel(){
 		
 		JPanel bottomPanel = new JPanel();
-
+		
+		
+		for(String s : trackList){
+			System.out.println(s);
+		}
 		/**
 		 * Create the autocomplete track box
 		 **/
 
 		// List<String> testComplete = new ArrayList<String>();
 		// testComplete.add();
-		NameService nameService = new NameService(trackList);
+		//NameService nameService = new NameService(trackList);
 		JTextField trackInput = new JTextField();
-		Document autoCompleteDocument = new AutoCompleteDocument(nameService,	trackInput);
-		trackInput.setDocument(autoCompleteDocument);
+		//Document autoCompleteDocument = new AutoCompleteDocument(nameService,	trackInput);
+		//trackInput.setDocument(autoCompleteDocument);
 
 		trackInput.setColumns(25);
 		bottomPanel.add(trackInput);
@@ -49,6 +54,8 @@ public class AutocompletePanel extends JPanel{
 		JButton trackGo = new JButton("Track");
 		
 		bottomPanel.add(trackGo);
+		System.out.println("Lol");
+		setVisible(true);
 	}
 
 	

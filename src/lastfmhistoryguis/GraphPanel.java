@@ -33,7 +33,6 @@ public class GraphPanel extends JPanel {
 			panelWidth = getWidth() - 4 * PAD;
 			//panelHeight = getHeight() - 2 * PAD;
 			panelHeight = 6000 - 2 * PAD;
-			// graph.setClip(0, 0, getWidth(), 2000);
 			System.out.println(panelWidth + ", " + panelHeight);
 
 			int x0 = panelWidth + PAD;
