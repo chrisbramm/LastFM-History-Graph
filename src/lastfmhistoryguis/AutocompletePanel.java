@@ -32,28 +32,41 @@ public class AutocompletePanel extends JPanel{
 	public void createAutocompletePanel(){
 		
 		
+		JButton defaultZoom = new JButton ("Default");
+		JButton medZoom = new JButton("2000");
+		JButton fullZoom = new JButton("6000");
 		
-		for(String s : trackList){
-			System.out.println(s);
-		}
+		this.add(defaultZoom);
+		this.add(medZoom);
+		this.add(fullZoom);
+		
 		/**
 		 * Create the autocomplete track box
 		 **/
 
 		// List<String> testComplete = new ArrayList<String>();
 		// testComplete.add();
-		NameService nameService = new NameService(trackList);
+		NameService nameTrackService = new NameService(trackList);
 		JTextField trackInput = new JTextField();
-		Document autoCompleteDocument = new AutoCompleteDocument(nameService,	trackInput);
-		trackInput.setDocument(autoCompleteDocument);
-
+		Document autoCompleteDocumentTrack = new AutoCompleteDocument(nameTrackService,	trackInput);
+		trackInput.setDocument(autoCompleteDocumentTrack);
 		trackInput.setColumns(25);
 		this.add(trackInput);
-
 		JButton trackGo = new JButton("Track");
-		
 		this.add(trackGo);
-		System.out.println("Lol");
+		
+		NameService nameArtistService = new NameService(artistList);
+		JTextField artistInput = new JTextField();
+		Document autoCompleteDocumentArtist = new AutoCompleteDocument(nameArtistService,	artistInput);
+		artistInput.setDocument(autoCompleteDocumentArtist);
+		artistInput.setColumns(25);
+		this.add(artistInput);
+		JButton artistGo = new JButton("Track");
+		this.add(artistGo);
+		
+		
+		
+		
 	}
 
 	
