@@ -31,7 +31,6 @@ public class AutocompletePanel extends JPanel{
 	
 	public void createAutocompletePanel(){
 		
-		JPanel bottomPanel = new JPanel();
 		
 		
 		for(String s : trackList){
@@ -49,13 +48,12 @@ public class AutocompletePanel extends JPanel{
 		//trackInput.setDocument(autoCompleteDocument);
 
 		trackInput.setColumns(25);
-		bottomPanel.add(trackInput);
+		this.add(trackInput);
 
 		JButton trackGo = new JButton("Track");
 		
-		bottomPanel.add(trackGo);
+		this.add(trackGo);
 		System.out.println("Lol");
-		setVisible(true);
 	}
 
 	
