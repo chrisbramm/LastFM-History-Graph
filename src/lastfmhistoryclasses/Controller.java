@@ -45,6 +45,7 @@ public class Controller {
 				lastFMHistoryModel.getArtistList();
 				
 				outputGUIView = new OutputGUI(lastFMHistoryModel, screenWidth, screenHeight, 0);
+				outputGUIView.autocompletePanel.addZoom2000(new Zoom2000());
 			}catch(Exception ex){
 				System.err.println(ex);
 				System.out.println(username);
