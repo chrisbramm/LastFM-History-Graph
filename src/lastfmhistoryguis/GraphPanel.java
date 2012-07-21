@@ -18,8 +18,11 @@ public class GraphPanel extends JPanel {
 	private int panelWidth;
 	private final int PAD = 20;
 	
-	public GraphPanel(LastFMHistory model){
+	public GraphPanel(LastFMHistory model, int height){
 		this.graphData = model;
+		if (height != 0){
+			this.panelHeight = height;
+		}
 	}
 	
 	protected void paintComponent(Graphics g) {

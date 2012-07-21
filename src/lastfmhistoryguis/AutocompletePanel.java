@@ -65,8 +65,6 @@ public class AutocompletePanel extends JPanel{
 		this.add(artistGo);
 		
 		
-		
-		
 	}
 
 	
