@@ -44,7 +44,7 @@ public class Controller {
 				lastFMHistoryModel.getTrackList();
 				lastFMHistoryModel.getArtistList();
 				
-				outputGUIView = new OutputGUI(lastFMHistoryModel, screenWidth, screenHeight);
+				outputGUIView = new OutputGUI(lastFMHistoryModel, screenWidth, screenHeight, 0);
 			}catch(Exception ex){
 				System.err.println(ex);
 				System.out.println(username);
@@ -64,6 +64,14 @@ public class Controller {
 				System.out.println(username);
 			}
 		}
+	}
+	
+	class Zoom2000 implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			outputGUIView.graphPanel.zoom(2000);
+		}
+
+		
 	}
 	
 }

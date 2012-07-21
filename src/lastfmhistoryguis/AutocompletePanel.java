@@ -20,6 +20,10 @@ public class AutocompletePanel extends JPanel{
 	
 	public List<String> trackList = new ArrayList<String>();
 	private List<String> artistList = new ArrayList<String>();
+	private JButton defaultZoom;
+	private JButton	medZoom;
+	private JButton fullZoom;
+	
 	
 	public AutocompletePanel(List<String> trackList, List<String> artistList){
 		
@@ -32,9 +36,9 @@ public class AutocompletePanel extends JPanel{
 	public void createAutocompletePanel(){
 		
 		
-		JButton defaultZoom = new JButton ("Default");
-		JButton medZoom = new JButton("2000");
-		JButton fullZoom = new JButton("6000");
+		defaultZoom = new JButton ("Default");
+		medZoom = new JButton("2000");
+		fullZoom = new JButton("6000");
 		
 		this.add(defaultZoom);
 		this.add(medZoom);
@@ -65,6 +69,9 @@ public class AutocompletePanel extends JPanel{
 		this.add(artistGo);
 		
 		
+	}
+	public void addZoom2000(ActionListener zoom2000){
+		medZoom.addActionListener(zoom2000);
 	}
 
 	

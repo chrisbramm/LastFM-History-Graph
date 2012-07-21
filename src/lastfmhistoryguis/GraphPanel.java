@@ -82,6 +82,10 @@ public class GraphPanel extends JPanel {
 			}
 		}
 	}
+	public void zoom(int height){
+		this.panelHeight = height;
+		repaint();
+	}
 	
 	
 }
