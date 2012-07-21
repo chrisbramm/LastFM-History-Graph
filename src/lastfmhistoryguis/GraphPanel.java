@@ -22,6 +22,8 @@ public class GraphPanel extends JPanel {
 		this.graphData = model;
 		if (height != 0){
 			this.panelHeight = height;
+		}else{
+			panelHeight = getHeight();
 		}
 	}
 	
@@ -34,8 +36,7 @@ public class GraphPanel extends JPanel {
 			System.err.println("No data found");
 		} else {
 			panelWidth = getWidth() - 4 * PAD;
-			//panelHeight = getHeight() - 2 * PAD;
-			panelHeight = 6000 - 2 * PAD;
+			panelHeight = panelHeight - 2 * PAD;
 			System.out.println(panelWidth + ", " + panelHeight);
 
 			int x0 = panelWidth + PAD;

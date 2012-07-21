@@ -13,16 +13,18 @@ public class OutputGUI extends JFrame {
 	private JFrame outputGUIFrame;
 	private int screenWidth;
 	private int screenHeight;
+	private int zoom;
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public OutputGUI(LastFMHistory model, int screenWidth, int screenHeight){
+	public OutputGUI(LastFMHistory model, int screenWidth, int screenHeight, int zoom){
 		this.screenWidth = screenWidth;
 		this.screenHeight = screenHeight;
 		this.lastFMHistoryModel = model;
+		this.zoom = zoom;
 		createGUI();
 		
 		
@@ -38,7 +40,7 @@ public class OutputGUI extends JFrame {
 		
 		System.out.println("Frame Width: " + frameWidth + ", Frame Height:" + frameHeight);
 
-		GraphPanel graphPanel = new GraphPanel(lastFMHistoryModel);
+		GraphPanel graphPanel = new GraphPanel(lastFMHistoryModel, zoom);
 		graphPanel.setPreferredSize(new Dimension(screenWidth - 80, 6000));
 
 
