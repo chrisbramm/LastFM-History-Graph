@@ -27,7 +27,8 @@ public class GraphPanel extends JPanel {
 			panelHeight = getHeight();
 			System.out.println("getHeight() returning:" + getHeight());
 		}
-		this.setPreferredSize(new Dimension(getWidth(), getHeight()));
+		System.out.println("Width" + getWidth() + "Height" + getHeight());
+		
 	}
 	
 	protected void paintComponent(Graphics g) {
@@ -38,8 +39,10 @@ public class GraphPanel extends JPanel {
 		if (graphData == null) {
 			System.err.println("No data found");
 		} else {
+			System.out.println("paintComponent Width" + getWidth() + "Height" + getHeight());
+			this.setPreferredSize(new Dimension(getWidth(), getHeight()));
 			panelWidth = getWidth() - 4 * PAD;
-			panelHeight = panelHeight - 2 * PAD;
+			panelHeight = getHeight() - 2 * PAD;
 			System.out.println(panelWidth + ", " + panelHeight);
 
 			int x0 = panelWidth + PAD;

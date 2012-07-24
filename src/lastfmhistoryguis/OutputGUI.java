@@ -35,7 +35,7 @@ public class OutputGUI extends JFrame {
 	}
 	public void createGUI(){
 		outputGUIFrame = new JFrame();
-		outputGUIFrame.setSize(screenWidth, screenHeight);
+		outputGUIFrame.setPreferredSize(new Dimension(screenWidth, screenHeight));
 		
 		int frameWidth = outputGUIFrame.getWidth();
 		int frameHeight = outputGUIFrame.getHeight();
@@ -43,11 +43,11 @@ public class OutputGUI extends JFrame {
 		System.out.println("Frame Width: " + frameWidth + ", Frame Height:" + frameHeight);
 
 		graphPanel = new GraphPanel(lastFMHistoryModel, zoom);
-		//graphPanel.setPreferredSize(new Dimension(screenWidth - 80, 6000));
+		graphPanel.setPreferredSize(new Dimension(outputGUIFrame.getWidth() - 80, 6000));
 
 
 		JScrollPane graphScrollPanel = new JScrollPane(graphPanel);
-		graphScrollPanel.setPreferredSize(new Dimension(screenWidth, screenHeight));
+		graphScrollPanel.setPreferredSize(new Dimension(outputGUIFrame.getWidth(), screenHeight));
 		graphScrollPanel.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		
 		autocompletePanel = new AutocompletePanel(lastFMHistoryModel.tracks, lastFMHistoryModel.artists);
