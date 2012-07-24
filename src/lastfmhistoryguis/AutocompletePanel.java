@@ -70,8 +70,14 @@ public class AutocompletePanel extends JPanel{
 		
 		
 	}
-	public void addZoom2000(ActionListener zoom2000){
-		medZoom.addActionListener(zoom2000);
+	public void addZoom2000(ActionListener zoom){
+		medZoom.addActionListener(zoom);
+	}
+	public void addZoomDefault(ActionListener zoom){
+		defaultZoom.addActionListener(zoom);
+	}
+	public void addZoom6000(ActionListener zoom){
+		fullZoom.addActionListener(zoom);
 	}
 
 	

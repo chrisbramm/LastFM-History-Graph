@@ -31,6 +31,7 @@ public class MainClass {
 		LastFMHistory lastFMHistoryModel = new LastFMHistory();
 		InputGUI InputGUI = new InputGUI(screenWidth, screenHeight);
 		Controller controller = new Controller(lastFMHistoryModel, InputGUI, screenWidth, screenHeight);
+		InputGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
 	

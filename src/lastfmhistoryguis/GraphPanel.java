@@ -12,19 +12,21 @@ import javax.swing.*;
 import de.umass.lastfm.*;
 import lastfmhistoryclasses.*;
 
+@SuppressWarnings("serial")
 public class GraphPanel extends JPanel {
 
 	private LastFMHistory graphData;
-	private int panelHeight;
-	private int panelWidth;
+	private int graphHeight;
+	private int graphWidth;
+	private int zoom;
 	private final int PAD = 20;
 	
-	public GraphPanel(LastFMHistory model, int height){
+	public GraphPanel(LastFMHistory model, int zoom){
 		this.graphData = model;
-		if (height != 0){
-			this.panelHeight = height;
+		if (zoom != 1){
+			this.zoom = zoom;
 		}else{
-			panelHeight = getHeight();
+			this.zoom = 1;
 			System.out.println("getHeight() returning:" + getHeight());
 		}
 		System.out.println("Width" + getWidth() + "Height" + getHeight());
@@ -40,15 +42,14 @@ public class GraphPanel extends JPanel {
 			System.err.println("No data found");
 		} else {
 			System.out.println("paintComponent Width" + getWidth() + "Height" + getHeight());
-			this.setPreferredSize(new Dimension(getWidth(), getHeight()));
-			panelWidth = getWidth() - 4 * PAD;
-			panelHeight = getHeight() - 2 * PAD;
-			System.out.println(panelWidth + ", " + panelHeight);
+			graphWidth = getWidth() - 5 * PAD;
+			graphHeight = getHeight() - 2 * PAD;
+			System.out.println(graphWidth + ", " + graphHeight);
 
-			int x0 = panelWidth + PAD;
-			graph.draw(new Rectangle2D.Double(PAD, PAD, panelWidth, panelHeight));
-			double xInc = (double) (panelWidth) / (graphData.dayMax);
-			double secondHeight = (double) (panelHeight) / 86400;
+			int x0 = graphWidth + PAD;
+			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, graphHeight));
+			double xInc = (double) (graphWidth) / (graphData.dayMax);
+			double secondHeight = (double) (graphHeight) / 86400;
 
 			for (int i = 0; i <= 86400; i++) {
 				if (i % 3600 == 0) {
@@ -83,13 +84,13 @@ public class GraphPanel extends JPanel {
 			}
 			
 			for (int i = 0; i < graphData.dayMax;){
-				graph.draw(new Line2D.Double(x0 - i * xInc, PAD, x0 - i * xInc, panelHeight + PAD));
+				graph.draw(new Line2D.Double(x0 - i * xInc, PAD, x0 - i * xInc, graphHeight + PAD));
 				i = i + 7;
 			}
 		}
 	}
-	public void zoom(int height){
-		this.panelHeight = height;
+	public void zoom(int zoom){
+		this.zoom = zoom;
 		repaint();
 	}
 	
