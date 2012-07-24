@@ -1,6 +1,7 @@
 package lastfmhistoryguis;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Line2D;
@@ -24,7 +25,9 @@ public class GraphPanel extends JPanel {
 			this.panelHeight = height;
 		}else{
 			panelHeight = getHeight();
+			System.out.println("getHeight() returning:" + getHeight());
 		}
+		this.setPreferredSize(new Dimension(getWidth(), getHeight()));
 	}
 	
 	protected void paintComponent(Graphics g) {
