@@ -80,8 +80,8 @@ public class Controller {
 	class ZoomDefault implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			outputGUIView.graphPanel.setPreferredSize(new Dimension(screenWidth, screenHeight));
-			outputGUIView.repaint();
 			outputGUIView.graphScrollPanel.updateUI();
+			//outputGUIView.graphScrollPanel.updateUI();
 			
 		}
 	}
