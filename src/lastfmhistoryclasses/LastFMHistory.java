@@ -134,7 +134,7 @@ public class LastFMHistory {
 			do {
 				try {
 					PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
-					total = /*result.getTotalPages();*/ 5;
+					total = /*result.getTotalPages();*/ 7;
 					System.out.println(total + ", " + page);
 					Collection<Track> pageResults = result.getPageResults();
 					for (Track t: pageResults){
@@ -224,7 +224,9 @@ public class LastFMHistory {
 	public List<String> getTrackList(){
 		for(Track t: history){
 			String trackName = t.getName();
-			tracks.add(trackName);
+			if(!tracks.contains(trackName)){
+				tracks.add(trackName);
+			}
 		}
 		return tracks;
 	}

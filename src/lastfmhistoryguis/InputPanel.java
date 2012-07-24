@@ -48,45 +48,12 @@ public class InputPanel extends JFrame {
 		
 		JFrame outputFrame = new JFrame();
 		outputFrame.setSize(screenWidth, screenHeight);
-		OutputPanel outputCanvas = new OutputPanel();
+		OutputPanel outputCanvas = new OutputPanel(outputFrame);
 		InputPanel inputFrame = new InputPanel(outputCanvas);
-		LastFMHistory data = inputFrame.getHistory();
-		JScrollPane scrollOutput = new JScrollPane(outputCanvas);
-		scrollOutput.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		scrollOutput.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		
+		outputFrame.add(outputCanvas, BorderLayout.CENTER);
 
-		JPanel bottomPanel = new JPanel();
 		
-		/**
-		 Create the autocomplete track box
-		**/
-		
-		//TODO - Pass Data into nameService
-		//List<String> testComplete = new ArrayList<String>();
-		//testComplete.add();
-		NameService nameService = new NameService(data.tracks);
-		JTextField trackInput = new JTextField();
-		Document autoCompleteDocument = new AutoCompleteDocument(nameService, trackInput);
-		trackInput.setDocument(autoCompleteDocument);
-	
-		
-		trackInput.setColumns(25);
-		bottomPanel.add(trackInput);
-		
-		
-		
-		JButton trackGo = new JButton("Track");
-		trackGo.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		bottomPanel.add(trackGo);
-		
-		outputFrame.add(bottomPanel, BorderLayout.SOUTH);
-		outputFrame.add(scrollOutput, BorderLayout.CENTER);
 		outputFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//outputFrame.setSize(200, 200);
 		
@@ -96,10 +63,9 @@ public class InputPanel extends JFrame {
 	
 		//By leaving frame.setVisible down here, it creates the input window on top of the output window
 		inputFrame.setVisible(true);
-		outputCanvas.setVisible(true);
-		//scrollOutput.setSize(screenWidth, screenHeight);
 		
 		
+		outputCanvas.repaint();
 		
 
 	}
