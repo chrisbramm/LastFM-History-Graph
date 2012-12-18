@@ -72,14 +72,14 @@ public class Controller {
 	
 	class Zoom2000 implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			outputGUIView.graphPanel.setPreferredSize(new Dimension(screenWidth, 2000));
+			outputGUIView.graphPanel.zoom(2);
 			outputGUIView.graphScrollPanel.updateUI();
 			
 		}
 	}
 	class ZoomDefault implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			outputGUIView.graphPanel.setPreferredSize(new Dimension(screenWidth, screenHeight));
+			outputGUIView.graphPanel.zoom(1);
 			outputGUIView.graphScrollPanel.updateUI();
 			//outputGUIView.graphScrollPanel.updateUI();
 			
@@ -87,7 +87,7 @@ public class Controller {
 	}
 	class Zoom6000 implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			outputGUIView.graphPanel.setPreferredSize(new Dimension(screenWidth, 6000));
+			outputGUIView.graphPanel.zoom(6);
 			outputGUIView.graphScrollPanel.updateUI();
 			
 		}

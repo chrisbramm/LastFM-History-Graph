@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
 
@@ -13,18 +14,23 @@ import de.umass.lastfm.*;
 import lastfmhistoryclasses.*;
 
 @SuppressWarnings("serial")
-public class GraphPanel extends JPanel {
+public class GraphPanel extends JPanel{
+	
 
 	private LastFMHistory graphData;
 	private int graphHeight;
 	private int graphWidth;
 	private int zoom;
 	private final int PAD = 20;
+	private Graphics2D graph;
+	private AffineTransform newScale = new AffineTransform();
 	
 	public GraphPanel(LastFMHistory model, int zoom){
 		this.graphData = model;
 		if (zoom != 1){
 			this.zoom = zoom;
+			newScale.setToScale(1, (double) zoom);
+			System.out.println("newScale: " + newScale);
 		}else{
 			this.zoom = 1;
 			System.out.println("getHeight() returning:" + getHeight());
@@ -35,16 +41,17 @@ public class GraphPanel extends JPanel {
 	
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		 System.out.println("Drawing");
-		Graphics2D graph = (Graphics2D) g;
-
+		//System.out.println("Drawing");
+		graph = (Graphics2D) g;
+		System.out.println("Drawing Transform: " +graph.getTransform());
+		graph.transform(newScale);
 		if (graphData == null) {
 			System.err.println("No data found");
 		} else {
-			System.out.println("paintComponent Width" + getWidth() + "Height" + getHeight());
-			graphWidth = getWidth() - 5 * PAD;
+			//System.out.println("paintComponent Width: " + getWidth() + "paintComponent Height: " + getHeight());
+			graphWidth = getWidth() - 4 * PAD;
 			graphHeight = getHeight() - 2 * PAD;
-			System.out.println(graphWidth + ", " + graphHeight);
+			//System.out.println(graphWidth + ", " + graphHeight);
 
 			int x0 = graphWidth + PAD;
 			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, graphHeight));
@@ -87,12 +94,16 @@ public class GraphPanel extends JPanel {
 				graph.draw(new Line2D.Double(x0 - i * xInc, PAD, x0 - i * xInc, graphHeight + PAD));
 				i = i + 7;
 			}
+			graph.transform(newScale);
 		}
+		
+		
 	}
 	public void zoom(int zoom){
-		this.zoom = zoom;
-		repaint();
+		newScale.setToScale(1, (double) zoom);
+		System.out.println("newScale: " + newScale);
 	}
+		
 	
 	
 }
