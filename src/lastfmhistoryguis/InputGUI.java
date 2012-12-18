@@ -19,6 +19,7 @@ public class InputGUI extends JFrame {
 		this.screenWidth = screenWidth;
 		this.screenHeight = screenHeight;
 	}
+	// Creates Small GUI to collect username
 	
 	public void createGui(){
 		
