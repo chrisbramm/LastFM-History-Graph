@@ -13,6 +13,7 @@ public class Controller {
 	private LastFMHistory lastFMHistoryModel;
 	private InputGUI inputGUIView;
 	private OutputGUI outputGUIView;
+	private GraphPanel graphPanel;
 	private String username;
 	private int screenWidth;
 	private int screenHeight;
@@ -46,6 +47,8 @@ public class Controller {
 				lastFMHistoryModel.getArtistList();
 				
 				outputGUIView = new OutputGUI(lastFMHistoryModel, screenWidth, screenHeight, 1);
+				graphPanel = new GraphPanel(lastFMHistoryModel, 1);
+				outputGUIView.graphScrollPanel.add(graphPanel);
 				outputGUIView.autocompletePanel.addZoom2000(new Zoom2000());
 				outputGUIView.autocompletePanel.addZoomDefault(new ZoomDefault());
 				outputGUIView.autocompletePanel.addZoom6000(new Zoom6000());
@@ -81,7 +84,8 @@ public class Controller {
 	}
 	class Zoom2000 implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			outputGUIView.graphPanel.zoom(2);
+			graphPanel = null;
+			
 			outputGUIView.graphScrollPanel.updateUI();
 			
 		}

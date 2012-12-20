@@ -45,11 +45,11 @@ public class OutputGUI extends JFrame {
 		
 		System.out.println("OutputGUI:: Frame Width: " + frameWidth + ", Frame Height:" + frameHeight);
 
-		graphPanel = new GraphPanel(lastFMHistoryModel, zoom);
+		//graphPanel = new GraphPanel(lastFMHistoryModel, zoom);
 		
 
 
-		graphScrollPanel = new JScrollPane(graphPanel);
+		graphScrollPanel = new JScrollPane();
 		graphScrollPanel.setPreferredSize(new Dimension(screenWidth, screenHeight));
 		graphScrollPanel.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		
