@@ -134,7 +134,7 @@ public class LastFMHistory {
 			do {
 				try {
 					PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
-					total = /*result.getTotalPages();*/ 7;
+					total = /*result.getTotalPages();*/ 3;
 					System.out.println(total + ", " + page);
 					Collection<Track> pageResults = result.getPageResults();
 					for (Track t: pageResults){
