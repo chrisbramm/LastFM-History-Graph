@@ -42,6 +42,8 @@ public class GraphPanel extends Canvas{
 			graphWidth = getWidth() - 4 * PAD;
 			secondHeight = ((double) (getHeight()) / 90000) * (double) zoom;
 			//graphHeight = getHeight() - 2 * PAD;
+			System.out.println("GraphPanel: secondHeight * 90,000 " + (int)(secondHeight * 90000));
+			this.setSize(new Dimension(graphWidth + 4* PAD, (int) (secondHeight * 90000)));
 			
 			int x0 = graphWidth + PAD;
 			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, (86400*secondHeight)));
@@ -58,6 +60,12 @@ public class GraphPanel extends Canvas{
 					graph.drawString(hour, x0 + 15,
 							(int) ((i * secondHeight) + PAD));
 				}
+				if (i % 3600 == 0) {
+					graph.draw(new Line2D.Double(PAD, (i * secondHeight) + PAD,
+							x0, (i * secondHeight) + PAD));
+						
+				}
+				
 			}
 			if (zoom == 2){
 				for (int i = 0; i <= 86400; i++) {
@@ -67,6 +75,13 @@ public class GraphPanel extends Canvas{
 						String hour = Double.toString(i / 3600 );
 						graph.drawString(hour, x0 + 15,
 								(int) ((i * secondHeight) + PAD));
+					}
+				}
+				for (int i = 0; i <= 86400; i++) {
+					if (i % 3600 == 0) {
+						graph.draw(new Line2D.Double(PAD, (i * secondHeight) + PAD,
+								x0, (i * secondHeight) + PAD));
+						
 					}
 				}
 			}
@@ -86,7 +101,7 @@ public class GraphPanel extends Canvas{
 					}
 				}
 			}
-
+			//Plot Tracks on Graph
 			for (Track t : graphData.history) {
 				if (t.getPlayedWhen() != null) {
 
@@ -108,7 +123,7 @@ public class GraphPanel extends Canvas{
 				}
 
 			}
-			
+			//Display week ago line
 			for (int i = 0; i < graphData.dayMax;){
 				graph.draw(new Line2D.Double(x0 - i * xInc, PAD, x0 - i * xInc, graphHeight + PAD));
 				i = i + 7;
@@ -121,6 +136,7 @@ public class GraphPanel extends Canvas{
 		this.zoom = zoom;
 		System.out.println("Prefered Size: " + this.getPreferredSize());
 		System.out.println("Minumum Size: " + this.getMinimumSize());
+		System.out.println("Size: " + this.getSize());
 		repaint();
 	}
 		
