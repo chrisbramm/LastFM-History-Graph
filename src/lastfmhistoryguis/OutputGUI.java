@@ -31,11 +31,9 @@ public class OutputGUI extends JFrame {
 		this.lastFMHistoryModel = model;
 		this.zoom = zoom;
 		createGUI();
-		
-		
-		
-		
 	}
+	
+	
 	public void createGUI(){
 		outputGUIFrame = new JFrame();
 		outputGUIFrame.setSize(standardScreenSize);
@@ -45,12 +43,12 @@ public class OutputGUI extends JFrame {
 		int frameWidth = outputGUIFrame.getWidth();
 		int frameHeight = outputGUIFrame.getHeight();
 		
-		System.out.println("Frame Width: " + frameWidth + ", Frame Height:" + frameHeight);
+		System.out.println("OutputGUI:: Frame Width: " + frameWidth + ", Frame Height:" + frameHeight);
 
-		graphPanel = new GraphPanel(lastFMHistoryModel, 6);
-		/*if (zoom != 0 ){
+		graphPanel = new GraphPanel(lastFMHistoryModel, zoom);
+		if (zoom != 0 ){
 			graphPanel.setPreferredSize(new Dimension(screenWidth, zoom));
-		}*/
+		}
 
 
 		graphScrollPanel = new JScrollPane(graphPanel);
@@ -72,6 +70,5 @@ public class OutputGUI extends JFrame {
 
 		outputGUIFrame.setVisible(true);
 	}
-	
 	
 }
