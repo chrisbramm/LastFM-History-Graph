@@ -24,6 +24,7 @@ public class GraphPanel extends Canvas{
 	private int graphWidth;
 	private int zoom;
 	private final int PAD = 20;
+	private double secondHeight;
 	private Graphics2D graph;
 	private AffineTransform newScale = new AffineTransform();
 	
@@ -39,12 +40,13 @@ public class GraphPanel extends Canvas{
 			System.err.println("No data found");
 		} else {
 			graphWidth = getWidth() - 4 * PAD;
-			graphHeight = getHeight() - 2 * PAD;
+			secondHeight = ((double) (getHeight()) / 90000) * (double) zoom;
+			//graphHeight = getHeight() - 2 * PAD;
 			
 			int x0 = graphWidth + PAD;
-			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, graphHeight));
+			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, (86400*secondHeight)));
 			double xInc = (double) (graphWidth) / (graphData.dayMax);
-			double secondHeight = ((double) (graphHeight) / 86400) * (double) zoom;
+			
 
 			
 			//Draws righthand axis on output graph
