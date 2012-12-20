@@ -75,7 +75,7 @@ public class Controller {
 		public void actionPerformed(ActionEvent e){
 			System.out.println("Action Received");
 			outputGUIView.graphPanel.zoom(1);
-			outputGUIView.graphScrollPanel.updateUI();
+			outputGUIView.graphScrollPanel.revalidate();
 			//outputGUIView.graphScrollPanel.updateUI();
 			
 		}
@@ -83,14 +83,14 @@ public class Controller {
 	class Zoom2000 implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			outputGUIView.graphPanel.zoom(2);
-			outputGUIView.graphScrollPanel.updateUI();
+			outputGUIView.graphScrollPanel.revalidate();
 			
 		}
 	}
 	class Zoom6000 implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			outputGUIView.graphPanel.zoom(6);
-			outputGUIView.graphScrollPanel.updateUI();
+			outputGUIView.graphScrollPanel.revalidate();
 			
 		}
 	}

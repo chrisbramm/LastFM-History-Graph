@@ -34,16 +34,16 @@ public class GraphPanel extends Canvas{
 	}
 	
 	public void paint(Graphics g) {
-		//System.out.println("Drawing");
 		graph = (Graphics2D) g;
 		if (graphData == null) {
 			System.err.println("No data found");
 		} else {
+			System.out.println("Parent Width: " + this.getParent().getWidth());
 			graphWidth = getWidth() - 4 * PAD;
-			secondHeight = ((double) (getHeight()) / 90000) * (double) zoom;
-			//graphHeight = getHeight() - 2 * PAD;
+			secondHeight = ((double) (this.getParent().getHeight()) / 90000) * (double) zoom;
+			graphHeight = (int) secondHeight * 86400;
 			System.out.println("GraphPanel: secondHeight * 90,000 " + (int)(secondHeight * 90000));
-			this.setSize(new Dimension(graphWidth + 4* PAD, (int) (secondHeight * 90000)));
+			//this.setPreferredSize(new Dimension(graphWidth + 4* PAD, graphHeight));
 			
 			int x0 = graphWidth + PAD;
 			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, (86400*secondHeight)));
