@@ -1,5 +1,6 @@
 package lastfmhistoryguis;
 
+import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -14,7 +15,8 @@ import de.umass.lastfm.*;
 import lastfmhistoryclasses.*;
 
 @SuppressWarnings("serial")
-public class GraphPanel extends JPanel{
+public class GraphPanel extends Canvas{
+	
 	
 
 	private LastFMHistory graphData;
@@ -27,16 +29,10 @@ public class GraphPanel extends JPanel{
 	
 	public GraphPanel(LastFMHistory model, int zoom){
 		this.graphData = model;
-		if (zoom != 1){
-			this.zoom = zoom;
-		}else{
-			this.zoom = 1;
-		}
-		
+		this.zoom = zoom;
 	}
 	
-	protected void paintComponent(Graphics g) {
-		super.paintComponent(g);
+	public void paint(Graphics g) {
 		//System.out.println("Drawing");
 		graph = (Graphics2D) g;
 		if (graphData == null) {
@@ -48,8 +44,10 @@ public class GraphPanel extends JPanel{
 			int x0 = graphWidth + PAD;
 			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, graphHeight));
 			double xInc = (double) (graphWidth) / (graphData.dayMax);
-			double secondHeight = (double) (graphHeight) / 86400;
+			double secondHeight = ((double) (graphHeight) / 86400) * (double) zoom;
 
+			
+			//Draws righthand axis on output graph
 			for (int i = 0; i <= 86400; i++) {
 				if (i % 3600 == 0) {
 					graph.draw(new Line2D.Double(x0, (i * secondHeight) + PAD,
@@ -89,9 +87,6 @@ public class GraphPanel extends JPanel{
 		}
 		
 		
-	}
-	public void zoom(int zoom){
-		this.zoom = zoom;
 	}
 		
 	
