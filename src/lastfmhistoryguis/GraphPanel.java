@@ -59,6 +59,33 @@ public class GraphPanel extends Canvas{
 							(int) ((i * secondHeight) + PAD));
 				}
 			}
+			if (zoom == 2){
+				for (int i = 0; i <= 86400; i++) {
+					if (i % 1800 == 0) {
+						graph.draw(new Line2D.Double(x0, (i * secondHeight) + PAD,
+								x0 + 10, (i * secondHeight) + PAD));
+						String hour = Double.toString(i / 3600 );
+						graph.drawString(hour, x0 + 15,
+								(int) ((i * secondHeight) + PAD));
+					}
+				}
+			}
+			if (zoom == 6){
+				for (int i = 0; i <= 86400; i++) {
+					if (i % 600 == 0) {
+						graph.draw(new Line2D.Double(x0, (i * secondHeight) + PAD,
+								x0 + 10, (i * secondHeight) + PAD));
+						
+					}
+				}
+				for (int i = 0; i <= 86400; i++) {
+					if (i % 3600 == 0) {
+						graph.draw(new Line2D.Double(PAD, (i * secondHeight) + PAD,
+								x0, (i * secondHeight) + PAD));
+						
+					}
+				}
+			}
 
 			for (Track t : graphData.history) {
 				if (t.getPlayedWhen() != null) {

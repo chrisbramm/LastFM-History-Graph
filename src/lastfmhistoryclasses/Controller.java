@@ -82,8 +82,7 @@ public class Controller {
 	}
 	class Zoom2000 implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			graphPanel = null;
-			
+			outputGUIView.graphPanel.zoom(2);
 			outputGUIView.graphScrollPanel.updateUI();
 			
 		}
