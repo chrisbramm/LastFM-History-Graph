@@ -90,6 +90,8 @@ public class GraphPanel extends Canvas{
 	}
 	public void zoom(int zoom){
 		this.zoom = zoom;
+		System.out.println("Prefered Size: " + this.getPreferredSize());
+		System.out.println("Minumum Size: " + this.getMinimumSize());
 		repaint();
 	}
 		

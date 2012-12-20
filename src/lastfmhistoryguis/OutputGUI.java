@@ -46,9 +46,7 @@ public class OutputGUI extends JFrame {
 		System.out.println("OutputGUI:: Frame Width: " + frameWidth + ", Frame Height:" + frameHeight);
 
 		graphPanel = new GraphPanel(lastFMHistoryModel, zoom);
-		if (zoom != 0 ){
-			graphPanel.setPreferredSize(new Dimension(screenWidth, zoom));
-		}
+		
 
 
 		graphScrollPanel = new JScrollPane(graphPanel);
