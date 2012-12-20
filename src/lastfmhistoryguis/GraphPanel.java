@@ -88,6 +88,10 @@ public class GraphPanel extends Canvas{
 		
 		
 	}
+	public void zoom(int zoom){
+		this.zoom = zoom;
+		repaint();
+	}
 		
 	
 	
