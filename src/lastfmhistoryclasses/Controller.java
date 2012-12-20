@@ -47,8 +47,6 @@ public class Controller {
 				lastFMHistoryModel.getArtistList();
 				
 				outputGUIView = new OutputGUI(lastFMHistoryModel, screenWidth, screenHeight, 1);
-				graphPanel = new GraphPanel(lastFMHistoryModel, 1);
-				outputGUIView.graphScrollPanel.add(graphPanel);
 				outputGUIView.autocompletePanel.addZoom2000(new Zoom2000());
 				outputGUIView.autocompletePanel.addZoomDefault(new ZoomDefault());
 				outputGUIView.autocompletePanel.addZoom6000(new Zoom6000());
