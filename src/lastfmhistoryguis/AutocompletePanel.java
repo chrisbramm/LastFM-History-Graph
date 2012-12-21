@@ -23,6 +23,10 @@ public class AutocompletePanel extends JPanel{
 	private JButton defaultZoom;
 	private JButton	medZoom;
 	private JButton fullZoom;
+	private JButton trackGo;
+	private JButton artistGo;
+	public JTextField trackInput;
+	public JTextField artistInput;
 	
 	
 	public AutocompletePanel(List<String> trackList, List<String> artistList){
@@ -51,21 +55,21 @@ public class AutocompletePanel extends JPanel{
 		// List<String> testComplete = new ArrayList<String>();
 		// testComplete.add();
 		NameService nameTrackService = new NameService(trackList);
-		JTextField trackInput = new JTextField();
+		trackInput = new JTextField();
 		Document autoCompleteDocumentTrack = new AutoCompleteDocument(nameTrackService,	trackInput);
 		trackInput.setDocument(autoCompleteDocumentTrack);
 		trackInput.setColumns(25);
 		this.add(trackInput);
-		JButton trackGo = new JButton("Track");
+		trackGo = new JButton("Track");
 		this.add(trackGo);
 		
 		NameService nameArtistService = new NameService(artistList);
-		JTextField artistInput = new JTextField();
+		artistInput = new JTextField();
 		Document autoCompleteDocumentArtist = new AutoCompleteDocument(nameArtistService,	artistInput);
 		artistInput.setDocument(autoCompleteDocumentArtist);
 		artistInput.setColumns(25);
 		this.add(artistInput);
-		JButton artistGo = new JButton("Track");
+		artistGo = new JButton("Track");
 		this.add(artistGo);
 		
 		
@@ -78,6 +82,10 @@ public class AutocompletePanel extends JPanel{
 	}
 	public void addZoom6000(ActionListener zoom){
 		fullZoom.addActionListener(zoom);
+	}
+	
+	public void addTrackListener(ActionListener track){
+		trackGo.addActionListener(track);
 	}
 
 	

@@ -5,6 +5,8 @@ import java.awt.Dimension;
 
 import javax.swing.*;
 
+import de.umass.lastfm.Track;
+
 import lastfmhistoryclasses.*;
 
 public class OutputGUI extends JFrame {
@@ -69,5 +71,9 @@ public class OutputGUI extends JFrame {
 		outputGUIFrame.setVisible(true);
 	}
 	
+	public void graphTrack(String trackName){
+		graphPanel = null;
+		
+	}
 	
 }

@@ -97,4 +97,11 @@ public class Controller {
 		}
 	}
 	
+	class trackListener implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			String trackName = outputGUIView.autocompletePanel.trackInput.getText();
+			outputGUIView.graphTrack(trackName);
+		}
+		
+	}
 }
