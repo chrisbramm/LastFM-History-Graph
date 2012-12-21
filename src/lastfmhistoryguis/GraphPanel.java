@@ -125,13 +125,34 @@ public class GraphPanel extends JPanel{
 			
 				
 			if (trackName != null){
-				System.out.println("Hello");
 				for (Track t : graphData.history) {
-					System.out.println("bababababa");
 					if ((t.getName()).equals(trackName)){
 						System.out.println("cacacaca");
 						if (t.getPlayedWhen() != null) {
-							System.out.println("Getting to here");
+							Color color = t.getColour();
+
+							int duration = t.getDuration();
+							int day = Math.abs(t.getDay());
+							double dayOrigin = x0 - ((day + 1) * xInc);
+							double timeOrigin = t.getGraphHeight() * secondHeight + PAD;
+							double trackHeight = duration * secondHeight;
+							graph.setColor(color);
+							// System.out.println("PLOTTING TRACK, " + day + ", " +
+							// dayOrigin + ", " + t.getGraphHeight() + ", " + timeOrigin
+							// + ", " + trackHeight);
+							// graph.draw(new Rectangle2D.Double(dayOrigin, timeOrigin,
+							// xInc, trackHeight));
+							graph.fillRect((int) dayOrigin, (int) timeOrigin,
+									(int) xInc, (int) trackHeight);
+						}
+
+					}
+				}
+			}else if (artistName != null){
+				for (Track t : graphData.history) {
+					if (t.getArtist().equals(artistName)){
+						if (t.getPlayedWhen() != null) {
+							System.out.println("lalalala");
 							Color color = t.getColour();
 
 							int duration = t.getDuration();
