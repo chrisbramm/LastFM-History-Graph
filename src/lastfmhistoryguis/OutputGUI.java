@@ -69,4 +69,5 @@ public class OutputGUI extends JFrame {
 		outputGUIFrame.setVisible(true);
 	}
 	
+	
 }

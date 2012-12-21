@@ -15,7 +15,7 @@ import de.umass.lastfm.*;
 import lastfmhistoryclasses.*;
 
 @SuppressWarnings("serial")
-public class GraphPanel extends Canvas{
+public class GraphPanel extends JPanel{
 	
 	
 
@@ -33,7 +33,12 @@ public class GraphPanel extends Canvas{
 		this.zoom = zoom;
 	}
 	
+	public GraphPanel(LastFMHistory model){
+		this.graphData = model;
+	}
+	
 	public void paint(Graphics g) {
+		super.paintComponent(g);
 		graph = (Graphics2D) g;
 		if (graphData == null) {
 			System.err.println("No data found");
@@ -43,7 +48,7 @@ public class GraphPanel extends Canvas{
 			secondHeight = ((double) (this.getParent().getHeight()) / 90000) * (double) zoom;
 			graphHeight = (int) secondHeight * 86400;
 			System.out.println("GraphPanel: secondHeight * 90,000 " + (int)(secondHeight * 90000));
-			//this.setPreferredSize(new Dimension(graphWidth + 4* PAD, graphHeight));
+			
 			
 			int x0 = graphWidth + PAD;
 			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, (86400*secondHeight)));
@@ -132,6 +137,11 @@ public class GraphPanel extends Canvas{
 		
 		
 	}
+	@Override
+	public Dimension getPreferredSize(){
+		return new Dimension(graphWidth + 4* PAD, (int)secondHeight * 90000);
+	}
+	
 	public void zoom(int zoom){
 		this.zoom = zoom;
 		System.out.println("Prefered Size: " + this.getPreferredSize());
@@ -139,6 +149,9 @@ public class GraphPanel extends Canvas{
 		System.out.println("Size: " + this.getSize());
 		repaint();
 	}
+	
+	
+	
 		
 	
 	
