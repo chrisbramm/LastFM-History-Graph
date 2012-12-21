@@ -27,17 +27,32 @@ public class GraphPanel extends JPanel{
 	private double secondHeight;
 	private Graphics2D graph;
 	private AffineTransform newScale = new AffineTransform();
+	private String trackName;
+	private String artistName;
 	
 	public GraphPanel(LastFMHistory model, int zoom){
 		this.graphData = model;
 		this.zoom = zoom;
+		this.artistName = null;
+		this.trackName = null;
 	}
 	
 	public GraphPanel(LastFMHistory model){
 		this.graphData = model;
+		this.artistName = null;
+		this.trackName = null;
 	}
 	
-	public void paint(Graphics g) {
+	public GraphPanel(LastFMHistory model, int zoom, String trackName, String artistName){
+		this.graphData = model;
+		this.zoom = zoom;
+		this.trackName = trackName;
+		this.artistName = artistName;
+		System.out.println("GraphPanel: trackName " + trackName);
+		
+	}
+	
+	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		graph = (Graphics2D) g;
 		if (graphData == null) {
@@ -107,26 +122,57 @@ public class GraphPanel extends JPanel{
 				}
 			}
 			//Plot Tracks on Graph
-			for (Track t : graphData.history) {
-				if (t.getPlayedWhen() != null) {
+			
+				
+			if (trackName != null){
+				System.out.println("Hello");
+				for (Track t : graphData.history) {
+					System.out.println("bababababa");
+					if (t.getName() == trackName){
+						System.out.println("cacacaca");
+						if (t.getPlayedWhen() != null) {
+							System.out.println("Getting to here");
+							Color color = t.getColour();
 
-					Color color = t.getColour();
+							int duration = t.getDuration();
+							int day = Math.abs(t.getDay());
+							double dayOrigin = x0 - ((day + 1) * xInc);
+							double timeOrigin = t.getGraphHeight() * secondHeight + PAD;
+							double trackHeight = duration * secondHeight;
+							graph.setColor(color);
+							// System.out.println("PLOTTING TRACK, " + day + ", " +
+							// dayOrigin + ", " + t.getGraphHeight() + ", " + timeOrigin
+							// + ", " + trackHeight);
+							// graph.draw(new Rectangle2D.Double(dayOrigin, timeOrigin,
+							// xInc, trackHeight));
+							graph.fillRect((int) dayOrigin, (int) timeOrigin,
+									(int) xInc, (int) trackHeight);
+						}
 
-					int duration = t.getDuration();
-					int day = Math.abs(t.getDay());
-					double dayOrigin = x0 - ((day + 1) * xInc);
-					double timeOrigin = t.getGraphHeight() * secondHeight + PAD;
-					double trackHeight = duration * secondHeight;
-					graph.setColor(color);
-					// System.out.println("PLOTTING TRACK, " + day + ", " +
-					// dayOrigin + ", " + t.getGraphHeight() + ", " + timeOrigin
-					// + ", " + trackHeight);
-					// graph.draw(new Rectangle2D.Double(dayOrigin, timeOrigin,
-					// xInc, trackHeight));
-					graph.fillRect((int) dayOrigin, (int) timeOrigin,
-							(int) xInc, (int) trackHeight);
+					}
 				}
+			}else{
+				for (Track t : graphData.history) {
+					if (t.getPlayedWhen() != null) {
+						System.out.println("lalalala");
+						Color color = t.getColour();
 
+						int duration = t.getDuration();
+						int day = Math.abs(t.getDay());
+						double dayOrigin = x0 - ((day + 1) * xInc);
+						double timeOrigin = t.getGraphHeight() * secondHeight + PAD;
+						double trackHeight = duration * secondHeight;
+						graph.setColor(color);
+						// System.out.println("PLOTTING TRACK, " + day + ", " +
+						// dayOrigin + ", " + t.getGraphHeight() + ", " + timeOrigin
+						// + ", " + trackHeight);
+						// graph.draw(new Rectangle2D.Double(dayOrigin, timeOrigin,
+						// xInc, trackHeight));
+						graph.fillRect((int) dayOrigin, (int) timeOrigin,
+								(int) xInc, (int) trackHeight);
+					}
+
+				}
 			}
 			//Display week ago line
 			for (int i = 0; i < graphData.dayMax;){

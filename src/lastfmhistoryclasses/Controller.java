@@ -50,6 +50,7 @@ public class Controller {
 				outputGUIView.autocompletePanel.addZoom2000(new Zoom2000());
 				outputGUIView.autocompletePanel.addZoomDefault(new ZoomDefault());
 				outputGUIView.autocompletePanel.addZoom6000(new Zoom6000());
+				outputGUIView.autocompletePanel.addTrackListener(new trackListener());
 			}catch(Exception ex){
 				System.err.println(ex);
 				System.out.println(username);
@@ -101,6 +102,7 @@ public class Controller {
 		public void actionPerformed(ActionEvent e){
 			System.out.println("Action Performed: Track Button Pressed");
 			String trackName = outputGUIView.autocompletePanel.trackInput.getText();
+			System.out.println(trackName);
 			outputGUIView.graphTrack(trackName);
 		}
 		
