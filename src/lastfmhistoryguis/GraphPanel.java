@@ -68,7 +68,10 @@ public class GraphPanel extends JPanel{
 			int x0 = graphWidth + PAD;
 			graph.draw(new Rectangle2D.Double(PAD, PAD, graphWidth, (86400*secondHeight)));
 			double xInc = (double) (graphWidth) / (graphData.dayMax);
-			
+			for (int i = 0; i < graphData.dayMax;){
+				graph.draw(new Line2D.Double(x0 - i * xInc, PAD, x0 - i * xInc, 86400*secondHeight + PAD));
+				i = i + 7;
+			}
 
 			
 			//Draws righthand axis on output graph
@@ -196,10 +199,7 @@ public class GraphPanel extends JPanel{
 				}
 			}
 			//Display week ago line
-			for (int i = 0; i < graphData.dayMax;){
-				graph.draw(new Line2D.Double(x0 - i * xInc, PAD, x0 - i * xInc, graphHeight + PAD));
-				i = i + 7;
-			}
+			
 		}
 		
 		
@@ -219,6 +219,10 @@ public class GraphPanel extends JPanel{
 	
 	public void graphTrack(String trackName){
 		this.trackName = trackName;
+		repaint();
+	}
+	public void graphArtist(String artistName){
+		this.artistName = artistName;
 		repaint();
 	}
 	

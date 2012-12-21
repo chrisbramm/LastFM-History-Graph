@@ -107,4 +107,11 @@ public class Controller {
 		}
 		
 	}
+	class artistListener implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			String artistName = outputGUIView.autocompletePanel.artistInput.getText();
+			outputGUIView.graphPanel.graphArtist(artistName);
+		}
+		
+	}
 }

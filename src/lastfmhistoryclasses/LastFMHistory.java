@@ -134,7 +134,7 @@ public class LastFMHistory {
 			do {
 				try {
 					PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
-					total = /*result.getTotalPages();*/ 200;
+					total = /*result.getTotalPages();*/ 225;
 					System.out.println(total + ", " + page);
 					Collection<Track> pageResults = result.getPageResults();
 					for (Track t: pageResults){
@@ -182,9 +182,9 @@ public class LastFMHistory {
 					history.addAll(pageResults);
 
 
-					if(page % 10 == 0){
+					if(page % 15 == 0){
 						try {
-							Thread.sleep(5000);
+							Thread.sleep(1500);
 						}catch (InterruptedException ex) {
 							System.out.println("Error! :(");
 						}
