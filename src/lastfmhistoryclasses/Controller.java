@@ -99,6 +99,7 @@ public class Controller {
 	
 	class trackListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
+			System.out.println("Action Performed: Track Button Pressed");
 			String trackName = outputGUIView.autocompletePanel.trackInput.getText();
 			outputGUIView.graphTrack(trackName);
 		}
