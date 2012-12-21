@@ -71,12 +71,6 @@ public class OutputGUI extends JFrame {
 		outputGUIFrame.setVisible(true);
 	}
 	
-	public void graphTrack(String trackName){
-		graphPanel.setVisible(false);
-		graphPanel = null;
-		GraphPanel graphTrackPanel = new GraphPanel(lastFMHistoryModel, zoom, trackName, null);
-		graphScrollPanel.add(graphTrackPanel);
-		
-	}
+	
 	
 }

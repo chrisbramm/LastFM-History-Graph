@@ -103,7 +103,7 @@ public class Controller {
 			System.out.println("Action Performed: Track Button Pressed");
 			String trackName = outputGUIView.autocompletePanel.trackInput.getText();
 			System.out.println(trackName);
-			outputGUIView.graphTrack(trackName);
+			outputGUIView.graphPanel.graphTrack(trackName);
 		}
 		
 	}

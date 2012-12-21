@@ -128,7 +128,7 @@ public class GraphPanel extends JPanel{
 				System.out.println("Hello");
 				for (Track t : graphData.history) {
 					System.out.println("bababababa");
-					if (t.getName() == trackName){
+					if ((t.getName()).equals(trackName)){
 						System.out.println("cacacaca");
 						if (t.getPlayedWhen() != null) {
 							System.out.println("Getting to here");
@@ -193,6 +193,11 @@ public class GraphPanel extends JPanel{
 		System.out.println("Prefered Size: " + this.getPreferredSize());
 		System.out.println("Minumum Size: " + this.getMinimumSize());
 		System.out.println("Size: " + this.getSize());
+		repaint();
+	}
+	
+	public void graphTrack(String trackName){
+		this.trackName = trackName;
 		repaint();
 	}
 	
