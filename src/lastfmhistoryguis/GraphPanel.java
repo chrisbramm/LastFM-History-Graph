@@ -130,7 +130,6 @@ public class GraphPanel extends JPanel{
 			if (trackName != null){
 				for (Track t : graphData.history) {
 					if ((t.getName()).equals(trackName)){
-						System.out.println("cacacaca");
 						if (t.getPlayedWhen() != null) {
 							Color color = t.getColour();
 
@@ -155,7 +154,6 @@ public class GraphPanel extends JPanel{
 				for (Track t : graphData.history) {
 					if (t.getArtist().equals(artistName)){
 						if (t.getPlayedWhen() != null) {
-							System.out.println("lalalala");
 							Color color = t.getColour();
 
 							int duration = t.getDuration();
@@ -178,7 +176,6 @@ public class GraphPanel extends JPanel{
 			}else{
 				for (Track t : graphData.history) {
 					if (t.getPlayedWhen() != null) {
-						System.out.println("lalalala");
 						Color color = t.getColour();
 
 						int duration = t.getDuration();
