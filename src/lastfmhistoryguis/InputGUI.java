@@ -62,7 +62,8 @@ public class InputGUI extends JFrame {
 		
 		
 		contentPane.add(dateSorterPanel, BorderLayout.CENTER);
-		
+		contentPane.revalidate();
+		contentPane.repaint();
 		pack();
 		
 		System.out.println(dateSorterPanel.isShowing());
