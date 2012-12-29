@@ -32,7 +32,7 @@ public class InputGUI extends JFrame {
 		inputGUIFrame.setContentPane(contentPane);
 		
 		JPanel inputGUIPanel = new JPanel();
-		inputGUIFrame.setBounds(50, 50, 700, 400);
+		inputGUIFrame.setBounds(50, 50, 700, 250);
 		
 		usernameInput = new JTextField("wizard710");
 		usernameInput.setColumns(15);
@@ -51,33 +51,35 @@ public class InputGUI extends JFrame {
 	}
 	
 	public void addScrobbleFilter(long trueDateOrigin){
-		JPanel dateSorterPanel = new JPanel(new BorderLayout());
+		JPanel scrobbleFilterPanel = new JPanel(new BorderLayout());
+		
+				
+		
 		Calendar calendar = Calendar.getInstance();
 		Date dateOfFirstScrobble = new Date(trueDateOrigin * 1000);
 		Date initDate = calendar.getTime();
 		System.out.println("Calendar: " + calendar + " initDate: " + initDate + " trueDateOrigin: " + dateOfFirstScrobble);
-		SpinnerDateModel s = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.YEAR);
-		JSpinner spinner = new JSpinner(s);
-		JSpinner.DateEditor de = new JSpinner.DateEditor(spinner, "dd MMM yy");
-		spinner.setEditor(de);
-		dateSorterPanel. add(spinner, BorderLayout.LINE_START);
+		SpinnerDateModel modelFrom = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.YEAR);
+		SpinnerDateModel modelTo = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.YEAR);
 		
 		
-		JPanel beginDatePanel = new JPanel();
-		beginDatePanel.setLayout(new BoxLayout(beginDatePanel, BoxLayout.PAGE_AXIS));
-//		DateUtils dU = new DateUtils();
-//		String[] monthStrings = dU.getMonthStrings();
-//		
+		JSpinner spinnerFrom = new JSpinner(modelFrom);
+		JSpinner.DateEditor deFrom = new JSpinner.DateEditor(spinnerFrom, "dd MMM yy");
+		spinnerFrom.setEditor(deFrom);
+		scrobbleFilterPanel.add(spinnerFrom, BorderLayout.LINE_START);
 		
+		JSpinner spinnerTo = new JSpinner(modelTo);
+		JSpinner.DateEditor deTo = new JSpinner.DateEditor(spinnerFrom, "dd MMM yy");
+		spinnerTo.setEditor(deTo);
 		
-		
+		scrobbleFilterPanel.add(spinnerTo, BorderLayout.LINE_END);
 		
 		btnGetHistory = new JButton("Get History");
-		dateSorterPanel.add(btnGetHistory, BorderLayout.PAGE_END);
-		dateSorterPanel.setVisible(true);
+		scrobbleFilterPanel.add(btnGetHistory, BorderLayout.PAGE_END);
+		scrobbleFilterPanel.setVisible(true);
 		
 		
-		contentPane.add(dateSorterPanel, BorderLayout.CENTER);
+		contentPane.add(scrobbleFilterPanel, BorderLayout.CENTER);
 		contentPane.revalidate();
 		contentPane.repaint();
 		pack();
