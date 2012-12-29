@@ -52,6 +52,9 @@ public class Controller {
 				outputGUIView.autocompletePanel.addZoomDefault(new ZoomDefault());
 				outputGUIView.autocompletePanel.addZoom6000(new Zoom6000());
 				outputGUIView.autocompletePanel.addTrackListener(new trackListener());
+				
+				outputGUIView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				inputGUIView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			}catch(Exception ex){
 				System.err.println(ex);
 				System.out.println(username);

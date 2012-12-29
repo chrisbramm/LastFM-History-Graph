@@ -41,13 +41,19 @@ public class LastFMHistory {
 		Caller.getInstance().setDebugMode(true);
 	}
 	
+	/**
+	 * Sets the username of the lastFMHistory model
+	 * 
+	 * @param user The username of the Last.fm user
+	 */
 	public void setUser(String user){
 		this.user = user;
 		
 		System.out.println(this.user);
 	}
 	
-	public Date getLastDate(){
+	
+	public long getLastDate(){
 		PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
 		total = result.getTotalPages();
 				
@@ -55,9 +61,27 @@ public class LastFMHistory {
 		
 		result = User.getRecentTracks(user, total, per_page, API_KEY);
 		Collection<Track> pageResults = result.getPageResults();
+		int i = 1;
+		long trueDateOrigin = 0;
+		for (Track t: pageResults){
+			Date datePlayed = t.getPlayedWhen();
+			long timePlayed = datePlayed.getTime() / 1000;
+			
+			if (i == 1){
+				trueDateOrigin = timePlayed;
+			}else{
+				if (timePlayed < trueDateOrigin){
+					trueDateOrigin = timePlayed;
+				}
+			}
+			System.out.println(i + " = " + datePlayed + ", " + timePlayed);
+			System.out.println(trueDateOrigin);
+			i++;
+		}
+		int pageResultsSize = pageResults.size();
+		System.out.println(pageResultsSize);
 		
-		System.out.println(pageResults);
-		return null;
+		return trueDateOrigin;
 	}
 	
 	public Collection<Track> getLibraryTracks(){
