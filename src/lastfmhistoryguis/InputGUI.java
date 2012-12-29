@@ -51,12 +51,12 @@ public class InputGUI extends JFrame {
 	public void addDateSorter(long trueDateOrigin){
 		JPanel dateSorterPanel = new JPanel(new GridLayout(4,1));
 		
-		dateSorterPanel.setPreferredSize(new Dimension(200,200));
+		//dateSorterPanel.setPreferredSize(new Dimension(200,200));
 		dateSorterPanel.setBackground(Color.RED);
 		
 		System.out.println(dateSorterPanel.getPreferredSize());
 		btnGetHistory = new JButton("Get History");
-		btnGetHistory.setSize(50, 20);
+		//btnGetHistory.setSize(50, 20);
 		dateSorterPanel.add(btnGetHistory);
 		dateSorterPanel.setVisible(true);
 		

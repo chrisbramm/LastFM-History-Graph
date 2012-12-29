@@ -53,10 +53,10 @@ public class Controller {
 		public void actionPerformed(ActionEvent e) {
 			try {
 //				
-//				lastFMHistoryModel.getRecentTracks();
-//				lastFMHistoryModel.graphMax();
-//				lastFMHistoryModel.getTrackList();
-//				lastFMHistoryModel.getArtistList();
+				lastFMHistoryModel.getRecentTracks();
+				lastFMHistoryModel.graphMax();
+				lastFMHistoryModel.getTrackList();
+				lastFMHistoryModel.getArtistList();
 				
 				outputGUIView = new OutputGUI(lastFMHistoryModel, screenWidth, screenHeight, 1);
 				outputGUIView.autocompletePanel.addZoom2000(new Zoom2000());
