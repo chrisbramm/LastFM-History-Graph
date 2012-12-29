@@ -25,6 +25,7 @@ public class LastFMHistory {
 	private HashMap<String, Color> colorMapping;
 	private HashMap<String, Integer> durationMapping;
 	private int page;
+	private int per_page = 50;
 	private int total;
 	private String tst = "tst";
 	//private String file_name;
@@ -44,6 +45,19 @@ public class LastFMHistory {
 		this.user = user;
 		
 		System.out.println(this.user);
+	}
+	
+	public Date getLastDate(){
+		PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
+		total = result.getTotalPages();
+				
+		System.out.println(total);
+		
+		result = User.getRecentTracks(user, total, per_page, API_KEY);
+		Collection<Track> pageResults = result.getPageResults();
+		
+		System.out.println(pageResults);
+		return null;
 	}
 	
 	public Collection<Track> getLibraryTracks(){
@@ -118,7 +132,7 @@ public class LastFMHistory {
 		String file_name = user + "_history1.txt";
 		history = new ArrayList<Track>();
 		page = 1;
-		int per_page = 50;
+		
 		int i = 0;
 		long unixDate;
 		/*try{
@@ -134,7 +148,7 @@ public class LastFMHistory {
 			do {
 				try {
 					PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
-					total = /*result.getTotalPages();*/ 225;
+					total = /*result.getTotalPages();*/ 5;
 					System.out.println(total + ", " + page);
 					Collection<Track> pageResults = result.getPageResults();
 					for (Track t: pageResults){

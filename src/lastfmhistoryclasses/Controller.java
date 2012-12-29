@@ -37,15 +37,15 @@ public class Controller {
 			username = "Not Set";
 			try {
 				username = inputGUIView.getUsername();
-				System.out.println(username);
 				lastFMHistoryModel.setUser(username);
-				lastFMHistoryModel.getLibraryTracks();
-				lastFMHistoryModel.createColorHashmap();
-				lastFMHistoryModel.createDurationHashmap();
-				lastFMHistoryModel.getRecentTracks();
-				lastFMHistoryModel.graphMax();
-				lastFMHistoryModel.getTrackList();
-				lastFMHistoryModel.getArtistList();
+				lastFMHistoryModel.getLastDate();
+//				lastFMHistoryModel.getLibraryTracks();
+//				lastFMHistoryModel.createColorHashmap();
+//				lastFMHistoryModel.createDurationHashmap();
+//				lastFMHistoryModel.getRecentTracks();
+//				lastFMHistoryModel.graphMax();
+//				lastFMHistoryModel.getTrackList();
+//				lastFMHistoryModel.getArtistList();
 				
 				outputGUIView = new OutputGUI(lastFMHistoryModel, screenWidth, screenHeight, 1);
 				outputGUIView.autocompletePanel.addZoom2000(new Zoom2000());
