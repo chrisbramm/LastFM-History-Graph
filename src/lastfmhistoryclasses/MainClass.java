@@ -28,11 +28,9 @@ public class MainClass {
 		
 		System.out.println("Main Class:: Width = " + screenWidth + ", Height = " + screenHeight);
 		
-		LastFMHistory lastFMHistoryModel = new LastFMHistory();
-		InputGUI InputGUI = new InputGUI(screenWidth, screenHeight);
-		Controller controller = new Controller(lastFMHistoryModel, InputGUI, screenWidth, screenHeight);
-		InputGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		Controller controller = new Controller(screenWidth, screenHeight);
+				
 	}
 	
 	

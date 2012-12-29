@@ -18,9 +18,10 @@ public class Controller {
 	private int screenWidth;
 	private int screenHeight;
 
-	public Controller(LastFMHistory model, InputGUI view, int screenWidth, int screenHeight){
-		lastFMHistoryModel = model;
-		inputGUIView = view;
+	public Controller(int screenWidth, int screenHeight){
+		lastFMHistoryModel = new LastFMHistory();
+		inputGUIView = new InputGUI(screenWidth, screenHeight);
+		
 		
 		this.screenWidth = screenWidth;
 		this.screenHeight = screenHeight;
