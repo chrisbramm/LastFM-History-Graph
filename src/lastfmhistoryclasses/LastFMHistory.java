@@ -78,6 +78,8 @@ public class LastFMHistory {
 			System.out.println(trueDateOrigin);
 			i++;
 		}
+		int playcount = ((total - 1 ) * per_page + i);
+		System.out.println(playcount);
 		int pageResultsSize = pageResults.size();
 		System.out.println(pageResultsSize);
 		

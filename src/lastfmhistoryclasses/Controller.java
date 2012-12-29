@@ -26,22 +26,33 @@ public class Controller {
 		this.screenWidth = screenWidth;
 		this.screenHeight = screenHeight;
 		
-		inputGUIView.addGetLastFMHistoryListener(new GetLastFMHistory());
+		inputGUIView.addGetDataListener(new GetData());
 		inputGUIView.addDeleteLibraryFile(new DeleteLibraryFile());
 	}
 	
 	
-	
-	class GetLastFMHistory implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+	class GetData implements ActionListener {
+		public void actionPerformed(ActionEvent e){
 			username = "Not Set";
 			try {
 				username = inputGUIView.getUsername();
 				lastFMHistoryModel.setUser(username);
-				lastFMHistoryModel.getLastDate();
-//				lastFMHistoryModel.getLibraryTracks();
-//				lastFMHistoryModel.createColorHashmap();
-//				lastFMHistoryModel.createDurationHashmap();
+				long tDO = lastFMHistoryModel.getLastDate();
+				lastFMHistoryModel.getLibraryTracks();
+				lastFMHistoryModel.createColorHashmap();
+				lastFMHistoryModel.createDurationHashmap();
+				inputGUIView.addDateSorter(tDO);
+			}catch(Exception ex){
+				System.err.println(ex);
+				System.out.println(username);
+			}
+			inputGUIView.addGetLastFMHistoryListener(new GetLastFMHistory());			
+		}
+	}
+	class GetLastFMHistory implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			try {
+//				
 //				lastFMHistoryModel.getRecentTracks();
 //				lastFMHistoryModel.graphMax();
 //				lastFMHistoryModel.getTrackList();
