@@ -56,9 +56,6 @@ public class LastFMHistory {
 	public long getLastDate(){
 		PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
 		total = result.getTotalPages();
-				
-		System.out.println(total);
-		
 		result = User.getRecentTracks(user, total, per_page, API_KEY);
 		Collection<Track> pageResults = result.getPageResults();
 		int i = 1;
@@ -74,15 +71,8 @@ public class LastFMHistory {
 					trueDateOrigin = timePlayed;
 				}
 			}
-			System.out.println(i + " = " + datePlayed + ", " + timePlayed);
-			System.out.println(trueDateOrigin);
 			i++;
 		}
-		int playcount = ((total - 1 ) * per_page + i);
-		System.out.println(playcount);
-		int pageResultsSize = pageResults.size();
-		System.out.println(pageResultsSize);
-		
 		return trueDateOrigin;
 	}
 	

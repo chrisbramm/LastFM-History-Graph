@@ -2,7 +2,9 @@ package lastfmhistoryguis;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.Calendar;
 import java.util.Date;
+
 
 import javax.swing.*;
 
@@ -48,16 +50,30 @@ public class InputGUI extends JFrame {
 		inputGUIFrame.setVisible(true);
 	}
 	
-	public void addDateSorter(long trueDateOrigin){
-		JPanel dateSorterPanel = new JPanel(new GridLayout(4,1));
+	public void addScrobbleFilter(long trueDateOrigin){
+		JPanel dateSorterPanel = new JPanel(new BorderLayout());
+		Calendar calendar = Calendar.getInstance();
+		Date dateOfFirstScrobble = new Date(trueDateOrigin * 1000);
+		Date initDate = calendar.getTime();
+		System.out.println("Calendar: " + calendar + " initDate: " + initDate + " trueDateOrigin: " + dateOfFirstScrobble);
+		SpinnerDateModel s = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.YEAR);
+		JSpinner spinner = new JSpinner(s);
+		JSpinner.DateEditor de = new JSpinner.DateEditor(spinner, "dd MMM yy");
+		spinner.setEditor(de);
+		dateSorterPanel. add(spinner, BorderLayout.LINE_START);
 		
-		//dateSorterPanel.setPreferredSize(new Dimension(200,200));
-		dateSorterPanel.setBackground(Color.RED);
 		
-		System.out.println(dateSorterPanel.getPreferredSize());
+		JPanel beginDatePanel = new JPanel();
+		beginDatePanel.setLayout(new BoxLayout(beginDatePanel, BoxLayout.PAGE_AXIS));
+//		DateUtils dU = new DateUtils();
+//		String[] monthStrings = dU.getMonthStrings();
+//		
+		
+		
+		
+		
 		btnGetHistory = new JButton("Get History");
-		//btnGetHistory.setSize(50, 20);
-		dateSorterPanel.add(btnGetHistory);
+		dateSorterPanel.add(btnGetHistory, BorderLayout.PAGE_END);
 		dateSorterPanel.setVisible(true);
 		
 		
@@ -66,7 +82,6 @@ public class InputGUI extends JFrame {
 		contentPane.repaint();
 		pack();
 		
-		System.out.println(dateSorterPanel.isShowing());
 	}
 	
 	

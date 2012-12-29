@@ -41,7 +41,7 @@ public class Controller {
 				lastFMHistoryModel.getLibraryTracks();
 				lastFMHistoryModel.createColorHashmap();
 				lastFMHistoryModel.createDurationHashmap();
-				inputGUIView.addDateSorter(tDO);
+				inputGUIView.addScrobbleFilter(tDO);
 			}catch(Exception ex){
 				System.err.println(ex);
 				System.out.println(username);
