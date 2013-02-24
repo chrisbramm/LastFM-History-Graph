@@ -50,6 +50,13 @@ public class InputGUI extends JFrame {
 		inputGUIFrame.setVisible(true);
 	}
 	
+	public void progresBarPanel(int libraryTotalPages){
+		JPanel progressBarPanel = new JPanel(new BorderLayout());
+		JProgressBar libraryTracksProgressBar = new JProgressBar(0, libraryTotalPages);
+		libraryTracksProgressBar.setValue(0);
+		libraryTracksProgressBar.setStringPainted(true);
+		inputGUIFrame.add(progressBarPanel, BorderLayout.CENTER);
+	}
 	public void addScrobbleFilter(long trueDateOrigin){
 		JPanel scrobbleFilterPanel = new JPanel(new BorderLayout());
 		
