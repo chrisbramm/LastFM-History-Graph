@@ -76,7 +76,7 @@ public class LastFMHistory {
 		return trueDateOrigin;
 	}
 	
-	public Collection<Track> getLibraryTracks(){
+	/*public Collection<Track> getLibraryTracks(){
 		String file_name = user + "_library.txt";
 		try{
 			library = FileStuff.openFile(file_name);
@@ -116,8 +116,62 @@ public class LastFMHistory {
 		}
 		//System.out.println("Library size: " + library.size());
 		return library;
+	}*/
+	public Collection<Track> getLibraryTracks(){
+		String file_name = user + "_library.txt";
+		try{
+			library = FileStuff.openFile(file_name);
+			if (library.isEmpty() == true){
+				System.out.println("Library is not set");
+			}
+		}catch(FileNotFoundException e) {
+			try{
+				Collection<Track> library = null;
+				int page = 1, total;
+				do {
+					PaginatedResult<Track> result = getTracks(user, page, apiKey);
+					total = result.getTotalPages();
+					Collection<Track> pageResults = result.getPageResults();
+					if (library == null) {
+						// tracks is initialized here to initialize it with the right size and avoid array copying later on
+						library = new ArrayList<Track>(total * pageResults.size());
+					}
+					library.addAll(pageResults);
+					page++;
+				} while (page <= total);
+				
+			
+				int red = 0;
+				int green = 255;
+				int blue;
+				
+				for(Track l : library){
+					System.out.println(l);
+					blue = (int)(Math.random() * 255);
+					Color color = new Color(red, green, blue);
+					
+					l.setColour(color);
+					if (red == 255){
+						red = 0;
+					}else{
+					red++;
+					}
+					if (green == 0){
+						green = 255;
+					}else{
+					green--;
+					}
+				}
+				FileStuff.saveFile(file_name, library);
+			}catch(IOException x){
+				System.out.println(x);
+			}
+		}catch(IOException e){
+			System.out.println(e.getMessage());
+		}
+		//System.out.println("Library size: " + library.size());
+		return library;
 	}
-	
 	public HashMap<String, Color> createColorHashmap(){
 		colorMapping = new HashMap();
 		for(Track l : library){
