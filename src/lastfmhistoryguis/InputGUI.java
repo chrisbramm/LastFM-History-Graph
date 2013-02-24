@@ -59,8 +59,8 @@ public class InputGUI extends JFrame {
 		Date dateOfFirstScrobble = new Date(trueDateOrigin * 1000);
 		Date initDate = calendar.getTime();
 		System.out.println("Calendar: " + calendar + " initDate: " + initDate + " trueDateOrigin: " + dateOfFirstScrobble);
-		SpinnerDateModel modelFrom = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.YEAR);
-		SpinnerDateModel modelTo = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.YEAR);
+		SpinnerDateModel modelFrom = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.DAY_OF_WEEK);
+		SpinnerDateModel modelTo = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.DAY_OF_WEEK);
 		
 		
 		JSpinner spinnerFrom = new JSpinner(modelFrom);
@@ -69,7 +69,7 @@ public class InputGUI extends JFrame {
 		scrobbleFilterPanel.add(spinnerFrom, BorderLayout.LINE_START);
 		
 		JSpinner spinnerTo = new JSpinner(modelTo);
-		JSpinner.DateEditor deTo = new JSpinner.DateEditor(spinnerFrom, "dd MMM yy");
+		JSpinner.DateEditor deTo = new JSpinner.DateEditor(spinnerTo, "dd MMM yy");
 		spinnerTo.setEditor(deTo);
 		
 		scrobbleFilterPanel.add(spinnerTo, BorderLayout.LINE_END);
