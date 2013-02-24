@@ -63,6 +63,7 @@ public class Controller {
 				outputGUIView.autocompletePanel.addZoomDefault(new ZoomDefault());
 				outputGUIView.autocompletePanel.addZoom6000(new Zoom6000());
 				outputGUIView.autocompletePanel.addTrackListener(new trackListener());
+				outputGUIView.autocompletePanel.addArtistListener(new artistListener());
 				
 				outputGUIView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				inputGUIView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -125,6 +126,7 @@ public class Controller {
 	class artistListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			String artistName = outputGUIView.autocompletePanel.artistInput.getText();
+			System.out.println(artistName);
 			outputGUIView.graphPanel.graphArtist(artistName);
 		}
 		

@@ -87,6 +87,9 @@ public class AutocompletePanel extends JPanel{
 	public void addTrackListener(ActionListener track){
 		trackGo.addActionListener(track);
 	}
+	public void addArtistListener(ActionListener artist){
+		artistGo.addActionListener(artist);
+	}
 
 	
 	
