@@ -27,6 +27,7 @@ public class LastFMHistory {
 	private int page;
 	private int per_page = 50;
 	private int total;
+	public int libraryPageTotal;
 	private String tst = "tst";
 	//private String file_name;
 	public long originDate;
@@ -127,18 +128,18 @@ public class LastFMHistory {
 		}catch(FileNotFoundException e) {
 			try{
 				Collection<Track> library = null;
-				int page = 1, total;
+				int page = 1;
 				do {
-					PaginatedResult<Track> result = getTracks(user, page, apiKey);
-					total = result.getTotalPages();
+					PaginatedResult<Track> result = de.umass.lastfm.Library.getTracks(user, page, API_KEY);
+					libraryPageTotal = result.getTotalPages();
 					Collection<Track> pageResults = result.getPageResults();
 					if (library == null) {
 						// tracks is initialized here to initialize it with the right size and avoid array copying later on
-						library = new ArrayList<Track>(total * pageResults.size());
+						library = new ArrayList<Track>(libraryPageTotal * pageResults.size());
 					}
 					library.addAll(pageResults);
 					page++;
-				} while (page <= total);
+				} while (page <= libraryPageTotal);
 				
 			
 				int red = 0;
