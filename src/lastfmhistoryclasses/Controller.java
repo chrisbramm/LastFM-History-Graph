@@ -3,6 +3,8 @@ package lastfmhistoryclasses;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
 import javax.swing.*;
 
@@ -113,7 +115,6 @@ public class Controller {
 			
 		}
 	}
-	
 	class trackListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			System.out.println("Action Performed: Track Button Pressed");
@@ -131,4 +132,5 @@ public class Controller {
 		}
 		
 	}
+	
 }
