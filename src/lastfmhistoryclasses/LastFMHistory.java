@@ -21,7 +21,7 @@ public class LastFMHistory {
 	private final static String API_KEY = "3c02b48004816856418a2c0b9a4e785b";;
 	private String user;
 	public Collection<Track> history;
-	private Collection<Track> library;
+	public Collection<Track> library;
 	private HashMap<String, Color> colorMapping;
 	private HashMap<String, Integer> durationMapping;
 	private int page;
@@ -32,6 +32,8 @@ public class LastFMHistory {
 	//private String file_name;
 	public long originDate;
 	public int dayMax;
+	public long fullDateLong;
+	public long maxLookDate;
 	
 	public List<String> artists = new ArrayList<String>();
 	public List<String> tracks = new ArrayList<String>();
@@ -75,6 +77,11 @@ public class LastFMHistory {
 			i++;
 		}
 		return trueDateOrigin;
+	}
+	
+	public int getLibraryPageTotal(){
+		PaginatedResult<Track> result = de.umass.lastfm.Library.getTracks(user, page, API_KEY);
+		return result.getTotalPages();
 	}
 	
 	/*public Collection<Track> getLibraryTracks(){
@@ -127,8 +134,9 @@ public class LastFMHistory {
 			}
 		}catch(FileNotFoundException e) {
 			try{
-				Collection<Track> library = null;
+				library = null;
 				int page = 1;
+				System.out.println("Aye 1");
 				do {
 					PaginatedResult<Track> result = de.umass.lastfm.Library.getTracks(user, page, API_KEY);
 					libraryPageTotal = result.getTotalPages();
@@ -140,7 +148,7 @@ public class LastFMHistory {
 					library.addAll(pageResults);
 					page++;
 				} while (page <= libraryPageTotal);
-				
+				System.out.println("Aye 2");
 			
 				int red = 0;
 				int green = 255;
@@ -163,21 +171,27 @@ public class LastFMHistory {
 					green--;
 					}
 				}
+				System.out.println("Aye 3");
 				FileStuff.saveFile(file_name, library);
 			}catch(IOException x){
-				System.out.println(x);
+				System.out.println(x.getMessage());
 			}
 		}catch(IOException e){
 			System.out.println(e.getMessage());
 		}
 		//System.out.println("Library size: " + library.size());
+		System.out.println("Aye 4");
 		return library;
 	}
+	
+	
+	
 	public HashMap<String, Color> createColorHashmap(){
-		colorMapping = new HashMap();
+		colorMapping = new HashMap<String, Color>();
 		for(Track l : library){
-			String hashName = l.getName();
-			String hashArtist = l.getArtist();
+			String hashName = l.getName().replaceAll("[^\\x00-\\x7F]", "");;
+			String hashArtist = l.getArtist().replaceAll("[^\\x00-\\x7F]", "");
+			//String resultString = subjectString.replaceAll("[^\\x00-\\x7F]", "");
 			String hashString = hashName + hashArtist;
 			Color color = l.getColour();
 			//System.out.println(l + ", " + l.hashCode() + ", " + hashString.hashCode());
@@ -187,16 +201,20 @@ public class LastFMHistory {
 		return colorMapping;
 	}
 	public HashMap<String, Integer> createDurationHashmap(){
-		durationMapping = new HashMap();
+		durationMapping = new HashMap<String, Integer>();
 		for(Track l : library){
-			String hashName = l.getName();
-			String hashArtist = l.getArtist();
+			String hashName = l.getName().replaceAll("[^\\x00-\\x7F]", "");;
+			String hashArtist = l.getArtist().replaceAll("[^\\x00-\\x7F]", "");;
 			String hashString = hashName + hashArtist;
 			int duration = l.getDuration();
 			//System.out.println(l + ", " + l.hashCode() + ", " + hashString.hashCode());
 			durationMapping.put(hashString, duration);
 		}
 		return durationMapping;
+	}
+	
+	public void setMaxLookDate(long inp){
+		this.maxLookDate = inp;
 	}
 	
 	public Collection<Track> getRecentTracks() {
@@ -219,12 +237,13 @@ public class LastFMHistory {
 			do {
 				try {
 					PaginatedResult<Track> result = User.getRecentTracks(user, page, per_page, API_KEY);
-					total = /*result.getTotalPages();*/ 5;
+					total = /*result.getTotalPages();*/ 20;
 					System.out.println(total + ", " + page);
 					Collection<Track> pageResults = result.getPageResults();
 					for (Track t: pageResults){
-						String hashName = t.getName();
-						String hashArtist = t.getArtist();
+						//System.out.println(t);
+						String hashName = t.getName().replaceAll("[^\\x00-\\x7F]", "");;
+						String hashArtist = t.getArtist().replaceAll("[^\\x00-\\x7F]", "");;
 						String hashString = hashName + hashArtist;
 						try{
 							Color colorOfOriginalMapping = colorMapping.get(hashString);
@@ -243,6 +262,7 @@ public class LastFMHistory {
 						//Pull out date of when played and then use it to set the coordinates for the graph		
 						if(t.getPlayedWhen() != null){
 							Date fullDate = t.getPlayedWhen();
+							fullDateLong = t.getPlayedTime();
 							Calendar fullDateCalendar = Calendar.getInstance();
 							fullDateCalendar.setTime(fullDate);
 							TimeZone timeZone = fullDateCalendar.getTimeZone();
@@ -284,7 +304,8 @@ public class LastFMHistory {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} while (page <= total);
+			//} while (page <= total);
+			} while (fullDateLong >= maxLookDate);
 		/*}catch(IOException x){
 			System.err.println(x);
 		}*/

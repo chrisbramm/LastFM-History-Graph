@@ -24,7 +24,7 @@ public class AutocompletePanel extends JPanel{
 	private JButton	medZoom;
 	private JButton fullZoom;
 	private JButton trackGo;
-	private JButton artistGo;
+	private JButton artistGo, btnReset;
 	public JTextField trackInput;
 	public JTextField artistInput;
 	
@@ -72,6 +72,9 @@ public class AutocompletePanel extends JPanel{
 		artistGo = new JButton("Track");
 		this.add(artistGo);
 		
+		btnReset = new JButton("Reset");
+		this.add(btnReset);
+		
 		
 	}
 	public void addZoom2000(ActionListener zoom){
@@ -89,6 +92,9 @@ public class AutocompletePanel extends JPanel{
 	}
 	public void addArtistListener(ActionListener artist){
 		artistGo.addActionListener(artist);
+	}
+	public void addResetListener(ActionListener reset){
+		btnReset.addActionListener(reset);
 	}
 
 	

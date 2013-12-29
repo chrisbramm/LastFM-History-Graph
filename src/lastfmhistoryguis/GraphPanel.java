@@ -222,6 +222,12 @@ public class GraphPanel extends JPanel{
 		this.artistName = artistName;
 		repaint();
 	}
+	public void btnReset(){
+		this.trackName = null;
+		this.artistName = null;
+		repaint();
+		System.out.println("Clk GraphPanel");
+	}
 	
 	
 	

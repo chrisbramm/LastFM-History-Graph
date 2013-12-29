@@ -16,6 +16,8 @@ public class InputGUI extends JFrame {
 	private JTextField usernameInput;
 	private JButton btnGetData, btnGetHistory, btnDeleteHistory;
 	private JFrame inputGUIFrame;
+	public JSpinner spinnerFrom;
+	public JSpinner spinnerTo;
 	private Container contentPane;
 	
 	public InputGUI(int screenWidth, int screenHeight){
@@ -58,38 +60,46 @@ public class InputGUI extends JFrame {
 		inputGUIFrame.add(progressBarPanel, BorderLayout.CENTER);
 	}
 	public void addScrobbleFilter(long trueDateOrigin){
+		//System.out.println("addScrobbleFilter 1");
 		JPanel scrobbleFilterPanel = new JPanel(new BorderLayout());
-		
-				
-		
-		Calendar calendar = Calendar.getInstance();
 		Date dateOfFirstScrobble = new Date(trueDateOrigin * 1000);
-		Date initDate = calendar.getTime();
-		System.out.println("Calendar: " + calendar + " initDate: " + initDate + " trueDateOrigin: " + dateOfFirstScrobble);
-		SpinnerDateModel modelFrom = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.DAY_OF_WEEK);
-		SpinnerDateModel modelTo = new SpinnerDateModel(initDate, dateOfFirstScrobble, initDate, Calendar.DAY_OF_WEEK);
 		
+		Calendar calendarTo = Calendar.getInstance();
+		Date initDateTo = calendarTo.getTime();
+		Calendar calendarFrom = Calendar.getInstance();
+		calendarFrom.add(Calendar.DATE, -14);
+		Date initDateFrom = calendarFrom.getTime();
+		//System.out.println("Calendar: " + calendar + " initDate: " + initDate + " trueDateOrigin: " + dateOfFirstScrobble);
+		SpinnerDateModel modelFrom = new SpinnerDateModel(initDateFrom, dateOfFirstScrobble, initDateTo, Calendar.DAY_OF_WEEK);
+		SpinnerDateModel modelTo = new SpinnerDateModel(initDateTo, dateOfFirstScrobble, initDateTo, Calendar.DAY_OF_WEEK);
+		//System.out.println("addScrobbleFilter 2");
 		
-		JSpinner spinnerFrom = new JSpinner(modelFrom);
+		spinnerFrom = new JSpinner(modelFrom);
 		JSpinner.DateEditor deFrom = new JSpinner.DateEditor(spinnerFrom, "dd MMM yy");
 		spinnerFrom.setEditor(deFrom);
 		scrobbleFilterPanel.add(spinnerFrom, BorderLayout.LINE_START);
+		//System.out.println("addScrobbleFilter 3");
 		
-		JSpinner spinnerTo = new JSpinner(modelTo);
+		spinnerTo = new JSpinner(modelTo);
 		JSpinner.DateEditor deTo = new JSpinner.DateEditor(spinnerTo, "dd MMM yy");
 		spinnerTo.setEditor(deTo);
-		
 		scrobbleFilterPanel.add(spinnerTo, BorderLayout.LINE_END);
+		//System.out.println("addScrobbleFilter 4");
 		
 		btnGetHistory = new JButton("Get History");
 		scrobbleFilterPanel.add(btnGetHistory, BorderLayout.PAGE_END);
+		//System.out.println("addScrobbleFilter 5");
 		scrobbleFilterPanel.setVisible(true);
-		
+		//System.out.println("addScrobbleFilter 6");
 		
 		contentPane.add(scrobbleFilterPanel, BorderLayout.CENTER);
+		//System.out.println("addScrobbleFilter 7");
 		contentPane.revalidate();
+		//System.out.println("addScrobbleFilter 8");
 		contentPane.repaint();
+		//System.out.println("addScrobbleFilter 9");
 		pack();
+		//System.out.println("addScrobbleFilter 10");
 		
 	}
 	

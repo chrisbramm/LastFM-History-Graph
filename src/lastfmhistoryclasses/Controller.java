@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.text.*;
+import java.util.*;
 
 import javax.swing.*;
 
@@ -40,21 +42,38 @@ public class Controller {
 				username = inputGUIView.getUsername();
 				lastFMHistoryModel.setUser(username);
 				long tDO = lastFMHistoryModel.getLastDate();
+				int libraryPageTotal = lastFMHistoryModel.getLibraryPageTotal();
+				System.out.println("Run getLibraryTracks");
 				lastFMHistoryModel.getLibraryTracks();
+				System.out.println("Finish getLibrary Tracks");
+				
+				
 				lastFMHistoryModel.createColorHashmap();
 				lastFMHistoryModel.createDurationHashmap();
+				
 				inputGUIView.addScrobbleFilter(tDO);
+				inputGUIView.addGetLastFMHistoryListener(new GetLastFMHistory());
 			}catch(Exception ex){
 				System.err.println(ex);
 				System.out.println(username);
 			}
-			inputGUIView.addGetLastFMHistoryListener(new GetLastFMHistory());			
+						
 		}
 	}
 	class GetLastFMHistory implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			try {
-//				
+				String maxLookString = inputGUIView.spinnerFrom.getValue().toString();
+//				Calendar maxLookCal = new Calendar();
+				DateFormat maxLookFormat = new SimpleDateFormat("EEE MMM d HH:mm:ss z yyyy");
+				Date maxLookTime = new Date();
+				try{
+					maxLookTime = maxLookFormat.parse(maxLookString);
+				}catch(Exception f){
+					System.out.println(f.getMessage());
+				}
+				
+				lastFMHistoryModel.setMaxLookDate(maxLookTime.getTime()/1000);
 				lastFMHistoryModel.getRecentTracks();
 				lastFMHistoryModel.graphMax();
 				lastFMHistoryModel.getTrackList();
@@ -66,6 +85,7 @@ public class Controller {
 				outputGUIView.autocompletePanel.addZoom6000(new Zoom6000());
 				outputGUIView.autocompletePanel.addTrackListener(new trackListener());
 				outputGUIView.autocompletePanel.addArtistListener(new artistListener());
+				outputGUIView.autocompletePanel.addResetListener(new btnResetListener());
 				
 				outputGUIView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				inputGUIView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -131,6 +151,12 @@ public class Controller {
 			outputGUIView.graphPanel.graphArtist(artistName);
 		}
 		
+	}
+	class btnResetListener implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			outputGUIView.graphPanel.btnReset();
+			System.out.println("Clicking");
+		}
 	}
 	
 }
